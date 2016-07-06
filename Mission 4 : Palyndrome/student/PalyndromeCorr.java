@@ -18,9 +18,9 @@ package student;
 public class PalyndromeStu {
 
 	/*
-     *@pré: str != null
-     *@post: Retourne true si le String str est un palyndrome, false sinon.
-     */
+	 *@pré: str != null
+	 *@post: Retourne true si le String str est un palyndrome, false sinon.
+         */
 	public static boolean isPalyndrome(String str){
     	int length = str.length();
         for(int i=0;i<str.length()/2;i++){
