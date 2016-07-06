@@ -1,0 +1,41 @@
+accessible: true
+author: Aurélie Massart & Alexandre Kühn & Hua Yang Hu
+context: |
+    Soit une liste doublement chainée telle que représentée ci-dessous.
+
+    .. image:: OWM11_9/Fin.png
+        :height: 367px
+        :width: 1065px
+        :scale: 60%
+
+    La liste est implémentée par la classe Node décrite comme :
+
+    .. code-block:: java
+
+        public class Node{
+            int value;
+            Node next;
+            Node previous;
+
+            ...
+        }
+
+    On veut retirer l'élément ayant comme valeur
+    4 de la liste en utilisant uniquement les variables p, next et previous. Indiquez quelle est la ligne de code nécessaire pour réaliser cette opération. Attention, n'oubliez pas de mettre un espace avant et après un signe d'égalité.
+environment: java7
+groups: false
+limits:
+    memory: '200'
+    time: '30'
+    output: '2'
+name: 'Mission 11 : Retrait d''un élément à la fin d''une liste '
+network_grading: false
+order: 5
+problems:
+    '1':
+        header: 'Écrivez ici la ligne de code effectuant le retrait de l''élément
+            ayant comme valeur 4 dans la liste. '
+        type: match
+        answer: p.next.next = null;
+        name: Retrait d'un élément à la fin d'une liste
+weight: 1.0

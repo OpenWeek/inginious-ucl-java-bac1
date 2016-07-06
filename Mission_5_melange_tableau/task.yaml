@@ -1,7 +1,8 @@
 accessible: true
 author: Arnaud Gellens & Pablo Gonzalez Alvarez
-context: Dans cette question, on s'intéresser à l'écriture d'une méthodes dont le
+context: Dans cette question, on s'intéresse à l'écriture d'une méthode dont le
     but est de mélanger les éléments de manière aléatoire d'un tableau passé en paramètre.
+    Exemple: [1 2 3 4] peut devenir [2 3 4 1].
 environment: java7
 groups: false
 limits:
