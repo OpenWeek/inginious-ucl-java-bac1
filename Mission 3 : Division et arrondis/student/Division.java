@@ -1,5 +1,5 @@
 /**
- *  Copyright (c) 2015, 2016 François Michel, Clémentine Munyabarenzi
+ *  Copyright (c) 2016 Fitvoye Florian, Dubray Alexandre
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU Affero General Public License as published by
  *  the Free Software Foundation, either version 3 of the License, or
@@ -30,20 +30,20 @@ public class Division {
 	@Test
 	public void testDivision(){
 		try{
-			double d1 = 0.0;
-            double d2 = 3.0;
-            double r1 = DivisionStu.DivideAndRound(d1,d2);
-            assertEquals(r1,0.0,0);
+	     		double d1 = 0.0;
+		        double d2 = 3.0;
+             		double r1 = DivisionStu.DivideAndRound(d1,d2);
+                        assertEquals("Votre fonction ne donne pas le bon résultat avec d1= 0.0",r1,0.0,0);
             
-            double d3 = 1000.0;
-            double d4 = 500.0;
-            double r2 = DivisionStu.DivideAndRound(d3,d4);
-            assertEquals(r2,2.0,0);
+	  		double d3 = 1000.0;
+		        double d4 = 500.0;
+	                double r2 = DivisionStu.DivideAndRound(d3,d4);
+	                assertEquals("Votre fonction ne donne pas le bon résultat avec d1= 1000.0 et d2=500.0",r2,2.0,0);
             
-            double d5 = 160.0;
-            double d6 = 24.0;
-            double r3 = DivisionStu.DivideAndRound(d5,d6);
-            assertEquals(r3,6.0,0.001);
+        	        double d5 = 160.0;
+	                double d6 = 24.0;
+	                double r3 = DivisionStu.DivideAndRound(d5,d6);
+	                assertEquals("Votre fonction ne donne pas le bon résultat avec d1=160.0 et d2=24.0"r3,6.0,0.001);
 			
 		}catch (ArithmeticException e){
 			fail(str + "Le code est incorrect : il est interdit de diviser par zéro.");

@@ -1,5 +1,5 @@
 /**
- *  Copyright (c) 2015, 2016 François Michel, Clémentine Munyabarenzi
+ *  Copyright (c) 2015, 2016 Fitvoye Florian, Dubray Alexandre
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU Affero General Public License as published by
  *  the Free Software Foundation, either version 3 of the License, or
@@ -17,7 +17,10 @@ package student;
 
 public class DivisionStu {
 
-	// Code a verifier
+	/*
+         *@pré: d2 != 0.0
+         *@post: Retourne la division de d1 par d2, arrondie à l'entier inférieur le plus proche
+         */
 	public static double DivideAndRound(double d1, double d2){
 @		@q1@@
 		
