@@ -1,5 +1,5 @@
 /**
- *  Copyright (c) 2015, 2016 Fitvoye Florian, Dubray Alexandre
+ *  Copyright (c) 2016 Gellens Arnaud, Gonzalez Alvarez Pablo
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU Affero General Public License as published by
  *  the Free Software Foundation, either version 3 of the License, or
@@ -14,16 +14,12 @@
  */
 
 package student;
+import java.util.Arrays;
 
-public class FactStu {
+public class M5QShuffleStu {
 
-    public static int fact (int a){
-        if(a<0){return -1;}
-        if (a==0){return 1;}
-        int r=1;
-        for (int i=2;i<=a;i++){
-            r*=i;
-        }
-        return r;
-    }
+	// Code a verifier
+	public static void shuffle(int tab[]){
+@		@q1@@
+	}
 }
