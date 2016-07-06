@@ -48,7 +48,7 @@ public class M9Q2 {
 	@testNeg
 	public void testOpen(){
 		try{
-				File name= new File("fichier.txt");
+				//File name = new File("fichier.txt");
 				String res;
 				name.setReadable(false);
 				M9Q2Stu.deuxiemeFichier(name, res);	

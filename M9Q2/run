@@ -10,7 +10,7 @@ from inginious import feedback
 
 EXERCICE = "M9Q2"
 CUSTOMSCRIPT="custom.sh"
-CORR=2
+CORR=1
 
 # EXECCUSTOM vaut 0 si on n'exécute pas de script "custom" pour faire des vérifications supplémentaires
 EXECCUSTOM=0
