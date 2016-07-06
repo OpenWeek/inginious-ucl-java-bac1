@@ -16,16 +16,22 @@ package student;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.*;
+import java.lang.*;
 
 public class M9Q1Stu
 {
 
 	// Code a verifier
-	public static void premierFichier(String filename,String res)
+	public static void premierFichier(String filename)
 	{
-		try
+			try
 		{
+        	PrintStream out = System.out;
+            FileOutputStream f = new FileOutputStream("outStu.txt");
+            System.setOut(new PrintStream(f));
 			@@q1@@
+            System.setOut(out);
 		}
 		catch(FileNotFoundException e)
 		{

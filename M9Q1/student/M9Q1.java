@@ -1,5 +1,5 @@
 /**
- *  Copyright (c) 2016 Justine Doutreloux, Carolina Unriza, Charline Outters
+ *  Copyright (c) 2016 Justine Doutreloux, Carolina Unriza Salamanca, Charline Outters
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU Affero General Public License as published by
  *  the Free Software Foundation, either version 3 of the License, or
@@ -27,18 +27,22 @@ public class M9Q1 {
 	
 	@Test
 	public void testPos(){
+    
 		try{
-				String res ="";
-				M9Q1Stu.premierFichier("fichier.txt", res);
+				M9Q1Stu.premierFichier("student/fichier.txt");
+                BufferedReader verif;
+                verif = new BufferedReader(new FileReader("outStu.txt"));
+               String res = verif.readLine();
+               verif.close();
 				assertEquals("Hello", res);
 			}
-		catch (FileNotFoundException e){
+		catch(FileNotFoundException e){
 			fail(str + "Le code est incorrect : le nom du fichier ne semble pas être correct, vous essayez d'ouvrir un fichier non existnant.");
 			e.printStackTrace();
 		}catch(IOException e){
 			fail(str + "Le code est incorrect: il y a un problème lors de l'utilisation de la méthode readLine() ou close()");
-			e.printStackTrace();
-		}catch(IllegalArgumentException  e){
+			e.printStackTrace();}
+		catch(IllegalArgumentException  e){
 			e.printStackTrace();
 			fail(str + "Attention, vous tentez de lire en dehors des limites d'un String ! (StringIndexOutOfBoundsException)");
 			e.printStackTrace();

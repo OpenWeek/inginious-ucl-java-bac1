@@ -1,5 +1,5 @@
 /**
- *  Copyright (c) 2016 Justine Doutreloux, Carolina Unriza, Charline Outters
+ *  Copyright (c) 2016 Justine Doutreloux, Carolina Unriza Salamanca, Charline Outters
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU Affero General Public License as published by
  *  the Free Software Foundation, either version 3 of the License, or
@@ -15,23 +15,34 @@
 
 package student;
 import java.io.*;
+import java.io.BufferedReader;
 
 public class M9Q1Stu {
 
 	// Code a verifier
-	public static void premierFichier(String filename,String res)
+	public static void premierFichier(String filename)
 	{ 
-		BufferedReader br;
 		try
 		{
-			br  = new BufferedReader(new FileReader("filename"));
+        	BufferedReader br;
+			br = new BufferedReader(new FileReader(filename));
 			String str = br.readLine();
 			while(str != null)
 			{
 				System.out.println(str);
-				str = br.readLine();
+               str = br.readLine();
 			}
 			br.close();
+		}
+        catch(FileNotFoundException e)
+		{
+			fail(res + "Le code est incorrect : le nom du fichier ne semble pas être correct, vous essayez d'ouvrir un fichier non existnant.");
+			e.printStackTrace();
+		}
+		catch(IOException e)
+		{
+			fail(res + "Le code est incorrect: il y a un problème lors de l'utilisation de la méthode readLine() ou close()");
+			e.printStackTrace();*/
 		}
 		catch(IOException e)
 		{
