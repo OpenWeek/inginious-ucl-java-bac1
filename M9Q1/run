@@ -8,7 +8,7 @@ import sys
 import re
 from inginious import feedback
 
-EXERCICE = "M9Q"
+EXERCICE = "M9Q1"
 CUSTOMSCRIPT="custom.sh"
 CORR=0
 
