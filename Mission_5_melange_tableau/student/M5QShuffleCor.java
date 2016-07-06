@@ -23,7 +23,7 @@ public class M5QShuffleStu {
         int t[]=Arrays.copyOf(tab,tab.length);
         for(int i=0;i<t.length;i++){
 
-            //à chaque passagee dans la boucle on regarde un élément à la fin en moins, et l'élément qui est choisit est mis à la fin
+            // À chaque passage dans la boucle on regarde un élément à la fin en moins, et l'élément qui est choisit est mis à la fin
             int randomPosition=(int)(Math.random()*(tab.length-i));
             t[i]=tab[randomPosition];
 

@@ -12,7 +12,7 @@
  *  You should have received a copy of the GNU Affero General Public License
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
- 
+
 package student;
 import static org.junit.Assert.*;
 import org.junit.runner.JUnitCore;
@@ -23,36 +23,36 @@ import java.util.Arrays;
 import org.junit.runner.notification.Failure;
 
 public class M5QShuffle {
-	
-    
-    
+
+
+
 	private static String str = "Le code semble comporter des erreurs : ";
-	
-    
-    
-    
+
+
+
+
 	@Test
 	public void testSame(){ // test que deux exécutions de la fonction ne donne pas le même résultat
 		try{
-        	int len = 6; // longeur du taleau
+        	int len = 6; // longueur du tableau
 			 int tab[] = new int[len];
             for (int i=0; i<len;i++){
                 tab[i]=(int)(Math.random()*100);
             }
-            
+
             int tabShuf1[] = Arrays.copyOf(tab, tab.length);
             int tabShuf2[] = Arrays.copyOf(tab, tab.length);
             try{
                 M5QShuffleStu.shuffle(tabShuf1);
                 M5QShuffleStu.shuffle(tabShuf2);
         	}catch(AssertionError e) {
-            	fail("Question 1 :\n Vous n'utilisez pas correctement assert.");	
+            	fail("Question 1 :\n Vous n'utilisez pas correctement assert.");
             }
-            
-            
+
+
             assertFalse("Question 1 :\n Votre code ne mélange pas de manière aléatoir le tableau", Arrays.equals(tabShuf1, tabShuf2));
-            
-            
+
+
             // verification de l'utilisation de la programation défensive
             try {
                     M5QShuffleStu.shuffle(null);
@@ -63,7 +63,7 @@ public class M5QShuffle {
             } catch (NullPointerException e) {
             	fail("Question 1 : \n Vous devez utiliser de la programmation défensive.");
             }
-            
+
 		}catch (ArithmeticException e){
 			fail(str + "Le code est incorrect : il est interdit de diviser par zéro.");
 			e.printStackTrace();
@@ -86,7 +86,7 @@ public class M5QShuffle {
 			e.printStackTrace();
 		}
 	}
-	
+
 	@Test
 	public void testWellShuffle(){ // test que le tableau est bien mélangé
 		try{
@@ -95,19 +95,19 @@ public class M5QShuffle {
             for (int i=0; i<len;i++){
                 tab[i]=(int)(Math.random()*100);
             }
-            
+
             int tabShuf[] = Arrays.copyOf(tab, tab.length);
             int t[] = Arrays.copyOf(tab, tab.length);
             try{
                 M5QShuffleStu.shuffle(tabShuf);
         	}catch(AssertionError e) {
             	//pas nécessaire puisque déjà tester dans la fonction de test juste avant
-                //fail("Question 1 :\n Vous n'utilisez pas correctement assert.");	
+                //fail("Question 1 :\n Vous n'utilisez pas correctement assert.");
             }
-            
+
             boolean found=false;
             for (int i=0; i<len;i++){// parcour le tableau de mélanger par l'étudiant		found=false;
-            	for (int j=0; j<len-i;i++){ //parcourt le tableau initial sans regarder les derniers élémnents avec len-i qui ont déjà été trouvé 
+            	for (int j=0; j<len-i;i++){ //parcourt le tableau initial sans regarder les derniers élémnents avec len-i qui ont déjà été trouvé
                 	if (tabShuf[i]==tab[j]){ // si on trouve un élément qui à la même valeur on la permute avec le dernier élémentmet à la place du dernier élément
                     	int temp = tab[j];
                         tab[j]=tab[len-i-1]; //tab[len-i-1] est le dernier élément qui aurait été vérifier
@@ -118,9 +118,9 @@ public class M5QShuffle {
                 if(!found){
                 	fail("Question 1 :\n Votre code ne mélange pas correctement le tablleau, votre tableau: "+Arrays.toString(tabShuf)+" avec ce tableau comme paramettre : "+Arrays.toString(t));
                 }
-            }            
-			
-            
+            }
+
+
 		}catch (ArithmeticException e){
 			fail(str + "Le code est incorrect : il est interdit de diviser par zéro.");
 			e.printStackTrace();
@@ -143,7 +143,7 @@ public class M5QShuffle {
 			e.printStackTrace();
 		}
 	}
-	
+
 	// Code verificateur
 	public static void main(String[] args) {
 		Result result = JUnitCore.runClasses(M5QShuffle.class);
