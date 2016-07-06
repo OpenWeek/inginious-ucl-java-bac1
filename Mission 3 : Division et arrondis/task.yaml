@@ -1,0 +1,27 @@
+accessible: true
+author: Fitvoye Florian, Dubray Alexandre
+context: De nombreuses librairies sont à votre disposition pour vous faciliter la
+    vie. Dans cette tâche, vous allez devoir utiliser les fonction de la librairie
+    ``Java.lang.Math``.
+environment: java7
+groups: false
+limits:
+    memory: '100'
+    time: '30'
+    output: '2'
+name: Division et arrondis
+network_grading: false
+problems:
+    q1:
+        language: java
+        type: code
+        name: Division
+        header: |-
+            Utilisez les différentes fonctions à votre disposition pour diviser les deux nombres passés en paramètres et arrondir le résultat à la borne inférieure. Voici la signature de la fonction:
+
+            .. code-block:: java
+
+                public static double DivideAndRound(double d1, double d2){
+                    /* Code à compléter */
+                }
+weight: 1.0
