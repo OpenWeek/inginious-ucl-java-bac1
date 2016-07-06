@@ -25,69 +25,38 @@ import org.junit.runner.notification.Failure;
 public class Fact {
 	
 	private static String str = "Le code semble comporter des erreurs : ";
-    private static String str1 = "Question 1 :\n";
-    private static String str2 = "Question 2 :\n";
 	
 	@Test
 	public void testFact(){
 		try{
-        	assertEquals(str1 + "Verifiez les pre !",-1,FactStu.fact(-10));
-            assertEquals(str1 + "Fact(0) ne donne pas le resultat attendu :",1,FactStu.fact(0));
-            assertEquals(str1 + "Fact(1) ne donne pas le resultat attendu :",1,FactStu.fact(1));
-            assertEquals(str1 + "Fact(4) ne donne pas le resultat attendu :",24,FactStu.fact(4));
+        	assertEquals("Verifiez les pre !",-1,FactStu.fact(-10));
+            assertEquals("Fact(0) ne donne pas le resultat attendu :",1,FactStu.fact(0));
+            assertEquals("Fact(1) ne donne pas le resultat attendu :",1,FactStu.fact(1));
+            assertEquals("Fact(4) ne donne pas le resultat attendu :",24,FactStu.fact(4));
 		}catch (ArithmeticException e){
-			fail(str1 + str + "Le code est incorrect : il est interdit de diviser par zéro.");
+			fail(str + "Le code est incorrect : il est interdit de diviser par zéro.");
 			e.printStackTrace();
 		}catch(ClassCastException e){
-			fail(str1 + str + "Attention, certaines variables ont été mal castées	!");
+			fail(str + "Attention, certaines variables ont été mal castées	!");
 			e.printStackTrace();
 		}catch(StringIndexOutOfBoundsException e){
 			e.printStackTrace();
-			fail(str1 + str + "Attention, vous tentez de lire en dehors des limites d'un String ! (StringIndexOutOfBoundsException)");
+			fail(str + "Attention, vous tentez de lire en dehors des limites d'un String ! (StringIndexOutOfBoundsException)");
 			e.printStackTrace();
 		}catch(ArrayIndexOutOfBoundsException e){
 			e.printStackTrace();
-			fail(str1 + str + "Attention, vous tentez de lire en dehors des limites d'un tableau ! (ArrayIndexOutOfBoundsException)");
+			fail(str + "Attention, vous tentez de lire en dehors des limites d'un tableau ! (ArrayIndexOutOfBoundsException)");
 			e.printStackTrace();
 		}catch(NullPointerException e){
-			fail(str1 + str + "Attention, vous faites une opération sur un objet qui vaut null ! Veillez à bien gérer ce cas.");
+			fail(str + "Attention, vous faites une opération sur un objet qui vaut null ! Veillez à bien gérer ce cas.");
 			e.printStackTrace();
 		}catch(Exception e){
-			fail(str1 + str + "\n" + e.getMessage());
+			fail(str + "\n" + e.getMessage());
 			e.printStackTrace();
 		}
 	}
 	
-	@Test
-	public void testExp(){
-		try{
-        assertEquals(str2 + "Verifiez les pre !",-1.0,FactStu.exp(-10),0.0);
-        	assertEquals(str2 + "exp(0) ne donne pas le resultat attendu :",1.0,FactStu.exp(0),0.0);
-            assertEquals(str2 + "exp(1) ne donne pas le resultat attendu :",2.72,FactStu.exp(1),0.02);
-            assertEquals(str2 + "exp(4) ne donne pas le resultat attendu :",54.59,FactStu.exp(4),0.5);
-		}catch (ArithmeticException e){
-			fail(str2 + str + "il est interdit de diviser par zéro.");
-			e.printStackTrace();
-		}catch(ClassCastException e){
-			fail(str2 + str + "Attention, certaines variables ont été mal castées	!");
-			e.printStackTrace();
-		}catch(StringIndexOutOfBoundsException e){
-			e.printStackTrace();
-			fail(str2 + str + "Attention, vous tentez de lire en dehors des limites d'un String ! (StringIndexOutOfBoundsException)");
-			e.printStackTrace();
-		}catch(ArrayIndexOutOfBoundsException e){
-			e.printStackTrace();
-			fail(str2 + str + "Attention, vous tentez de lire en dehors des limites d'un tableau ! (ArrayIndexOutOfBoundsException)");
-			e.printStackTrace();
-		}catch(NullPointerException e){
-			fail(str2 + str + "Attention, vous faites une opération sur un objet qui vaut null ! Veillez à bien gérer ce cas.");
-			e.printStackTrace();
-		}catch(Exception e){
-			fail(str2 + str + "\n" + e.getMessage());
-			e.printStackTrace();
-		}
-	}
-	
+
 	// Code verificateur
 	public static void main(String[] args) {
 		Result result = JUnitCore.runClasses(Fact.class);

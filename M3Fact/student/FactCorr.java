@@ -26,12 +26,4 @@ public class FactStu {
         }
         return r;
     }
-    public static double exp (int a){
-        if(a<0){return -1;}
-        double r=0.0;
-        for (int i=0;i<15;i++){
-            r+=(Math.pow((double)a,(double)i))/(double)fact(i);
-        }
-        return r;
-    }
 }
