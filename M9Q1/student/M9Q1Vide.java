@@ -21,8 +21,23 @@ public class M9Q1Stu
 {
 
 	// Code a verifier
-	public static void premierFichier(String filename,String res) throws FileNotFoundException, IOException, IllegalArgumentException
+	public static void premierFichier(String filename,String res)
 	{
+			try
+		{
 			@@q1@@
+		}
+		catch(FileNotFoundException e)
+		{
+			System.out.println(e.getMessage());
+		}
+		catch(IOException e)
+		{
+			System.out.println(e.getMessage());
+		}
+		catch(IllegalArgumentException e)
+		{
+			System.out.println(e.getMessage());
+		}
 	}
 }
