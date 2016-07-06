@@ -28,7 +28,7 @@ public class M9Q2 {
 	@Test
 	public void testPos(){
 		try{
-				M9Q2Stu.deuxiemeFichier("fichier.txt", res);
+				M9Q2Stu.deuxiemeFichier("fichier.txt");
 				BufferedReader verif;
 				verif = new BufferedReader(new FileReader("outStu.txt"));
 				String res = verif.readLine();

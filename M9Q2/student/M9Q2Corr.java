@@ -19,7 +19,7 @@ import java.io.*;
 public class M9Q2Stu 
 {
 
-	public static void deuxiemeFichier(String filename,String res)
+	public static void deuxiemeFichier(String filename)
 	{ 
 		BufferedReader br;
 		try

@@ -19,10 +19,12 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import student.MyBufferedReader;
 import java.io.FileReader;
+import java.lang.*;
+import java.io.*;
 
 public class M9Q2Stu 
 {
-	public static void deuxiemeFichier(String filename,String res) throws IOException
+	public static void deuxiemeFichier(String filename) throws IOException
 	{
 		MyBufferedReader br; // attention!, il faut leur dire d'utiliser MyBufferedReader dans l'énoncé
 		PrintStream out = System.out;
