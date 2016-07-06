@@ -28,8 +28,11 @@ public class M9Q2 {
 	@Test
 	public void testPos(){
 		try{
-				String res ="";
 				M9Q2Stu.deuxiemeFichier("fichier.txt", res);
+				BufferedReader verif;
+				verif = new BufferedReader(new FileReader("outStu.txt"));
+				String res = verif.readLine();
+				verif.close();
 				assertEquals("Hello", res);
 			}
 		catch (FileNotFoundException e){
