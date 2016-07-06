@@ -30,7 +30,7 @@ public class MyBufferedReader
 	public static boolean closeSuccess = true;
 	private BufferedReader bf;
 	
-	public MyBufferedReader(FileReader f) throws FileNotFoundException
+	public MyBufferedReader(FileReader f) throws IOException, FileNotFoundException
 	{
 		if(openSuccess == true)
 		{

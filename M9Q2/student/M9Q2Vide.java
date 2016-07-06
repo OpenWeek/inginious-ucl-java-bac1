@@ -22,7 +22,7 @@ import java.io.FileReader;
 
 public class M9Q2Stu 
 {
-	public static void deuxiemeFichier(String filename,String res)
+	public static void deuxiemeFichier(String filename,String res) throws IOException
 	{
 		MyBufferedReader br; // attention!, il faut leur dire d'utiliser MyBufferedReader dans l'énoncé
 		@@q2@@
