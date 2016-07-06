@@ -28,35 +28,6 @@ public class M9Q6Stu
 	 */
 	public static void charNumber(String filename)
 	{
-		try
-		{
-			Scanner sc = new Scanner( new FileReader(filename) );
-			int i = 0;
-			//String s;
-			while(sc.hasNext())
-			{
-//				s = sc.next();
-//				if(s=="\n"||s=="\t"||s=="\b"||s=="\r"||s=="\f")
-//				{
-//					//
-//				}
-//				else
-//				{
-//					i++;
-//				}
-				sc.next();
-				i++;
-			}
-			System.out.println(i);
-			sc.close();
-		}
-		catch(FileNotFoundException e)
-		{
-			System.out.println(e.getMessage());
-		}
-		catch(IOException e)
-		{
-			System.out.println(e.getMessage());
-		}
+		@@q3@@
 	}
 }
