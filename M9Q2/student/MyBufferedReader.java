@@ -30,7 +30,7 @@ public class MyBufferedReader
 	public static boolean closeSuccess = true;
 	private BufferedReader bf;
 	
-	public MyBufferedReader(FileReader f) throws FileNotFoundException
+	public MyBufferedReader(FileReader f) throws IOException, FileNotFoundException
 	{
 		if(openSuccess == true)
 		{
@@ -53,5 +53,8 @@ public class MyBufferedReader
 			throw new IOException();
 		}
 	}
-	
+	public String readLine() throws IOException
+    {
+    	bf.readLine();
+    }
 }

@@ -29,7 +29,7 @@ public class M9Q2 {
 	public void testPos(){
 		try{
 				String res ="";
-				M9Q2Stu.premierFichier("fichier.txt", res);
+				M9Q2Stu.deuxiemeFichier("fichier.txt", res);
 				assertEquals("Hello", res);
 			}
 		catch (FileNotFoundException e){
@@ -45,13 +45,13 @@ public class M9Q2 {
 		}
 	}
 	
-	@testNeg
+	@Test
 	public void testOpen(){
 		try{
-				File name= new File("fichier.txt");
+				//File name= new File("fichier.txt");
 				String res;
-				name.setReadable(false);
-				M9Q2Stu.deuxiemeFichier(name, res);	
+				//name.setReadable(false);
+				M9Q2Stu.deuxiemeFichier("fichier.txt", res);	
 				assertEquals("Hello",res);			
 			}
 		catch (FileNotFoundException e){
