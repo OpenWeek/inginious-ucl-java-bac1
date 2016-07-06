@@ -53,5 +53,8 @@ public class MyBufferedReader
 			throw new IOException();
 		}
 	}
-	
+	public String readLine() throws IOException
+    {
+    	bf.readLine();
+    }
 }
