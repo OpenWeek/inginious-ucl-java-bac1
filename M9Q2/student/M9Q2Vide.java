@@ -21,10 +21,9 @@ import student.MyBufferedReader;
 
 public class M9Q2Vide 
 {
-	public static void deuxiemeFichier(File filename,String res)
+	public static void deuxiemeFichier(String filename,String res)
 	{
 		MyBufferedReader br;
 		@@q2@@
-		
 	}
 }
