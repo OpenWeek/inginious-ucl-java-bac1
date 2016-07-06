@@ -1,6 +1,6 @@
 package student;
 /**
- *  Copyright (c) 2016 Justine Doutreloux
+ *  Copyright (c) 2016 Justine Doutreloux, Carolina Unriza, Charline Outters
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU Affero General Public License as published by
  *  the Free Software Foundation, either version 3 of the License, or
