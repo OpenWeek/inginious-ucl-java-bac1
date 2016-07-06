@@ -30,11 +30,11 @@ public class MyBufferedReader
 	public static boolean closeSuccess = true;
 	private BufferedReader bf;
 	
-	public MyBufferedReader(String filename) throws FileNotFoundException
+	public MyBufferedReader(FileReader f) throws FileNotFoundException
 	{
 		if(openSuccess == true)
 		{
-			bf = new BufferedReader(new FileReader(filename));
+			bf = new BufferedReader(f);
 		}
 		else
 		{
