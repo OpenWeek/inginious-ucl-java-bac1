@@ -19,10 +19,10 @@ import java.io.*;
 public class CutStu {
 
 	// Code a verifier
-	public static void cut (String str, char c){
+	public static void cut (String str, char c, String filename){
     	try{
         	PrintStream ori = System.out;
-    		FileOutputStream f = new FileOutputStream("answer.txt");
+    		FileOutputStream f = new FileOutputStream(filename);
 			System.setOut(new PrintStream(f));
 @		@q1@@
 			System.setOut(ori);
