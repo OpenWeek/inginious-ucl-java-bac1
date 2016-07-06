@@ -23,7 +23,7 @@ public class M9Q1Stu
 	// Code a verifier
 	public static void premierFichier(String filename,String res)
 	{
-			try
+		try
 		{
 			@@q1@@
 		}
