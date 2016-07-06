@@ -73,7 +73,7 @@ import sys
 import re
 from inginious import feedback
 
-EXERCICE = "M10Q1"
+EXERCICE = "M9Q3"
 CUSTOMSCRIPT="custom.sh"
 CORR=0
 
