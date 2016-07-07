@@ -55,6 +55,6 @@ public class MyBufferedReader
 	}
 	public String readLine() throws IOException
     {
-    	bf.readLine();
+    	return bf.readLine();
     }
 }
