@@ -14,7 +14,7 @@ public class M6Q3Stu {
 		credit = cr;
   		}
 
-        public boolean equals(Cour cour) {
+        public boolean equals(Cours cours) {
     	if ((this.prof).equals(cour.getProf()) && (this.code).equals(cour.getCode()) && this.credit == cour.getCredit()) {
         	return true;
         }

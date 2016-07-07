@@ -24,7 +24,7 @@ public class M6Q3 {
 		try{ 
         		
         	   int res=etu.nbCredit();
-				assertEquals(str + "le nombre de credit renvoyé n'est pas correct", a+b+c, res);
+				assertEquals(str + "le nombre de crédits renvoyé n'est pas correct", a+b+c, res);
                                                                              
 			}
 		catch(StringIndexOutOfBoundsException e){
@@ -49,7 +49,7 @@ public class M6Q3 {
 		try{ 
         		
         	   int res=etu2.nbCredit();
-				assertEquals(str + "le nombre de credit renvoyé n'est pas correct", 0, res);
+				assertEquals(str + "le nombre de crédits renvoyé n'est pas correct lorsque le tableau est vide", 0, res);
                                                                              
 			}
 		catch(StringIndexOutOfBoundsException e){

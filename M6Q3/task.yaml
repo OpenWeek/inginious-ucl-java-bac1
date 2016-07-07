@@ -1,7 +1,7 @@
 accessible: true
 author: Doriane Olewicki & Marie-Marie van der Beek
 context: |+
-    Dans l'exercice précédent, vous avez complété la classe Cours, résumé ci-dessous. On vous demande maintenant de représenter un étudiant qui est inscrit a maximum 5 cours différents et maximum 60 crédits. Les cours auquels l'étudiant est inscrit se trouve dans le tableau tab, celui-ci se remplit de manière croissante (si l'étudiant est inscrit a 3 cours, les 3 premières cases seront remplies). Attention, le tableau pourrait être vide.
+    Dans l'exercice précédent, vous avez complété la classe Cours, résumé ci-dessous. On vous demande maintenant de représenter un étudiant qui est inscrit à maximum 5 cours différents et à maximum 60 crédits. Les cours auxquels l'étudiant est inscrit se trouvent dans le tableau tab, celui-ci se remplit de manière croissante (si l'étudiant est inscrit à 3 cours, les 3 premières cases seront remplies et les deux dernières vides). Attention, le tableau pourrait être complètement vide.
 
     .. code-block:: java
 
@@ -22,8 +22,8 @@ context: |+
             private int nbCours;
 
             public Etudiant(int n, Cours[] a){/*NON FOURNI*/}
-            public int nbCredit(){/* QUESTION 1 */}
-            public boolean inscription (Cours a){/* QUESTION 2 */}
+            public int nbCredit(){/*QUESTION 1*/}
+            public boolean inscription (Cours a){/*NON FOURNI*/}
             }
 
 
@@ -37,14 +37,14 @@ limits:
 name: M6 Question d'approfondissement 1
 network_grading: false
 problems:
-    Q1:
+    q1:
         language: java
         type: code
         name: Nombre de crédits
         header: |-
-            Calculer le nombre total de crédits de l'étudiant.
+            Calculez le nombre total de crédits de l'étudiant.
 
-            hint: parcourez le tableau et recupérer le nombre de crédits de chaque cours.
+            hint: parcourez le tableau et recupérez le nombre de crédits de chaque cours.
 
             .. code-block:: java
 
