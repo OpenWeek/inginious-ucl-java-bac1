@@ -1,7 +1,7 @@
 #! /bin/python
 # -*- coding: utf-8 -*-
 
-#   Copyright (c) 2016 François Michel, Clémentine Munyabarenzi
+#   Copyright (c) 2016 Fitvoye Florian, Dubray Alexandre
 #   This program is free software: you can redistribute it and/or modify
 #   it under the terms of the GNU Affero General Public License as published by
 #   the Free Software Foundation, either version 3 of the License, or
@@ -73,12 +73,17 @@ import sys
 import re
 from inginious import feedback
 
-EXERCICE = "M1Q7"
+EXERCICE = "StringComparaison"
 CUSTOMSCRIPT="custom.sh"
 CORR=0
 
 # EXECCUSTOM vaut 0 si on n'exécute pas de script "custom" pour faire des vérifications supplémentaires
-EXECCUSTOM=0
+EXECCUSTOM=1
+#DELETE_COM vaut 0 si l'on ne veut pas supprimer les commentaires
+DELETE_COM=1
+DELETE_SCRIPT="./delete_comment"
+#Extension du fichier duquel on supprime les commentaire
+EXTENSION=".java"
 NEXERCICES=1
 CODELITTERAL=".. code-block:: java\n\n"
 JAVAC="javac -cp .:/usr/share/java/junit.jar:/usr/share/java/hamcrest-core.jar"
@@ -89,24 +94,35 @@ JAVA_ARGS = shlex.split(JAVA)
 
 subprocess.call(['parsetemplate', '-o', 'student/' + EXERCICE + 'Stu.java', 'student/' + EXERCICE + 'Vide.java'], universal_newlines=True)
 
+if DELETE_COM != 0:
+    OLD_NAME='student/'+EXERCICE+'Stu'+EXTENSION
+    DELETE_PROC=subprocess.call([DELETE_SCRIPT,'student/'+EXERCICE+'Stu.java'],universal_newlines=True)
+    NEW_NAME='student/'+EXERCICE+"Stu_uncomment"+EXTENSION
+
 OUTCUSTOM=0
 if EXECCUSTOM != 0:
-	OUTCUSTOM=subprocess.call(['sh', CUSTOMSCRIPT], universal_newlines=True)
-
-if OUTCUSTOM != 0:
-	exit()
+    if DELETE_COM != 0:
+        PROC=subprocess.Popen(['sh',CUSTOMSCRIPT,NEW_NAME],stdout=subprocess.PIPE,universal_newlines=True)
+        (OUTCUSTOM,err)=PROC.communicate()
+	
+    else:
+        PROC=subprocess.call(['sh', CUSTOMSCRIPT,OLD_NAME], universal_newlines=True)
+        (OUTCUSTOM,err)=PROC.communicate()
+        
+print(OUTCUSTOM)
+if int(OUTCUSTOM) != 0:
+    exit()
 
 with open('logOther.out', 'w') as f:
 	subprocess.call(JAVAC_ARGS + ['student/' + EXERCICE + '.java'], universal_newlines=True, stderr=f)
 
 with open('log.out', 'w') as f:
-	subprocess.call(JAVAC_ARGS + ['student/' + EXERCICE + 'Stu.java'], universal_newlines=True, stderr=f)
+	subprocess.call(JAVAC_ARGS + ['student/' + EXERCICE + '.java'], universal_newlines=True, stderr=f)
 
 
 LOG = open('log.out')
 
 OUTPUT = LOG.read()
-
 LOG.close()
 
 OUTCORR = ""
@@ -114,7 +130,6 @@ if CORR != 0:
     PROC = subprocess.Popen(JAVAC_ARGS + ['student/' + EXERCICE + 'Corr.java'], stdout=subprocess.PIPE, universal_newlines=True)
     OUTCORR = PROC.stdout.read()
     PROC.communicate()
-
 with open('logOther.out', 'r') as f:
 	OUTOTHER = f.read()
 
@@ -133,12 +148,12 @@ if OUTCORR != "":
     MESSAGEENSEIGNANT = OUTCORR
 
 if OUTOTHER != "":
+	# feedback n'aime pas les "\n", donc on contourne le probleme en l'écrivant dans un fichier puis en le lisant.
     # sed permet d'indenter chaque ligne de son input avec une tabulation
     with open('in', 'w+') as f:
         f.write(OUTOTHER)
         f.flush()
         f.seek(0)
-        # On indente le message pour le faire passer dans le code-block rst
         PROC = subprocess.Popen(['sed', '-e', 's/^/\t/'], universal_newlines=True, stdin=f, stdout=subprocess.PIPE)
         out1 = PROC.stdout
         PROC2 = subprocess.Popen(['sed', 's/%/%%/g'], universal_newlines=True, stdin=out1, stdout=subprocess.PIPE)
@@ -158,7 +173,7 @@ if ERREURENSEIGNANT != 0:
     sys.exit(0)
 	
 ERREUR=0
-# Si OUTPUT est vide et qu'il n'y a donc pas d'erreur de compilation
+# Si le fichier est vide et qu'il n'y a donc pas d'erreur de compilation
 if OUTPUT == "":
     with open('err.txt', 'w+') as f:
         # On lance l'exercice 1
@@ -171,6 +186,7 @@ if OUTPUT == "":
         f.seek(0)
         OUTERR = f.read()
     # S'il y a des erreurs dans l'exécution du programme (écrites sur stderr)
+  
     if RESULTAT == 127:
         if NEXERCICES == 1:
 			feedback.set_result('success')
