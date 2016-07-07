@@ -1,0 +1,77 @@
+accessible: true
+author: Aurélie Massart & Alexandre Kühn & Hua Yang Hu
+context: |-
+    Le but de cet exercice est de supprimer un noeud au milieu d'une liste doublement chainée. Concrètement, vous devez supprimer le noeud ayant comme valeur 2 de la liste doublement chainée illustrée ci-dessous.
+
+    .. image:: OWM11_8/Fin.png
+        :height: 367px
+        :width: 1065px
+        :scale: 60%
+
+    La liste doublement chainée est implémentée par la classe Node dont le code est fourni ci-dessous:
+
+    .. code-block:: java
+
+        public class Node{
+            int value;
+            Node next;
+            Node previous;
+
+            ...
+        }
+
+    Cette liste est donc telle que p.value = 1.
+
+    Parmi les différentes propositions, une seule est correcte. Pouvez-vous deviner laquelle?
+environment: default
+groups: false
+limits:
+    memory: '32'
+    output: '1024'
+    time: '60'
+name: 'Mission 11 : Suppression d''un élément au milieu d''une liste doublement chainée'
+network_grading: false
+order: 9
+problems:
+    idFirstExercice:
+        choices:
+        -   text: |-
+                .. code-block:: java
+
+                    p.next = p.next.next;
+                    p.next.next.previous = p;
+            feedback: 'Ce fragment de code est erronné : la deuxième ligne va provoquer
+                une erreur car p.next.next sera nul après l''exécution de la première
+                ligne.'
+        -   text: |-
+                .. code-block:: java
+
+                    p.next.next.previous = p;
+                    p.next = p.next.next.next;
+            feedback: 'Ce fragment de code est erronné : la deuxième ligne provoquera
+                une erreur car p.next.next est nul.'
+        -   text: |-
+                .. code-block:: java
+
+                    p.next.previous = p;
+                    p.next = p.next.next;
+            feedback: 'Ce fragment de code est erronné : la première ligne ne met
+                pas correctement à jour le previous.'
+        -   feedback: Ce fragment de code est erronné.
+            text: |-
+                .. code-block:: java
+
+                    p.next.previous = p;
+                    p = p.next;
+        -   valid: true
+            text: |-
+                .. code-block:: java
+
+                    p.next.next.previous = p;
+                    p.next = p.next.next;
+        header: ''
+        error_message: '``You failed!!!``... '
+        type: multiple-choice
+        limit: 4
+        name: The first exercice
+weight: 1.0
