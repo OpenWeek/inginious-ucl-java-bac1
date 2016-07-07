@@ -20,7 +20,7 @@ import java.util.Scanner;
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-public class M9Q6Stu
+public class M9Q3Stu
 {
 	/**
 	 * @pre -
