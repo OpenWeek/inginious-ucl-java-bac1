@@ -21,18 +21,27 @@ import org.junit.runner.Result;
 import org.junit.Test;
 import java.util.Random;
 import org.junit.runner.notification.Failure;
+import java.io.*;
 
-public class Fact {
+public class Cut {
 	
 	private static String str = "Le code semble comporter des erreurs : ";
 	
 	@Test
-	public void testFact(){
-		try{
-        	assertEquals("Verifiez les pre !",-1,FactStu.fact(-10));
-            assertEquals("Fact(0) ne donne pas le resultat attendu :",1,FactStu.fact(0));
-            assertEquals("Fact(1) ne donne pas le resultat attendu :",1,FactStu.fact(1));
-            assertEquals("Fact(4) ne donne pas le resultat attendu :",24,FactStu.fact(4));
+	public void testCut(){
+    	try{
+    		CutStu.cut("je.suis.belge.",'.');
+    		BufferedReader bf1 = new BufferedReader(new FileReader("student/ans.txt"));
+    		BufferedReader bf2 = new BufferedReader(new FileReader("answer.txt"));
+            String s1=bf1.readLine();
+            String s2=bf2.readLine();
+            while (s1!=null && s2!=null){
+                assertTrue("expected : " + s1 +", found : "+s2,s1.equals(s2));
+            	s1=bf1.readLine();
+                s2=bf2.readLine();
+            }
+            bf1.close();
+            bf2.close();
 		}catch (ArithmeticException e){
 			fail(str + "Le code est incorrect : il est interdit de diviser par zéro.");
 			e.printStackTrace();
@@ -53,13 +62,48 @@ public class Fact {
 		}catch(Exception e){
 			fail(str + "\n" + e.getMessage());
 			e.printStackTrace();
-		}
-	}
+            }
+        }
+        
+        public void testCut2(){
+    	try{
+    		CutStu.cut("hello",'.');
+    		BufferedReader bf3 = new BufferedReader(new FileReader("student/ans.txt"));
+    		BufferedReader bf4 = new BufferedReader(new FileReader("answer2.txt"));
+            String s3=bf3.readLine();
+            String s4=bf4.readLine();
+            while (s3!=null && s4!=null){
+                assertTrue("expected : " + s3 +", found : "+s4,s3.equals(s4));
+            	s3=bf3.readLine();
+                s4=bf4.readLine();
+            }
+            bf3.close();
+            bf4.close();
+		}catch (ArithmeticException e){
+			fail(str + "Le code est incorrect : il est interdit de diviser par zéro.");
+			e.printStackTrace();
+		}catch(ClassCastException e){
+			fail(str + "Attention, certaines variables ont été mal castées	!");
+			e.printStackTrace();
+		}catch(StringIndexOutOfBoundsException e){
+			e.printStackTrace();
+			fail(str + "Attention, vous tentez de lire en dehors des limites d'un String ! (StringIndexOutOfBoundsException)");
+			e.printStackTrace();
+		}catch(ArrayIndexOutOfBoundsException e){
+			e.printStackTrace();
+			fail(str + "Attention, vous tentez de lire en dehors des limites d'un tableau ! (ArrayIndexOutOfBoundsException)");
+			e.printStackTrace();
+		}catch(NullPointerException e){
+			fail(str + "Attention, vous faites une opération sur un objet qui vaut null ! Veillez à bien gérer ce cas.");
+			e.printStackTrace();
+		}catch(Exception e){
+			fail(str + "\n" + e.getMessage());
+			e.printStackTrace();
+            }
+        }
 	
-
-	// Code verificateur
 	public static void main(String[] args) {
-		Result result = JUnitCore.runClasses(Fact.class);
+		Result result = JUnitCore.runClasses(Cut.class);
 		for (Failure failure: result.getFailures()) {
 			System.err.println(failure.toString());
 		}

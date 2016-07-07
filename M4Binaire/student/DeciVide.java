@@ -14,16 +14,21 @@
  */
 
 package student;
+import java.io.*;
 
-public class FactStu {
+public class DeciStu {
 
-    public static int fact (int a){
-        if(a<0){return -1;}
-        if (a==0){return 1;}
-        int r=1;
-        for (int i=2;i<=a;i++){
-            r*=i;
+	// Code a verifier
+	public static void decimale (String str){
+    	try{
+        	PrintStream ori = System.out;
+    		FileOutputStream f = new FileOutputStream("answer.txt");
+			System.setOut(new PrintStream(f));
+@		@q1@@
+			System.setOut(ori);
         }
-        return r;
-    }
+        catch(FileNotFoundException e){
+        	System.out.println("FileNotFound");
+        }
+	}
 }

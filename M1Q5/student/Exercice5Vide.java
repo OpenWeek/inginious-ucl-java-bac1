@@ -1,5 +1,5 @@
 /**
- *  Copyright (c) 2015, 2016 Fitvoye Florian, Dubray Alexandre
+ *  Copyright (c)  2016 Ody Lucas, Rousseaux Tom
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU Affero General Public License as published by
  *  the Free Software Foundation, either version 3 of the License, or
@@ -12,18 +12,21 @@
  *  You should have received a copy of the GNU Affero General Public License
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-
 package student;
 
-public class FactStu {
+public class Exercice5Stu {
 
-    public static int fact (int a){
-        if(a<0){return -1;}
-        if (a==0){return 1;}
-        int r=1;
-        for (int i=2;i<=a;i++){
-            r*=i;
-        }
-        return r;
+    public static boolean xor(boolean A, boolean B)
+    {
+
+        boolean XOR = false;
+       
+        //<exercice>
+        
+        @    @q1@@
+       
+        //</exercice>
+        
+        return XOR; 
     }
 }

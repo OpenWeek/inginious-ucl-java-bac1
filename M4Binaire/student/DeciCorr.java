@@ -15,15 +15,17 @@
 
 package student;
 
-public class FactStu {
+public class DeciStu {
 
-    public static int fact (int a){
-        if(a<0){return -1;}
-        if (a==0){return 1;}
-        int r=1;
-        for (int i=2;i<=a;i++){
-            r*=i;
+	// Code a verifier
+	public static void decimale (String str){
+		int l = str.length();
+		double r=0.0;
+        for (int i=l;i>0;i--){
+            if (str.charAt(l-i)=='1'){
+                r+=Math.pow(2.0,(double)(i-1));
+            }
         }
-        return r;
-    }
+		System.out.println((int)r);
+	}
 }

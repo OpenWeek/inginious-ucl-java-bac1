@@ -1,5 +1,5 @@
 /**
- *  Copyright (c) 2015, 2016 Fitvoye Florian, Dubray Alexandre
+ *  Copyright (c)  2016 Ody Lucas, Rousseaux Tom
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU Affero General Public License as published by
  *  the Free Software Foundation, either version 3 of the License, or
@@ -12,8 +12,6 @@
  *  You should have received a copy of the GNU Affero General Public License
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-
-
 package student;
 import static org.junit.Assert.*;
 import org.junit.runner.JUnitCore;
@@ -22,17 +20,36 @@ import org.junit.Test;
 import java.util.Random;
 import org.junit.runner.notification.Failure;
 
-public class Fact {
+public class Exercice2 {
 	
 	private static String str = "Le code semble comporter des erreurs : ";
 	
 	@Test
-	public void testFact(){
+	public void testPos(){
 		try{
-        	assertEquals("Verifiez les pre !",-1,FactStu.fact(-10));
-            assertEquals("Fact(0) ne donne pas le resultat attendu :",1,FactStu.fact(0));
-            assertEquals("Fact(1) ne donne pas le resultat attendu :",1,FactStu.fact(1));
-            assertEquals("Fact(4) ne donne pas le resultat attendu :",24,FactStu.fact(4));
+        	int a = 0, b = 0, c = 0;
+       		int[] i = Exercice2Stu.prodAlgeb(a,b,c);
+            int[] sol = {1, -(a+b+c), (a*b+a*c+b*c),-a*b*c};
+            assertEquals("Avez-vous pensé au cas nul ? Votre coefficient xCube est erroné ",sol[0],i[0]);
+            assertEquals("Avez-vous pensé au cas nul ? Votre coefficient xCarré est erroné",sol[1],i[1]);
+            assertEquals("Avez-vous pensé au cas nul ? Votre coefficient x est erroné ",sol[2],i[2]);
+            assertEquals("Avez-vous pensé au cas nul ? Votre coefficient tI est erroné ",sol[3],i[3]);
+
+            for(short j = 0; j < 3; j++)
+            {
+            	a = (int)(Math.random()*10+2);
+                b = (int)(Math.random()*10+2);
+                c = (int)(Math.random()*10+2);
+			    i = Exercice2Stu.prodAlgeb(a,b,c);
+                sol[1] = -(a+b+c);
+                sol[2] = (a*b+a*c+b*c);
+                sol[3] = -a*b*c;
+            	assertEquals("Votre coefficient xCube est erroné ",sol[0],i[0]);
+                assertEquals("Votre coefficient xCarré est erroné",sol[1],i[1]);
+                assertEquals("Votre coefficient x est erroné ",sol[2],i[2]);
+                assertEquals("Votre coefficient tI est erroné ",sol[3],i[3]);
+            }
+
 		}catch (ArithmeticException e){
 			fail(str + "Le code est incorrect : il est interdit de diviser par zéro.");
 			e.printStackTrace();
@@ -57,9 +74,10 @@ public class Fact {
 	}
 	
 
+	
 	// Code verificateur
 	public static void main(String[] args) {
-		Result result = JUnitCore.runClasses(Fact.class);
+		Result result = JUnitCore.runClasses(Exercice2.class);
 		for (Failure failure: result.getFailures()) {
 			System.err.println(failure.toString());
 		}

@@ -1,5 +1,6 @@
+
 /**
- *  Copyright (c) 2015, 2016 Fitvoye Florian, Dubray Alexandre
+ *  Copyright (c)  2016 Ody Lucas, Rousseaux Tom
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU Affero General Public License as published by
  *  the Free Software Foundation, either version 3 of the License, or
@@ -12,8 +13,6 @@
  *  You should have received a copy of the GNU Affero General Public License
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-
-
 package student;
 import static org.junit.Assert.*;
 import org.junit.runner.JUnitCore;
@@ -22,17 +21,22 @@ import org.junit.Test;
 import java.util.Random;
 import org.junit.runner.notification.Failure;
 
-public class Fact {
+public class Exercice1 {
 	
 	private static String str = "Le code semble comporter des erreurs : ";
 	
 	@Test
-	public void testFact(){
+	public void testPos(){
 		try{
-        	assertEquals("Verifiez les pre !",-1,FactStu.fact(-10));
-            assertEquals("Fact(0) ne donne pas le resultat attendu :",1,FactStu.fact(0));
-            assertEquals("Fact(1) ne donne pas le resultat attendu :",1,FactStu.fact(1));
-            assertEquals("Fact(4) ne donne pas le resultat attendu :",24,FactStu.fact(4));
+			int b = (int)(20+Math.random()*20);
+			int c = (int)(20+Math.random()*20);
+
+            for(int a=0;a<=20;a++)
+			{
+	    		int sol = Exercice1Stu.eqSolv(1, -(a+b+c), (a*b + b*c + a*c), -a*b*c);
+               assertEquals("Vous ne devez chercher que les solutions entre 0 et 20 inclus",true,sol<=20);
+				assertEquals("Lorsque la solution a l'equation est "+a+", votre code renvoie "+sol+" : ",a,sol);
+			}
 		}catch (ArithmeticException e){
 			fail(str + "Le code est incorrect : il est interdit de diviser par zéro.");
 			e.printStackTrace();
@@ -57,9 +61,10 @@ public class Fact {
 	}
 	
 
+	
 	// Code verificateur
 	public static void main(String[] args) {
-		Result result = JUnitCore.runClasses(Fact.class);
+		Result result = JUnitCore.runClasses(Exercice1.class);
 		for (Failure failure: result.getFailures()) {
 			System.err.println(failure.toString());
 		}

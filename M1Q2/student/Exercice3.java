@@ -1,5 +1,5 @@
 /**
- *  Copyright (c) 2015, 2016 Fitvoye Florian, Dubray Alexandre
+ *  Copyright (c)  2016 Ody Lucas, Rousseaux Tom
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU Affero General Public License as published by
  *  the Free Software Foundation, either version 3 of the License, or
@@ -12,8 +12,6 @@
  *  You should have received a copy of the GNU Affero General Public License
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-
-
 package student;
 import static org.junit.Assert.*;
 import org.junit.runner.JUnitCore;
@@ -22,17 +20,44 @@ import org.junit.Test;
 import java.util.Random;
 import org.junit.runner.notification.Failure;
 
-public class Fact {
-	
+public class Exercice3 {
+
 	private static String str = "Le code semble comporter des erreurs : ";
-	
+
 	@Test
-	public void testFact(){
+	public void testPos(){
 		try{
-        	assertEquals("Verifiez les pre !",-1,FactStu.fact(-10));
-            assertEquals("Fact(0) ne donne pas le resultat attendu :",1,FactStu.fact(0));
-            assertEquals("Fact(1) ne donne pas le resultat attendu :",1,FactStu.fact(1));
-            assertEquals("Fact(4) ne donne pas le resultat attendu :",24,FactStu.fact(4));
+			String str=new String("Avec des coefficients nuls, ");
+			int[] stu = Exercice3Stu.multiplicationComplexe(0,0,0,0);
+			assertEquals(str+"vous avez mal calculé votre partie réelle a! ",0,stu[0]);
+			assertEquals(str+"vous avez mal calculé votre partie imaginaire b! ",0,stu[1]);
+			assertEquals(str+"imaginairePur n'est pas correct!",true,Exercice3Stu.imaginairePur);
+			assertEquals(str+"reelPur n'est pas correct!",true,Exercice3Stu.reelPur);
+			Exercice3Stu.imaginairePur=false; Exercice3Stu.reelPur=false;
+
+            str="Pour un produit reel pur, ";
+			stu = Exercice3Stu.multiplicationComplexe(1,2,3,-6);
+			assertEquals(str+"Vous avez mal calculé votre partie réelle a! ",15,stu[0]);
+			assertEquals(str+"Vous avez mal calculé votre partie imaginaire b! ",0,stu[1]);
+			assertEquals(str+"imaginairePur n'est pas correct!",false,Exercice3Stu.imaginairePur);
+			assertEquals(str+"reelPur n'est pas correct!",true,Exercice3Stu.reelPur);
+			Exercice3Stu.imaginairePur=false; Exercice3Stu.reelPur=false;
+
+			str="Pour un produit imaginaire pur, ";
+			stu = Exercice3Stu.multiplicationComplexe(2,1,6,12);
+			assertEquals(str+"Vous avez mal calculé votre partie réelle a! ",0,stu[0]);
+			assertEquals(str+"Vous avez mal calculé votre partie imaginaire b! ",30,stu[1]);
+			assertEquals(str+"imaginairePur n'est pas correct!",true,Exercice3Stu.imaginairePur);
+			assertEquals(str+"reelPur n'est pas correct!",false,Exercice3Stu.reelPur);
+			Exercice3Stu.imaginairePur=false; Exercice3Stu.reelPur=false;
+
+			str="Pour un produit complexe standard, ";
+			stu = Exercice3Stu.multiplicationComplexe(1,2,3,4);
+			assertEquals(str+"Vous avez mal calculé votre partie réelle a! ",-5,stu[0]);
+			assertEquals(str+"Vous avez mal calculé votre partie imaginaire b! ",10,stu[1]);
+			assertEquals(str+"imaginairePur n'est pas correct!",false,Exercice3Stu.imaginairePur);
+			assertEquals(str+"reelPur n'est pas correct!",false,Exercice3Stu.reelPur);
+			Exercice3Stu.imaginairePur=false; Exercice3Stu.reelPur=false;
 		}catch (ArithmeticException e){
 			fail(str + "Le code est incorrect : il est interdit de diviser par zéro.");
 			e.printStackTrace();
@@ -55,11 +80,12 @@ public class Fact {
 			e.printStackTrace();
 		}
 	}
-	
+
+
 
 	// Code verificateur
 	public static void main(String[] args) {
-		Result result = JUnitCore.runClasses(Fact.class);
+		Result result = JUnitCore.runClasses(Exercice3.class);
 		for (Failure failure: result.getFailures()) {
 			System.err.println(failure.toString());
 		}

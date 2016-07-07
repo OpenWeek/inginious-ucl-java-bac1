@@ -15,15 +15,20 @@
 
 package student;
 
-public class FactStu {
+public class CutStu {
 
-    public static int fact (int a){
-        if(a<0){return -1;}
-        if (a==0){return 1;}
-        int r=1;
-        for (int i=2;i<=a;i++){
-            r*=i;
-        }
-        return r;
+	// Code a verifier
+	public static void cut(String str, char c){
+    	int l = str.length();
+    	String r = "";
+    	for (int i=0; i<l;i++){
+            if (str.charAt(i)==c){
+                System.out.println(r);
+                r = "";
+            }
+            else {
+                r+=str.charAt(i);
+            }
+    	}	
     }
 }

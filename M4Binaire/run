@@ -73,7 +73,7 @@ import sys
 import re
 from inginious import feedback
 
-EXERCICE = "Fact"
+EXERCICE = "Deci"
 CUSTOMSCRIPT="custom.sh"
 CORR=0
 
