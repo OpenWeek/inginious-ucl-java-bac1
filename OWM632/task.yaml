@@ -34,7 +34,7 @@ limits:
     memory: '100'
     time: '30'
     output: '2'
-name: M6 Question d'approfondissement 2
+name: 'Mission 6 : Question d''approfondissement -  Etudiant.2'
 network_grading: false
 problems:
     q1:
@@ -53,5 +53,5 @@ problems:
                 * cours renvoie false. Sinon, ajoute le cours à tab et
                 * renvoie true.
                 */
-                public boolean inscription(Cours cours)
+                public boolean inscription(Cours cours){/*VOTRE CODE*/}
 weight: 1.0
