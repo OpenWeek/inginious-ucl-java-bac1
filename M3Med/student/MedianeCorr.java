@@ -15,23 +15,19 @@
 
 package student;
 
-public class FactStu {
+public class MedianeStu {
 
-    public static int fact (int a){
-        if(a<0){return -1;}
-        if (a==0){return 1;}
-        int r=1;
-        for (int i=2;i<=a;i++){
-            r*=i;
-        }
-        return r;
-    }
-    public static double exp (int a){
-        if(a<0){return -1;}
-        double r=0.0;
-        for (int i=0;i<15;i++){
-            r+=(Math.pow((double)a,(double)i))/(double)fact(i);
-        }
-        return r;
-    }
+	// Code a verifier
+	public static int mediane (int a, int b, int c){
+		if (a<b){
+    		if (c<a){return a;}
+    		else if (c<b){return c;}
+    		else {return b;}
+		}
+		else{
+    		if (c<b){return b;}
+    		else if (a<c){return a;}
+    		else {return c;}
+		}
+	}
 }
