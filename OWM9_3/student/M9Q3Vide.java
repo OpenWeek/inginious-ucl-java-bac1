@@ -24,7 +24,7 @@ public class M9Q6Stu
 {
 	/**
 	 * @pre -
-	 * @post affiche le nombre de caractères contenus dans le fichier
+	 * @post retourne le nombre de caractères contenus dans le fichier
 	 */
 	public static int charNumber(String filename)
 	{

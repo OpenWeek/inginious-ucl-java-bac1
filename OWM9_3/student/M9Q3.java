@@ -28,9 +28,36 @@ public class M9Q3
 	@Test
 	public void test()
 	{
-		int res = M9Q3Stu.charNumber("fichier.txt");
-		int res1 = 
-		assertEquals(res, res1);
+		try
+		{
+			int res = M9Q3Stu.charNumber("fichier.txt");
+			int res1 = M9Q3Corr.charNumber("fichier.txt");
+			assertEquals(res, res1);
+		}
+		catch(FileNotFoundException e)
+		{
+			fail(str + "Le code est incorrect : le nom du fichier ne semble pas être correct, vous essayez d'ouvrir un fichier non existant.");
+			e.printStackTrace();
+		}
+		catch(IOException e)
+		{
+			fail(str + "Le code est incorrect: il y a un problème à l'ouverture ou à la fermeture du fichier");
+			e.printStackTrace();
+		}
+	}
+	
+	public static void main(String[] args)
+	{
+		Result result = JUnitCore.runClasses(M9Q3.class);
+		for(Failure failure : result.getFailures())
+		{
+			System.err.println(failure.toString());
+		}
+		if(result.wasSuccessful())
+		{
+			System.out.println("Tous les tests se sont passés sans encombre");
+			System.exit(127);
+		}
 	}
 	
 }
