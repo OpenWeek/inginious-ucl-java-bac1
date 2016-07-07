@@ -11,7 +11,7 @@ limits:
     memory: '200'
     time: '30'
     output: '2'
-name: Mission 9 : Premiers fichiers II
+name: Mission 9 : Exercice facile - Premiers fichiers II
 network_grading: false
 problems:
     q2:
