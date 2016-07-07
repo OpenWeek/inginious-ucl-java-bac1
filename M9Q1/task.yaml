@@ -1,0 +1,29 @@
+accessible: true
+author: Justine Doutreloux, Charline Outters, Carolina Unriza Salamanca
+context: ''
+environment: java7
+groups: false
+limits:
+    memory: '200'
+    time: '30'
+    output: '2'
+name: Premiers fichiers
+network_grading: false
+problems:
+    q1:
+        language: Java
+        type: code
+        name: Première ouverture
+        header: |-
+            Pour cette première tâche, on vous demande simplement d'ouvrir et de fermer le fichier passé en argument et rien de plus.
+
+            .. code-block:: java
+
+                /* @pre: le fichier à ouvrir existe déjà
+                 * @post: une fois le fichier ouvert, afficher la première ligne
+                 *           refermer le fichier.
+                 */
+                 public static void premierFichier(String filename, String res);
+
+            Piste: utiliser la méthode readLine() pour afficher la première ligne.
+weight: 1.0

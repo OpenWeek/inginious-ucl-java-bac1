@@ -8,13 +8,13 @@ import sys
 import re
 from inginious import feedback
 
-EXERCICE = "M6Q2"
+EXERCICE = "M9Q1"
 CUSTOMSCRIPT="custom.sh"
 CORR=0
 
 # EXECCUSTOM vaut 0 si on n'exécute pas de script "custom" pour faire des vérifications supplémentaires
 EXECCUSTOM=0
-NEXERCICES=2
+NEXERCICES=1
 CODELITTERAL=".. code-block:: java\n\n"
 JAVAC="javac -cp .:/usr/share/java/junit.jar:/usr/share/java/hamcrest-core.jar"
 JAVA="run_student --time 20 java -ea -cp .:./student:/usr/share/java/junit.jar:/usr/share/java/hamcrest-core.jar"
@@ -208,8 +208,6 @@ else:
         feed = "Votre programme ne compile pas: \n " + CODELITTERAL + OUTPUT + "\n"
         feedback.set_result('failed')
         feedback.set_global_feedback(feed)
-
-
 
 
 
