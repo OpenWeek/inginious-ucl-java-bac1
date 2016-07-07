@@ -33,7 +33,7 @@ public class M6Q1 {
                M6Q1Stu a = new M6Q1Stu(nameInit);
                a.setName(nameEnd);
 
-				assertEquals("La fonction set n'est pas correcte ", nameEnd, a.getNameAdm());
+				assertEquals("Question 1 : La fonction set n'est pas correcte ", nameEnd, a.getNameAdm());
 			
 		}catch (ArithmeticException e){
 			fail(str + "Le code est incorrect : il est interdit de diviser par zéro.");
@@ -65,7 +65,7 @@ public class M6Q1 {
                M6Q1Stu a = new M6Q1Stu(nameInit);
 
 
-				assertEquals("La fonction get n'est pas correcte ", nameInit, a.getName());
+				assertEquals("Question 2 : La fonction get n'est pas correcte ", nameInit, a.getName());
 			
 		}catch (ArithmeticException e){
 			fail(str + "Le code est incorrect : il est interdit de diviser par zéro.");

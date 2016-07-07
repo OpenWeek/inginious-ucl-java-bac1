@@ -1,0 +1,29 @@
+accessible: true
+author: Fitvoye Florian, Dubray Alexandre
+context: De nombreuses librairies sont disponibles pour vous aider à résoudre tout types de problèmes (Vous pouvez les retrouver via l'API d'Oracle). Dans cette tâche, vous devrez, en vous aidant des fonctions de la librairie ``Java.lang.Math``, écrire le corps de la fonction ``DivideAndRound``. Cette fonction prend deux ``Double`` en argument, respectivement d1 et d2, fait la division de d1 par d2 et arrondis le résultat à l'entier inférieur le plus proche.
+environment: java7
+groups: false
+limits:
+    memory: '100'
+    time: '30'
+    output: '2'
+name: Division et arrondis
+network_grading: false
+problems:
+    q1:
+        language: java
+        type: code
+        name: Division
+        header: |-
+            Voici la signature de la fonction:
+
+            .. code-block:: java
+                
+                /*
+                 *@pré: d2 != 0.0
+                 *@post: Retourne la division de d1 par d2, arrondie à l'entier inférieur le plus proche
+                 */
+                public static double DivideAndRound(double d1, double d2){
+                    /* Code à compléter */
+                }
+weight: 1.0

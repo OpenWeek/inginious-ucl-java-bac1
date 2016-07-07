@@ -20,7 +20,7 @@ import org.junit.Test;
 import java.util.Random;
 import org.junit.runner.notification.Failure;
 
-public class M6Q2 {
+public class M6Q5 {
 	
 	private static String str = "Le code semble comporter des erreurs : ";
 	
@@ -28,12 +28,9 @@ public class M6Q2 {
     @Test
 	public void test11(){
 		try{
-			String prof1 = "prof" + (int)(Math.random() * 10);
-    		String code1 = "code" + (int)(Math.random() * 10);
-   		    int credit1 = (int)(Math.random() * 10);
-            
-            M6Q2Stu a11 = new M6Q2Stu(prof1, code1, credit1);
-			 assertEquals("Question 1 : Prof mal initialisé", prof1, a11.getProf());
+        	M6Q5Stu a = new M6Q5Stu();
+        	a.exo1();
+			assertNotNull("Question 1 : L'objet 'info' n'est pas initialisé.", a.getInfoAdm());
              
 		}catch (ArithmeticException e){
 			fail(str + "Le code est incorrect : il est interdit de diviser par zéro.");
@@ -59,14 +56,11 @@ public class M6Q2 {
 	}
     
     @Test
-    public void test12(){
+	public void test12(){
 		try{
-			String prof1 = "prof" + (int)(Math.random() * 10);
-    		String code1 = "code" + (int)(Math.random() * 10);
-   		    int credit1 = (int)(Math.random() * 10);
-            
-            M6Q2Stu a11 = new M6Q2Stu(prof1, code1, credit1);
-             assertEquals("Question 1 : Code mal initialisé", code1, a11.getCode());
+        	M6Q5Stu a = new M6Q5Stu();
+        	a.exo1();
+			assertNotNull("Question 1 : L'objet 'math' n'est pas initialisé.", a.getMathAdm());
              
 		}catch (ArithmeticException e){
 			fail(str + "Le code est incorrect : il est interdit de diviser par zéro.");
@@ -92,15 +86,41 @@ public class M6Q2 {
 	}
     
     @Test
-    public void test13(){
+	public void test13(){
 		try{
-			String prof1 = "prof" + (int)(Math.random() * 10);
-    		String code1 = "code" + (int)(Math.random() * 10);
-   		    int credit1 = (int)(Math.random() * 10);
+        	M6Q5Stu a = new M6Q5Stu();
+        	a.exo1();
+            assertEquals("Question 1 : L'objet 'info' est mal initialisé.", "PecheurLFSAB14016", (a.getInfoAdm()).getProf() + (a.getInfoAdm()).getCode() + (a.getInfoAdm()).getCredit());
+			
+		}catch (ArithmeticException e){
+			fail(str + "Le code est incorrect : il est interdit de diviser par zéro.");
+			e.printStackTrace();
+		}catch(ClassCastException e){
+			fail(str + "Attention, certaines variables ont été mal castées	!");
+			e.printStackTrace();
+		}catch(StringIndexOutOfBoundsException e){
+			e.printStackTrace();
+			fail(str + "Attention, vous tentez de lire en dehors des limites d'un String ! (StringIndexOutOfBoundsException)");
+			e.printStackTrace();
+		}catch(ArrayIndexOutOfBoundsException e){
+			e.printStackTrace();
+			fail(str + "Attention, vous tentez de lire en dehors des limites d'un tableau ! (ArrayIndexOutOfBoundsException)");
+			e.printStackTrace();
+		}catch(NullPointerException e){
+			fail(str + "Attention, vous faites une opération sur un objet qui vaut null ! Veillez à bien gérer ce cas.");
+			e.printStackTrace();
+		}catch(Exception e){
+			fail(str + "\n" + e.getMessage());
+			e.printStackTrace();
+		}
+	}
+    @Test
+	public void test14(){
+		try{
+        	M6Q5Stu a = new M6Q5Stu();
+        	a.exo1();
+            assertEquals("Question 1 : L'objet 'math' est mal initialisé.", "BenNaoumLFSAB11018", (a.getMathAdm()).getProf() + (a.getMathAdm()).getCode() + (a.getMathAdm()).getCredit());
             
-            M6Q2Stu a11 = new M6Q2Stu(prof1, code1, credit1);
-             assertEquals("Question 1 : Crédit mal initialisé", credit1, a11.getCredit());
-             
 		}catch (ArithmeticException e){
 			fail(str + "Le code est incorrect : il est interdit de diviser par zéro.");
 			e.printStackTrace();
@@ -124,17 +144,15 @@ public class M6Q2 {
 		}
 	}
     
-    /* TEST POUR LA Q2 */    
+    /* TEST POUR LA Q2 */
     @Test
 	public void test21(){
 		try{
-           String prof21 = "Pecheur" + (int)(Math.random() *10);
-           String code21 = "FSAB1401" + (int)(Math.random() *10);
-           int credit21 = (int)(Math.random() *10);
-			String text21 = prof21 + "-" + code21 + "-" + credit21;
+        	M6Q5Stu a = new M6Q5Stu();
+            a.exo1();
+        	a.exo2(a.getInfoAdm(), a.getMathAdm());
+            assertEquals("Question 2 : L'objet 'info' est mal mis à jour.", "PECHEURLFSAB14016", (a.getInfoAdm()).getProf() + (a.getInfoAdm()).getCode() + (a.getInfoAdm()).getCredit());
             
-            M6Q2Stu a21 = new M6Q2Stu(text21);
-			 assertEquals("Question 2 : Prof mal initialisé", prof21, a21.getProf());
 		}catch (ArithmeticException e){
 			fail(str + "Le code est incorrect : il est interdit de diviser par zéro.");
 			e.printStackTrace();
@@ -161,14 +179,11 @@ public class M6Q2 {
     @Test
 	public void test22(){
 		try{
-           String prof21 = "Pecheur" + (int)(Math.random() *10);
-           String code21 = "FSAB1401" + (int)(Math.random() *10);
-           int credit21 = (int)(Math.random() *10);
-			String text21 = prof21 + "-" + code21 + "-" + credit21;
+        	M6Q5Stu a = new M6Q5Stu();
+            a.exo1();
+        	a.exo2(a.getInfoAdm(), a.getMathAdm());
+            assertEquals("Question 2 : L'objet 'math' est mal mis à jour.", "BenNaoumLFSAB10005", (a.getMathAdm()).getProf() + (a.getMathAdm()).getCode() + (a.getMathAdm()).getCredit());
             
-            M6Q2Stu a21 = new M6Q2Stu(text21);
-             assertEquals("Question 2 : Code mal initialisé", code21, a21.getCode());
-             
 		}catch (ArithmeticException e){
 			fail(str + "Le code est incorrect : il est interdit de diviser par zéro.");
 			e.printStackTrace();
@@ -195,13 +210,73 @@ public class M6Q2 {
     @Test
 	public void test23(){
 		try{
-           String prof21 = "Pecheur" + (int)(Math.random() *10);
-           String code21 = "FSAB1401" + (int)(Math.random() *10);
-           int credit21 = (int)(Math.random() *10);
-			String text21 = prof21 + "-" + code21 + "-" + credit21;
+        	M6Q5Stu a = new M6Q5Stu();
+            a.exo1();
+        	a.exo2(a.getInfoAdm(), a.getMathAdm());
+            assertEquals("Question 2 : Il faut utiliser les get et set fournis dans la classe Cours.", 3, a.getCountSets());
             
-            M6Q2Stu a21 = new M6Q2Stu(text21);
-             assertEquals("Question 2 : Crédit mal initialisé", credit21, a21.getCredit());
+		}catch (ArithmeticException e){
+			fail(str + "Le code est incorrect : il est interdit de diviser par zéro.");
+			e.printStackTrace();
+		}catch(ClassCastException e){
+			fail(str + "Attention, certaines variables ont été mal castées	!");
+			e.printStackTrace();
+		}catch(StringIndexOutOfBoundsException e){
+			e.printStackTrace();
+			fail(str + "Attention, vous tentez de lire en dehors des limites d'un String ! (StringIndexOutOfBoundsException)");
+			e.printStackTrace();
+		}catch(ArrayIndexOutOfBoundsException e){
+			e.printStackTrace();
+			fail(str + "Attention, vous tentez de lire en dehors des limites d'un tableau ! (ArrayIndexOutOfBoundsException)");
+			e.printStackTrace();
+		}catch(NullPointerException e){
+			fail(str + "Attention, vous faites une opération sur un objet qui vaut null ! Veillez à bien gérer ce cas.");
+			e.printStackTrace();
+		}catch(Exception e){
+			fail(str + "\n" + e.getMessage());
+			e.printStackTrace();
+		}
+	}
+    /* TEST POUR LA Q3 */
+    @Test
+	public void test31(){
+		try{
+        	M6Q5Stu a = new M6Q5Stu();
+            a.exo1();
+            boolean comp = a.exo3(a.getInfoAdm(), a.getMathAdm());
+            assertEquals("Question 3 : La comparaison est mal réalisée.", true, comp);
+            
+		}catch (ArithmeticException e){
+			fail(str + "Le code est incorrect : il est interdit de diviser par zéro.");
+			e.printStackTrace();
+		}catch(ClassCastException e){
+			fail(str + "Attention, certaines variables ont été mal castées	!");
+			e.printStackTrace();
+		}catch(StringIndexOutOfBoundsException e){
+			e.printStackTrace();
+			fail(str + "Attention, vous tentez de lire en dehors des limites d'un String ! (StringIndexOutOfBoundsException)");
+			e.printStackTrace();
+		}catch(ArrayIndexOutOfBoundsException e){
+			e.printStackTrace();
+			fail(str + "Attention, vous tentez de lire en dehors des limites d'un tableau ! (ArrayIndexOutOfBoundsException)");
+			e.printStackTrace();
+		}catch(NullPointerException e){
+			fail(str + "Attention, vous faites une opération sur un objet qui vaut null ! Veillez à bien gérer ce cas.");
+			e.printStackTrace();
+		}catch(Exception e){
+			fail(str + "\n" + e.getMessage());
+			e.printStackTrace();
+		}
+	}
+    
+    @Test
+	public void test32(){
+		try{
+        	M6Q5Stu a = new M6Q5Stu();
+            a.exo1();
+            boolean comp = a.exo3(a.getInfoAdm(), a.getMathAdm());
+            assertEquals("Question 3 : Il faut utiliser la fonction equals fournie par la classe Cours", 2, a.getCountEquals());
+            
 		}catch (ArithmeticException e){
 			fail(str + "Le code est incorrect : il est interdit de diviser par zéro.");
 			e.printStackTrace();
@@ -227,7 +302,7 @@ public class M6Q2 {
     
 	// Code verificateur
 	public static void main(String[] args) {
-		Result result = JUnitCore.runClasses(M6Q2.class);
+		Result result = JUnitCore.runClasses(M6Q5.class);
 		for (Failure failure: result.getFailures()) {
 			System.err.println(failure.toString());
 		}
@@ -237,5 +312,4 @@ public class M6Q2 {
 		}
 	}
 }
-
 
