@@ -1,13 +1,79 @@
 #! /bin/python
 # -*- coding: utf-8 -*-
 
+#   Copyright (c) 2016 Fitvoye Florian, Dubray Alexandre
+#   This program is free software: you can redistribute it and/or modify
+#   it under the terms of the GNU Affero General Public License as published by
+#   the Free Software Foundation, either version 3 of the License, or
+#   (at your option) any later version.
+#
+#   This program is distributed in the hope that it will be useful,
+#   but WITHOUT ANY WARRANTY; without even the implied warranty of
+#   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#   GNU Affero General Public License for more details.
+#
+#   You should have received a copy of the GNU Affero General Public License
+#   along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+
+
+
+#	@author: François MICHEL
+
+
+# Ce script est un template pour lancer les exercices sur INGINIOUS.
+# Ce script va compiler et exécuter les fichiers suivants :
+# {EXERCICE}.java, 
+# {EXERCICE}Vide.java
+# {EXERCICE}Stu.java (qui sera créé par ce script) 
+# et optionnellement {EXERCICE}Corr.java
+# Ce script va parser le fichier {EXERCICE}Vide.java pour insérer la réponse de l'étudiant
+# à l'intérieur et mettre le tout dans un fichier nommé {EXERCICE}Stu.java
+# Il est important de bien respecter les noms des fichiers !
+
+# Le fichier {EXERCICE}.java contiendra la main qui lancera les tests. Losque les tests ont réussi, la main se termine avec System.exit(127). Lorsqu'un problème survient, la main se termine avec une autre valeur que 127.
+
+# Le fichier {EXERCICE}Vide.java contient un template java avec le code à compléter par l'étudiant.
+
+# Le fichier {EXERCICE}Corr.java est un fichier java optionnel, sensé contenir une résolution correcte de l'exercice dans le cas où il serait utile de comparer les réponses renvoyées par le code de l'étudiant avec celles renvoyées par la fonction correcte, pour le feedback.
+
+# Le fichiers custom.sh est un fichier optionnel, qui contient un script sh pour par exemple procéder à des vérifications dans le code (comme détecter l'utilisation de Math.pow à un endroit on on ne pourrait pas l'utiliser). Ce script doit renvoyer 0 (avec echo, par exemple), lorsque l'exécution du script s'est bien déroulée. Il doit renvoyer une autre valeur quand un probème est survenu (par exemple, on a détecté l'utilisation de Math.pow alors que c'est interdit). Lorsqu'un problème est survenu, le script doit retourner un feedback négatif pour la question en cours ainsi qu'un feedback négatif pour la tâche. Lorsqu'une erreur est survenue dans custom.sh, ce script-ci arrêtera automatiquement sa propre exécution directement avec exit, une fois custom.sh terminé.
+
+# Pour utiliser ce script pour corriger plusieurs exercices en une seule tâche, il faut respecter des conventions. Tout d'abord, le premier exercice doit s'appeler q1, le second doit s'appeler q2, le ième doit s'appeler qi.
+# Pour pourvoir faire un feedback spécialisé par exercice de la tâche, il faut impérativement que les erreurs (lorsque le code n'est pas correct) soient afficheées sur System.err avec comme première ligne une ligne qui comprend "Question i :" (pour le ième exercice). Par exemple :
+
+
+# Sur System.err : 
+# in testMethode : Question 1 : 
+# la réponse obtenue n'est pas correcte
+# in testMethode2 : Question 1 :
+# la réponse obtenue vaut null mais ce ne devrait pas être le cas
+# in testMethodeEx2 : Question 2 :
+# assertequals : la réponse devrait valoir 3
+# Question 2 : 
+# une ArrayIndexOutOfBounds s'est lancée
+
+# ... etc
+
+# L'ordre des labels "Question i :" n'a pas d'importance, les messages peuvent être désordonnés et s'entremêler par question.
+# La ligne qui contient le label "Question i : " sera supprimée dans le feedback
+
+# Pour utiliser ce template sur une de vos tâches, les variables à modifier sont :
+# EXERCICE, qui contient l'identifiant de l'exercice. Cet identifiant doit se retrouver dans les noms de fichiers java comme indiqué ci-dessus.
+# CORR, qui vaudra 0 lorsqu'il n'y a pas de fichier {EXERCICE}Corr.java à compiler. (Attention, mettre CORR à une autre valeur que 0 alors qu'il n'y a pas de fichier {EXERCICE}Corr.java provoquera une erreur de compilation.
+# EXECCUSTOM, qui vaudra 0 lorsqu'il n'y a pas de script custom.sh à exécuter et une autre valeur quand il faut en exécuter un.
+# NEXERCICES, qui indique le nombre d'exercices que comprend la tâche. Laisser à 1 s'il n'y a qu'un exercice dans la tâche (le cas idéal)
+
+# Pour le reste du script, il n'y a rien à modifier sauf peut-être pour certains cas précis.
+
+
 import subprocess 
 import shlex
 import sys
 import re
 from inginious import feedback
 
-EXERCICE = "M6Q6"
+EXERCICE = "Mediane"
 CUSTOMSCRIPT="custom.sh"
 CORR=0
 
@@ -160,7 +226,7 @@ if OUTPUT == "":
                     f.flush()
                     f.seek(0)
                     with open('question.out', 'w+') as f2:
-                        PROC = subprocess.Popen(['sed', '-e', "/Question " + str(i) + " 😕,/Question [^\D1] 😕!d"], universal_newlines=True, stdout=f2, stdin=f)
+                        PROC = subprocess.Popen(['sed', '-e', "/Question " + str(i) + " :/,/Question [^\D1] :/!d"], universal_newlines=True, stdout=f2, stdin=f)
                         PROC.communicate()
                         f2.seek(0)
                         p = re.compile("Question [0-9] :")
@@ -207,3 +273,6 @@ else:
         feed = "Votre programme ne compile pas: \n " + CODELITTERAL + OUTPUT + "\n"
         feedback.set_result('failed')
         feedback.set_global_feedback(feed)
+
+
+
