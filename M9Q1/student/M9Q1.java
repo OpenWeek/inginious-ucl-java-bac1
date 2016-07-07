@@ -37,7 +37,7 @@ public class M9Q1 {
 				assertEquals("Hello", res);
 			}
 		catch(FileNotFoundException e){
-			fail(str + "Le code est incorrect : le nom du fichier ne semble pas être correct, vous essayez d'ouvrir un fichier non existnant.");
+			fail(str + "Le code est incorrect : le nom du fichier ne semble pas être correct, vous essayez d'ouvrir un fichier non existant.");
 			e.printStackTrace();
 		}catch(IOException e){
 			fail(str + "Le code est incorrect: il y a un problème lors de l'utilisation de la méthode readLine() ou close()");
