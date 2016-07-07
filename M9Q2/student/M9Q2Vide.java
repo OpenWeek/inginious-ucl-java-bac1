@@ -1,5 +1,5 @@
 /**
- *  Copyright (c) 2015, 2016 Fitvoye Florian, Dubray Alexandre
+ *  Copyright (c) 2016 Justine Doutreloux, Carolina Unriza, Charline Outters
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU Affero General Public License as published by
  *  the Free Software Foundation, either version 3 of the License, or
@@ -15,23 +15,22 @@
 
 package student;
 
-public class FactStu {
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import student.MyBufferedReader;
+import java.io.FileReader;
+import java.lang.*;
+import java.io.*;
 
-    public static int fact (int a){
-        if(a<0){return -1;}
-        if (a==0){return 1;}
-        int r=1;
-        for (int i=2;i<=a;i++){
-            r*=i;
-        }
-        return r;
-    }
-    public static double exp (int a){
-        if(a<0){return -1;}
-        double r=0.0;
-        for (int i=0;i<15;i++){
-            r+=(Math.pow((double)a,(double)i))/(double)fact(i);
-        }
-        return r;
-    }
+public class M9Q2Stu 
+{
+	public static void deuxiemeFichier(String filename) throws IOException
+	{
+		MyBufferedReader br; // attention!, il faut leur dire d'utiliser MyBufferedReader dans l'énoncé
+		PrintStream out = System.out;
+		FileOutputStream f = new FileOutputStream("outStu.txt");
+		System.setOut(new PrintStream(f));
+		@@q2@@
+		System.setOut(out);
+	}
 }
