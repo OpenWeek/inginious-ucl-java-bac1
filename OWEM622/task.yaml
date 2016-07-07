@@ -23,7 +23,7 @@ context: |-
              * @post crée un objet Cours dont le prof, le code et le nombre de
              * crédit sont donnés par texte.
              */
-             public Cours (String texte) { /* non fourni */ }
+            public Cours (String texte) { /* non fourni */ }
 
             /*
              * @pre -
@@ -51,7 +51,7 @@ limits:
     memory: '100'
     time: '30'
     output: '2'
-name: 'Mission 6: Questionnaire de démarrage 2.2: comparateur'
+name: 'Mission 6 : Question de démarrage - classe Cours 2.2 (le comparateur)'
 network_grading: false
 problems:
     q1:
@@ -68,5 +68,7 @@ problems:
                  * @post renvoie true si les objets sont identiques, false sinon.
                  * Si l'objet comparé est null, renvoie false.
                  */
-                public boolean equals (Cours cours)
+                public boolean equals (Cours cours) {
+                    /* A COMPLETER */
+                }
 weight: 1.0

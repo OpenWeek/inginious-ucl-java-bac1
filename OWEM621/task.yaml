@@ -37,7 +37,7 @@ limits:
     memory: '100'
     output: '2'
     time: '30'
-name: 'Mission 6: Questionnaire de démarrage 2.1: les constructeurs'
+name: 'Mission 6 : Question de démarrage - classe Cours 2.1 (les constructeurs)'
 network_grading: false
 problems:
     q1:
@@ -54,7 +54,9 @@ problems:
                  * @post crée un objet Cours dont le prof est pr, le code est co et le nombre de
                  * crédit cr.
                  */
-                public Cours (String pr, String co, int cr)
+                public Cours (String pr, String co, int cr) {
+                    /* A COMPLETER */
+                }
         language: java
         type: code
     q2:
@@ -73,5 +75,7 @@ problems:
                  * @post crée un objet Cours dont le prof, le code et le nombre de
                  * crédit sont donnés par texte.
                  */
-                public Cours (String texte)
+                public Cours (String texte) {
+                    /* A COMPLETER */
+                }
 weight: 1.0
