@@ -1,7 +1,7 @@
 #! /bin/python
 # -*- coding: utf-8 -*-
 
-#   Copyright (c) 2016 François Michel, Clémentine Munyabarenzi
+#   Copyright (c) 2016 Fitvoye Florian, Dubray Alexandre
 #   This program is free software: you can redistribute it and/or modify
 #   it under the terms of the GNU Affero General Public License as published by
 #   the Free Software Foundation, either version 3 of the License, or
@@ -73,7 +73,7 @@ import sys
 import re
 from inginious import feedback
 
-EXERCICE = "M1Q7"
+EXERCICE = "Cut"
 CUSTOMSCRIPT="custom.sh"
 CORR=0
 
@@ -100,7 +100,7 @@ with open('logOther.out', 'w') as f:
 	subprocess.call(JAVAC_ARGS + ['student/' + EXERCICE + '.java'], universal_newlines=True, stderr=f)
 
 with open('log.out', 'w') as f:
-	subprocess.call(JAVAC_ARGS + ['student/' + EXERCICE + 'Stu.java'], universal_newlines=True, stderr=f)
+	subprocess.call(JAVAC_ARGS + ['student/' + EXERCICE + '.java'], universal_newlines=True, stderr=f)
 
 
 LOG = open('log.out')
@@ -133,12 +133,12 @@ if OUTCORR != "":
     MESSAGEENSEIGNANT = OUTCORR
 
 if OUTOTHER != "":
+	# feedback n'aime pas les "\n", donc on contourne le probleme en l'écrivant dans un fichier puis en le lisant.
     # sed permet d'indenter chaque ligne de son input avec une tabulation
     with open('in', 'w+') as f:
         f.write(OUTOTHER)
         f.flush()
         f.seek(0)
-        # On indente le message pour le faire passer dans le code-block rst
         PROC = subprocess.Popen(['sed', '-e', 's/^/\t/'], universal_newlines=True, stdin=f, stdout=subprocess.PIPE)
         out1 = PROC.stdout
         PROC2 = subprocess.Popen(['sed', 's/%/%%/g'], universal_newlines=True, stdin=out1, stdout=subprocess.PIPE)
@@ -158,7 +158,7 @@ if ERREURENSEIGNANT != 0:
     sys.exit(0)
 	
 ERREUR=0
-# Si OUTPUT est vide et qu'il n'y a donc pas d'erreur de compilation
+# Si le fichier est vide et qu'il n'y a donc pas d'erreur de compilation
 if OUTPUT == "":
     with open('err.txt', 'w+') as f:
         # On lance l'exercice 1

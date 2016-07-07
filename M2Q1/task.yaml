@@ -1,0 +1,32 @@
+accessible: true
+author: Tom & Lucas
+context: |-
+    Lisez le code suivant, et déterminez quel sera la sortie en console:
+
+     .. code-block:: java
+
+         int k = 0;
+         for(int i = 1; i<= 20; i=i+1)
+         {
+             for(int j = 0; j<=i; j=j+1)
+             {
+                 for(k=i; k>j; k=k-1){}
+             }
+         }
+         System.out.print(k);
+environment: java7
+groups: false
+limits:
+    memory: '100'
+    time: '30'
+    output: '2'
+name: 'Mission 2 : IJK'
+network_grading: false
+problems:
+    q1:
+        answer: '20'
+        type: match
+        name: ''
+        header: ''
+weight: 1.0
+order: 5
