@@ -33,7 +33,7 @@ public class M6Q2 {
    		    int credit1 = (int)(Math.random() * 10);
             
             M6Q2Stu a11 = new M6Q2Stu(prof1, code1, credit1);
-			 assertEquals("Prof mal initialisé", prof1, a11.getProf());
+			 assertEquals("Question 1 : Prof mal initialisé", prof1, a11.getProf());
              
 		}catch (ArithmeticException e){
 			fail(str + "Le code est incorrect : il est interdit de diviser par zéro.");
@@ -66,7 +66,7 @@ public class M6Q2 {
    		    int credit1 = (int)(Math.random() * 10);
             
             M6Q2Stu a11 = new M6Q2Stu(prof1, code1, credit1);
-             assertEquals("Code mal initialisé", code1, a11.getCode());
+             assertEquals("Question 1 : Code mal initialisé", code1, a11.getCode());
              
 		}catch (ArithmeticException e){
 			fail(str + "Le code est incorrect : il est interdit de diviser par zéro.");
@@ -99,7 +99,7 @@ public class M6Q2 {
    		    int credit1 = (int)(Math.random() * 10);
             
             M6Q2Stu a11 = new M6Q2Stu(prof1, code1, credit1);
-             assertEquals("Crédit mal initialisé", credit1, a11.getCredit());
+             assertEquals("Question 1 : Crédit mal initialisé", credit1, a11.getCredit());
              
 		}catch (ArithmeticException e){
 			fail(str + "Le code est incorrect : il est interdit de diviser par zéro.");
@@ -134,7 +134,7 @@ public class M6Q2 {
 			String text21 = prof21 + "-" + code21 + "-" + credit21;
             
             M6Q2Stu a21 = new M6Q2Stu(text21);
-			 assertEquals("Prof mal initialisé", prof21, a21.getProf());
+			 assertEquals("Question 2 : Prof mal initialisé", prof21, a21.getProf());
 		}catch (ArithmeticException e){
 			fail(str + "Le code est incorrect : il est interdit de diviser par zéro.");
 			e.printStackTrace();
@@ -167,7 +167,7 @@ public class M6Q2 {
 			String text21 = prof21 + "-" + code21 + "-" + credit21;
             
             M6Q2Stu a21 = new M6Q2Stu(text21);
-             assertEquals("Code mal initialisé", code21, a21.getCode());
+             assertEquals("Question 2 : Code mal initialisé", code21, a21.getCode());
              
 		}catch (ArithmeticException e){
 			fail(str + "Le code est incorrect : il est interdit de diviser par zéro.");
@@ -201,7 +201,7 @@ public class M6Q2 {
 			String text21 = prof21 + "-" + code21 + "-" + credit21;
             
             M6Q2Stu a21 = new M6Q2Stu(text21);
-             assertEquals("Crédit mal initialisé", credit21, a21.getCredit());
+             assertEquals("Question 2 : Crédit mal initialisé", credit21, a21.getCredit());
 		}catch (ArithmeticException e){
 			fail(str + "Le code est incorrect : il est interdit de diviser par zéro.");
 			e.printStackTrace();
