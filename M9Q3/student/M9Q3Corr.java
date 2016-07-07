@@ -26,29 +26,20 @@ public class M9Q3Corr
 	 * @pre -
 	 * @post affiche le nombre de caractères contenus dans le fichier
 	 */
-	public static void charNumber(String filename)
+	public static int charNumber(String filename)
 	{
 		try
 		{
 			Scanner sc = new Scanner( new FileReader(filename) );
 			int i = 0;
-			//String s;
 			while(sc.hasNext())
 			{
-//				s = sc.next();
-//				if(s=="\n"||s=="\t"||s=="\b"||s=="\r"||s=="\f")
-//				{
-//					//
-//				}
-//				else
-//				{
-//					i++;
-//				}
 				sc.next();
 				i++;
 			}
-			System.out.println(i);
+			//System.out.println(i);
 			sc.close();
+			return i;
 		}
 		catch(FileNotFoundException e)
 		{

@@ -28,9 +28,10 @@ public class M9Q2Stu
 	{
 		MyBufferedReader br; // attention!, il faut leur dire d'utiliser MyBufferedReader dans l'énoncé
 		PrintStream out = System.out;
-		FileOutputStream f = new FileOutputStream("outStu.txt");
+		FileOutputStream f = new FileOutputStream("student/outStu.txt");
 		System.setOut(new PrintStream(f));
 		@@q2@@
 		System.setOut(out);
+        f.close();
 	}
 }

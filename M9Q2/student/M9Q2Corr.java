@@ -24,7 +24,7 @@ public class M9Q2Stu
 		BufferedReader br;
 		try
 		{
-			br  = new BufferedReader(new FileReader("filename"));
+			br  = new BufferedReader(new FileReader(filename));
 			String str = br.readLine();
 			while(str != null)
 			{

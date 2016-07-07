@@ -13,12 +13,24 @@ package student;
  *  You should have received a copy of the GNU Affero General Public License
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-import static org.junit.Assert.*;
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
 
+import static org.junit.Assert.*;
+import java.io.*;
+import org.junit.runner.JUnitCore;
+import org.junit.runner.Result;
+import org.junit.Test;
+import java.util.Random;
+import org.junit.runner.notification.*;
 public class M9Q3 
 {
+	private static String str = "Le code semble comporter des erreurs : ";
+	
+	@Test
+	public void test()
+	{
+		int res = M9Q3Stu.charNumber("fichier.txt");
+		int res1 = 
+		assertEquals(res, res1);
+	}
 	
 }

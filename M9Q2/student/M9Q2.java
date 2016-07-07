@@ -30,13 +30,12 @@ public class M9Q2 {
 		try{
         		MyBufferedReader.openSuccess = true;
                MyBufferedReader.closeSuccess = true;
-				M9Q2Stu.deuxiemeFichier("fichier.txt");
+				M9Q2Stu.deuxiemeFichier("student/fichier.txt");
 				BufferedReader verif;
-				verif = new BufferedReader(new FileReader("outStu.txt"));
+				verif = new BufferedReader(new FileReader("student/outStu.txt"));
 				String res = verif.readLine();
 				verif.close();
-                String res1 = "Hello!";
-				assertEquals("Hello!", res1);
+				assertEquals("Hello!", res);
 			}
 		catch (FileNotFoundException e){
 			fail(str + "Le code est incorrect : le nom du fichier ne semble pas être correct, vous essayez d'ouvrir un fichier non existant.");
@@ -55,9 +54,9 @@ public class M9Q2 {
 	public void testOpen(){
 		try{	
         		MyBufferedReader.openSuccess = false;
-               M9Q2Stu.deuxiemeFichier("fichier.txt");
+               M9Q2Stu.deuxiemeFichier("student/fichier.txt");
 				BufferedReader verif;
-				verif = new BufferedReader(new FileReader("outStu.txt"));
+				verif = new BufferedReader(new FileReader("student/outStu.txt"));
 				//String res = verif.readLine();
 				verif.close();
 				//assertEquals("Hello", res);
