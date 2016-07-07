@@ -58,36 +58,7 @@ public class Fact {
 		}
 	}
 	
-	@Test
-	public void testExp(){
-		try{
-        assertEquals(str2 + "Verifiez les pre !",-1.0,FactStu.exp(-10),0.0);
-        	assertEquals(str2 + "exp(0) ne donne pas le resultat attendu :",1.0,FactStu.exp(0),0.0);
-            assertEquals(str2 + "exp(1) ne donne pas le resultat attendu :",2.72,FactStu.exp(1),0.02);
-            assertEquals(str2 + "exp(4) ne donne pas le resultat attendu :",54.59,FactStu.exp(4),0.5);
-		}catch (ArithmeticException e){
-			fail(str2 + str + "il est interdit de diviser par zéro.");
-			e.printStackTrace();
-		}catch(ClassCastException e){
-			fail(str2 + str + "Attention, certaines variables ont été mal castées	!");
-			e.printStackTrace();
-		}catch(StringIndexOutOfBoundsException e){
-			e.printStackTrace();
-			fail(str2 + str + "Attention, vous tentez de lire en dehors des limites d'un String ! (StringIndexOutOfBoundsException)");
-			e.printStackTrace();
-		}catch(ArrayIndexOutOfBoundsException e){
-			e.printStackTrace();
-			fail(str2 + str + "Attention, vous tentez de lire en dehors des limites d'un tableau ! (ArrayIndexOutOfBoundsException)");
-			e.printStackTrace();
-		}catch(NullPointerException e){
-			fail(str2 + str + "Attention, vous faites une opération sur un objet qui vaut null ! Veillez à bien gérer ce cas.");
-			e.printStackTrace();
-		}catch(Exception e){
-			fail(str2 + str + "\n" + e.getMessage());
-			e.printStackTrace();
-		}
-	}
-	
+
 	// Code verificateur
 	public static void main(String[] args) {
 		Result result = JUnitCore.runClasses(Fact.class);

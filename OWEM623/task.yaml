@@ -61,7 +61,7 @@ limits:
     memory: '100'
     output: '2'
     time: '30'
-name: 'Mission 6: Questionnaire de démarrage 2.3: application'
+name: 'Mission 6 : Question de démarrage - classe Cours 2.3 (les applications)'
 network_grading: false
 problems:
     q1:
