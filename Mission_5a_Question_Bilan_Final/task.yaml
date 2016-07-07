@@ -30,7 +30,7 @@ problems:
                  *       d'une position vers la droite (le dernier élément revenant
                  *       en première position)
                  */
-                public static void shiftRightOne (int[] tab, int n)
+                public static void shiftRightOne (int[] tab)
         language: Java
         type: code
     q2:
