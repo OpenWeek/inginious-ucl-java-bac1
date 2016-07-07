@@ -36,13 +36,13 @@ public class M9Q1Stu {
 		}
         catch(FileNotFoundException e)
 		{
-			fail(res + "Le code est incorrect : le nom du fichier ne semble pas être correct, vous essayez d'ouvrir un fichier non existnant.");
+			fail(res + "Le code est incorrect : le nom du fichier ne semble pas être correct, vous essayez d'ouvrir un fichier non existant.");
 			e.printStackTrace();
 		}
 		catch(IOException e)
 		{
 			fail(res + "Le code est incorrect: il y a un problème lors de l'utilisation de la méthode readLine() ou close()");
-			e.printStackTrace();*/
+			e.printStackTrace();
 		}
 		catch(IOException e)
 		{
