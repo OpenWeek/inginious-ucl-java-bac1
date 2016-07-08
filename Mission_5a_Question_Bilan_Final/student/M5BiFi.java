@@ -60,7 +60,11 @@ public class M5BiFi {
             int[] stuShiftRightOne = Arrays.copyOf(tab, tab.length);
             int[] shiftRightOne = Arrays.copyOf(tab, tab.length);
             
-            M5BiFiStu.shiftRightOne(stuShiftRightOne);
+            try{
+            	M5BiFiStu.shiftRightOne(stuShiftRightOne);
+            }catch (AssertionError e) {
+		fail("Question 1:\nVous n'utilisez pas correctement assert.");			
+	    }
             shiftRightOne(shiftRightOne);
                        
 		assertTrue("Question 1 : \n Votre fonction shiftRight ne fournit pas les bons résultats,\n votre fonction retourne " + Arrays.toString(stuShiftRightOne) + " avec ce tableau " + Arrays.toString(tab) + ".", Arrays.equals(stuShiftRightOne, shiftRightOne));
@@ -112,7 +116,11 @@ public class M5BiFi {
             int[] stuShiftRight = Arrays.copyOf(tab, tab.length);
             int[] shiftRight = Arrays.copyOf(tab, tab.length);
             
-            M5BiFiStu.shiftRight(stuShiftRight, shift);
+            try{
+            	M5BiFiStu.shiftRight(stuShiftRight, shift);
+            }catch (AssertionError e) {
+		fail("Question 2 :\nVous n'utilisez pas correctement assert.");	
+ 	    }
             shiftRight(shiftRight, shift);
             
             assertTrue("Question 2 :\n Votre fonction shiftRight ne fournit pas les bons résultats,\n votre fonction retourne " + Arrays.toString(stuShiftRight) + " avec ce tableau " + Arrays.toString(tab) + ".", Arrays.equals(stuShiftRight, shiftRight));
