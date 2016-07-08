@@ -26,8 +26,9 @@ import java.io.*;
 
 public class MyBufferedReader 
 {
-	public static boolean openSuccess = true; 
-	public static boolean closeSuccess = true;
+	//cette classe nous sert à faire échouer open volontairement pour vérifier si les étudiants catch bien les exceptions.
+	public static boolean openSuccess = true; //en changeant cette variable on contrôle l'ouverture du fichier
+	public static boolean closeSuccess = true;//même chose pour la fermeture
 	private BufferedReader bf;
 	
 	public MyBufferedReader(FileReader f) throws IOException, FileNotFoundException
