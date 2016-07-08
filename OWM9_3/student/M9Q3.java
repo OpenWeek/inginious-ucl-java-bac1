@@ -26,7 +26,12 @@ public class M9Q3
 {
 	private static String str = "Le code semble comporter des erreurs : ";
 	
-	public static String generateString(int length){
+	/*
+	 * @pre : length >0
+	 * @post : renvoie un string random de longueur length
+	 */
+	public static String generateString(int length)
+	{
 		String s = "";
 		Random r = new Random();
 		for(int i = 0 ; i < length ; i++){
@@ -40,9 +45,9 @@ public class M9Q3
 	{
 		try
 		{
-			int res = M9Q3Stu.charNumber("fichier.txt");
-			int res1 = M9Q3Corr.charNumber("fichier.txt");
-			assertEquals(res, res1);
+			int res = M9Q3Stu.charNumber("fichier.txt"); //on stocke le nombre retourné par l'etudiant
+			int res1 = M9Q3Corr.charNumber("fichier.txt"); //on stocke le nombre retourné par notre code
+			assertEquals(res, res1); //les 2 valeurs doivent être identiques
 		}
 		catch(FileNotFoundException e)
 		{
@@ -61,7 +66,7 @@ public class M9Q3
 	{
 		try
 		{
-			String content = generateString(5) + " " + generateString(6);
+			String content = generateString(5) + " " + generateString(6); //pour être sûr que les étudiants ne hardcode pas le nombre à retourner, on fait un test sur un fichier contenant un string random
 			File file = new File("file.txt");
 			FileWriter fw = new FileWriter(file);
 			BufferedWriter bw = new BufferedWriter(fw);

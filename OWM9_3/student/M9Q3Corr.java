@@ -34,10 +34,10 @@ public class M9Q3Corr
 			int i = 0;
 			while(sc.hasNext())
 			{
-				sc.next();
+				sc.next(); //on pourrait imaginer une fonction qui ne compte que certains
+				           //caractères mais ici on les compte tous.
 				i++;
 			}
-			//System.out.println(i);
 			sc.close();
 			return i;
 		}
