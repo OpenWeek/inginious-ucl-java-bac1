@@ -24,7 +24,7 @@ import org.junit.runner.notification.*;
 public class M9Q2 {
 	
 	private static String str = "Le code semble comporter des erreurs : ";
-	
+	//Generates a random String to avoid student hardcoding the answer
 	public static String generateString(int length){
 		String s = "";
 		Random r = new Random();
@@ -38,15 +38,14 @@ public class M9Q2 {
 	public void testPos(){
 		try{
         		MyBufferedReader.openSuccess = true;
-               MyBufferedReader.closeSuccess = true;
-				M9Q2Stu.deuxiemeFichier("student/fichier.txt");
-				BufferedReader verif;
-				verif = new BufferedReader(new FileReader("student/outStu.txt"));
-				String res = verif.readLine();
-				verif.close();
-				assertEquals("Hello!", res);
-			}
-		catch (FileNotFoundException e){
+               		MyBufferedReader.closeSuccess = true;
+			M9Q2Stu.deuxiemeFichier("student/fichier.txt");
+			BufferedReader verif;
+			verif = new BufferedReader(new FileReader("student/outStu.txt"));
+			String res = verif.readLine();
+			verif.close();
+			assertEquals("Hello!", res);
+		}catch (FileNotFoundException e){
 			fail(str + "Le code est incorrect : le nom du fichier ne semble pas être correct, vous essayez d'ouvrir un fichier non existant.");
 			e.printStackTrace();
 		}catch(IOException e){
@@ -63,18 +62,15 @@ public class M9Q2 {
 	public void testOpen(){
 		try{	
         		MyBufferedReader.openSuccess = false;
-               M9Q2Stu.deuxiemeFichier("student/fichier.txt");
-				BufferedReader verif;
-				verif = new BufferedReader(new FileReader("student/outStu.txt"));
-				//String res = verif.readLine();
-				verif.close();
-				//assertEquals("Hello", res);
-			}
-		catch (FileNotFoundException e){
-			fail(str + "Le code est incorrect : le nom du fichier ne semble pas être correct, vous essayez d'ouvrir un fichier non existnant.");
+               		M9Q2Stu.deuxiemeFichier("student/fichier.txt");
+			BufferedReader verif;
+			verif = new BufferedReader(new FileReader("student/outStu.txt"));
+			verif.close();
+		}catch (FileNotFoundException e){
+			fail(str + "Le code est incorrect : le nom du fichier ne semble pas être correct, vous essayez d'ouvrir un fichier non existant.");
 			e.printStackTrace();
 		}catch(IOException e){
-			fail(str + "oh dear! Vous essayez ne gérez pas correctement les erreurs liées à open()");
+			fail(str + "Oh dear! Vous ne gérez pas correctement les erreurs liées à open()");
 			e.printStackTrace();
 		}catch(IllegalArgumentException  e){
 			e.printStackTrace();
@@ -101,8 +97,7 @@ public class M9Q2 {
 			String res = verif.readLine();
 			verif.close();
 			assertEquals(content, res);
-		}
-		catch (FileNotFoundException e){
+		}catch (FileNotFoundException e){
 			fail(str + "Le code est incorrect : le nom du fichier ne semble pas être correct, vous essayez d'ouvrir un fichier non existant.");
 			e.printStackTrace();
 		}catch(IOException e){
