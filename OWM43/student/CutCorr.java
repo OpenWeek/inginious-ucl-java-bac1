@@ -29,6 +29,7 @@ public class CutStu {
             else {
                 r+=str.charAt(i);
             }
-    	}	
+    	}
+			System.out.println(r);	
     }
 }

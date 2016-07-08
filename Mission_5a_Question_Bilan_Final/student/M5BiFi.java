@@ -50,7 +50,7 @@ public class M5BiFi {
 	@Test
 	public void testQ1(){
     	String str = "Question 1 : \n Le code semble comporter des erreurs : ";
-		try{
+	try{
         	int n = 5; // longueur du tableau 
             int shift = 3; // longueur du décalage
         	int[] tab = new int[n];
@@ -60,18 +60,24 @@ public class M5BiFi {
             int[] stuShiftRightOne = Arrays.copyOf(tab, tab.length);
             int[] shiftRightOne = Arrays.copyOf(tab, tab.length);
             
-            M5BiFiStu.shiftRightOne(stuShiftRightOne);
+            try{
+            	M5BiFiStu.shiftRightOne(stuShiftRightOne);
+            }catch (AssertionError e) {
+		fail("Question 1:\nVous n'utilisez pas correctement assert.");			
+	    }
             shiftRightOne(shiftRightOne);
                        
-			assertTrue("Question 1 : \n Votre fonction shiftRight ne fournit pas les bons résultats,\n votre fonction retourne " + Arrays.toString(stuShiftRightOne) + " avec ce tableau " + Arrays.toString(tab) + ".", Arrays.equals(stuShiftRightOne, shiftRightOne));
-            
+		assertTrue("Question 1 : \n Votre fonction shiftRight ne fournit pas les bons résultats,\n votre fonction retourne " + Arrays.toString(stuShiftRightOne) + " avec ce tableau " + Arrays.toString(tab) + ".", Arrays.equals(stuShiftRightOne, shiftRightOne));
+            boolean err=false;
             try { 
             	M5BiFiStu.shiftRightOne(null);
-                assertTrue("Question 1 : \n Vous devez utiliser de la programmation défensive.", false);
-                
+            	err=true;
             } catch (AssertionError e) {
             	// Pour vérifier qu'une Assertion a bien été lancé
             } catch (NullPointerException e) {
+            	err=true;
+            }
+            if (err){
             	fail("Question 1 : \n Vous devez utiliser de la programmation défensive.");
             }
         }catch (ArithmeticException e){
@@ -91,9 +97,7 @@ public class M5BiFi {
 		}catch(NullPointerException e){
 			fail(str + "Attention, vous faites une opération sur un objet qui vaut null ! Veillez à bien gérer ce cas.");
 			e.printStackTrace();
-        }catch(AssertionError e) {
-        	fail("Question 1 : \n Vous n'utilisez pas correctement assert.");
-        }catch(Exception e){
+        	}catch(Exception e){
 			fail(str + "\n" + e.getMessage());
 			e.printStackTrace();
 		}
@@ -112,18 +116,25 @@ public class M5BiFi {
             int[] stuShiftRight = Arrays.copyOf(tab, tab.length);
             int[] shiftRight = Arrays.copyOf(tab, tab.length);
             
-            M5BiFiStu.shiftRight(stuShiftRight, shift);
+            try{
+            	M5BiFiStu.shiftRight(stuShiftRight, shift);
+            }catch (AssertionError e) {
+		fail("Question 2 :\nVous n'utilisez pas correctement assert.");	
+ 	    }
             shiftRight(shiftRight, shift);
             
             assertTrue("Question 2 :\n Votre fonction shiftRight ne fournit pas les bons résultats,\n votre fonction retourne " + Arrays.toString(stuShiftRight) + " avec ce tableau " + Arrays.toString(tab) + ".", Arrays.equals(stuShiftRight, shiftRight));
-            
+            boolean err=false;
             try {
             	M5BiFiStu.shiftRight(null, shift);
-                assertTrue("Question 2 : \n Vous devez utiliser de la programmation défensive.", false);
+                err=true;
                 
             } catch (AssertionError e) {
             // Pour vérifier qu'une Assertion a bien été lancé
             } catch (NullPointerException e) {
+            	err=true;
+            }
+            if(err){
             	fail("Question 2 : \n Vous devez utiliser de la programmation défensive.");
             }
 		}catch (ArithmeticException e){
@@ -143,9 +154,7 @@ public class M5BiFi {
 		}catch(NullPointerException e){
 			fail(str + "Attention, vous faites une opération sur un objet qui vaut null ! Veillez à bien gérer ce cas.");
 			e.printStackTrace();
-		}catch(AssertionError e) {
-        	fail("Question 2 : \n Vous n'utilisez pas correctement assert.");
-        }catch(Exception e){
+        	}catch(Exception e){
 			fail(str + "\n" + e.getMessage());
 			e.printStackTrace();
 		}

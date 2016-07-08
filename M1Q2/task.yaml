@@ -1,5 +1,5 @@
 accessible: true
-author: Tom & Lucas
+author: Lucas Ody & Tom Rousseaux 
 context: |+
     Deux nombres imaginaires vous sont donnés: x et y, par le biais de leus parties imaginaires et réelles, marquées respectivement d'un I et d'un R.
     Il vous est demandé de calculer leur produit, de stocker ses parties réelle et imaginaire dans respectivement a et b, ainsi que d'indiquer si ce dernier est devenu imaginaire pur, "réel pur", ou reste un complexe standard, via 2 booléens.

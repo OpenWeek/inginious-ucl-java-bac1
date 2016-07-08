@@ -63,12 +63,16 @@ public class M5QInversion {
       testComp(6); // ...et paire
 
       // verification de l'utilisation de la programation défensive (assert)
+      boolean err=false;
       try {
         M5QInversionStu.inverse(null);
-        assertTrue("Question 1 :\n Vous devez utiliser de la programmation défensive.", false);
+        err=true;
       } catch (AssertionError e) {
         // Pour vérifier qu'une Assertion a bien été lancée
       } catch (NullPointerException e) {
+        err=true;
+      }
+      if(err){
         fail("Question 1 :\n Vous devez utiliser de la programmation défensive.");
       }
 
