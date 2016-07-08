@@ -18,7 +18,10 @@ import java.io.*;
 
 public class M9Q2Stu 
 {
-
+	/*
+	 * @pre : /
+	 * @post : cette fonction ouvre un fichier (si il existe), lit le contenu, l'affiche et puis referme le fichier
+	 */
 	public static void deuxiemeFichier(String filename)
 	{ 
 		BufferedReader br;
