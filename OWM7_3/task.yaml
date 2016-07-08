@@ -6,14 +6,23 @@ context: |-
     .. code-block:: java
 
         public abstract class Animal{
-            public int faim = 0;
+            private int faim = 0;
+
+            public void set_faim(int faim){
+                this.faim = faim;
+            }
+
+            public int get_faim(){
+                return this.faim;
+            }
+
             /*
              * L'animal mange de la nourriture (dépend de l'animal) et
                  sa variable faim augmente (dépend de l'animal).
              * Quand l'animal mange, il ne mange qu'une seule
                  carotte/poulet. Il ne vide pas le panier.
              * L'animal mange même si la faim est <=0
-             * Dans tous les cas , retourne false si la faim est <= 0, true sinon
+             * @post retourne false si la faim est <= 0, true sinon
              */
             public abstract boolean manger(PanierDeNourriture panier);
         }

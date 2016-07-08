@@ -22,8 +22,12 @@ public class Extends2Stu {
     	protected final String couleur = "rose";
     	protected final int pv;
         
+        public int get_pv(){
+        	return this.pv;
+        }
+        
         public Kirby(){
-        	this.pv = (int) Math.random()*(10000);
+        	this.pv = 10 + (int) Math.random()*(10000);
         }
 @		@q1@@
 	}        
