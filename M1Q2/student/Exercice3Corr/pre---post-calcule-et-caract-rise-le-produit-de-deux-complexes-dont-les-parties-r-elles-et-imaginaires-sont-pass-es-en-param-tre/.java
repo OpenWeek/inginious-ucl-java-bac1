@@ -16,7 +16,11 @@ package student;
 
 public class Exercice3Stu {
 
-    // Soluce
+    /**
+    * @pre : -
+    * @post : calcule et caractérise le produit de deux complexes, dont les
+    *        parties réelles et imaginaires sont passées en paramètre
+    */
     public static boolean imaginairePur = false;
     public static boolean reelPur = false;
     public static int[] multiplicationComplexe(int xR, int xI, int yR, int yI)
