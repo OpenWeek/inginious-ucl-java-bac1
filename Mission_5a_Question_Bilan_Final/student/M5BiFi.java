@@ -93,9 +93,7 @@ public class M5BiFi {
 		}catch(NullPointerException e){
 			fail(str + "Attention, vous faites une opération sur un objet qui vaut null ! Veillez à bien gérer ce cas.");
 			e.printStackTrace();
-        }catch(AssertionError e) {
-        	fail("Question 1 : \n Vous n'utilisez pas correctement assert.");
-        }catch(Exception e){
+        	}catch(Exception e){
 			fail(str + "\n" + e.getMessage());
 			e.printStackTrace();
 		}
@@ -148,9 +146,7 @@ public class M5BiFi {
 		}catch(NullPointerException e){
 			fail(str + "Attention, vous faites une opération sur un objet qui vaut null ! Veillez à bien gérer ce cas.");
 			e.printStackTrace();
-		}catch(AssertionError e) {
-        	fail("Question 2 : \n Vous n'utilisez pas correctement assert.");
-        }catch(Exception e){
+        	}catch(Exception e){
 			fail(str + "\n" + e.getMessage());
 			e.printStackTrace();
 		}
