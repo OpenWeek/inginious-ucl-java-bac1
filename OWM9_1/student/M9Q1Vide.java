@@ -22,28 +22,21 @@ import java.lang.*;
 public class M9Q1Stu
 {
 
-	// Code a verifier
+	// Code to check
 	public static void premierFichier(String filename)
 	{
 		BufferedReader br;
-            try
-		{
-        	PrintStream out = System.out;
-            FileOutputStream f = new FileOutputStream("student/outStu.txt");
-            System.setOut(new PrintStream(f));
+        	try	{
+		    	PrintStream out = System.out;
+			FileOutputStream f = new FileOutputStream("student/outStu.txt");
+			System.setOut(new PrintStream(f));
 			@@q1@@
-            System.setOut(out);
-		}
-		catch(FileNotFoundException e)
-		{
+			System.setOut(out);
+		}catch(FileNotFoundException e){
 			System.out.println(e.getMessage());
-		}
-		catch(IOException e)
-		{
+		}catch(IOException e){
 			System.out.println(e.getMessage());
-		}
-		catch(IllegalArgumentException e)
-		{
+		}catch(IllegalArgumentException e){
 			System.out.println(e.getMessage());
 		}
 	}
