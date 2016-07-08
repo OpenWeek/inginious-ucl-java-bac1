@@ -1,7 +1,7 @@
 accessible: true
 author: Justine Doutreloux, Carolina Urinza Salamanca, Charline Outters
 context: |+
-    Dans cet exercice, nous allons vous donner un morceau de code contenant des erreurs. Vous allez devoir les corriger.
+    Dans cet exercice, nous allons vous donner un morceau de code incomplet. Vous allez devoir le compléter.
 
     .. code-block:: java
 
