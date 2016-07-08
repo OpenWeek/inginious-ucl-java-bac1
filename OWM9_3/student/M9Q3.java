@@ -21,9 +21,19 @@ import org.junit.runner.Result;
 import org.junit.Test;
 import java.util.Random;
 import org.junit.runner.notification.*;
+
 public class M9Q3 
 {
 	private static String str = "Le code semble comporter des erreurs : ";
+	
+	public static String generateString(int length){
+		String s = "";
+		Random r = new Random();
+		for(int i = 0 ; i < length ; i++){
+			s += (char) ((r.nextInt('z' - 'a') + 'a'));
+		}
+		return s;
+	}
 	
 	@Test
 	public void test()
@@ -32,6 +42,33 @@ public class M9Q3
 		{
 			int res = M9Q3Stu.charNumber("fichier.txt");
 			int res1 = M9Q3Corr.charNumber("fichier.txt");
+			assertEquals(res, res1);
+		}
+		catch(FileNotFoundException e)
+		{
+			fail(str + "Le code est incorrect : le nom du fichier ne semble pas être correct, vous essayez d'ouvrir un fichier non existant.");
+			e.printStackTrace();
+		}
+		catch(IOException e)
+		{
+			fail(str + "Le code est incorrect: il y a un problème à l'ouverture ou à la fermeture du fichier");
+			e.printStackTrace();
+		}
+	}
+	
+	@Test
+	public void test1()
+	{
+		try
+		{
+			String content = generateString(5) + " " + generateString(6);
+			File file = new File("file.txt");
+			FileWriter fw = new FileWriter(file);
+			BufferedWriter bw = new BufferedWriter(fw);
+			bw.write(content);
+			bw.close;
+			int res = M9Q3Stu.charNumber("file.txt");
+			int res1 = M9Q3Corr.charNumber("file.txt");
 			assertEquals(res, res1);
 		}
 		catch(FileNotFoundException e)
