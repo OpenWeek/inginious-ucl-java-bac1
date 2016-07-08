@@ -16,7 +16,10 @@ package student;
 
 public class M2Q3Stu {
 
-    // Soluce
+    /**
+     * @pre : diviseur != 0
+     * @post : division entière du dividende, renvoie le qoutient et le reste dans un tableau
+     */
     public static int[] M2Q3(int diviseur, int dividende)
     {
         int reste = 0;
