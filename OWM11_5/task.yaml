@@ -18,9 +18,9 @@ limits:
     memory: '32'
     output: '1024'
     time: '60'
-name: 'Mission 11 : Plus petit élément d''une liste'
+name: 'Mission 11 : Question de démarrage 5 : Plus petit élément d''une liste'
 network_grading: false
-order: 9
+order: 5
 problems:
     idFirstExercice:
         choices:

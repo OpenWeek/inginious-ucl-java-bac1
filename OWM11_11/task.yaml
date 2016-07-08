@@ -21,9 +21,9 @@ limits:
     memory: '200'
     time: '30'
     output: '2'
-name: 'Mission 11 : Maximum d''une liste triée'
+name: 'Mission 11 : Question intermédiare 2 : Maximum d''une liste triée'
 network_grading: false
-order: 5
+order: 11
 problems:
     q1:
         language: java

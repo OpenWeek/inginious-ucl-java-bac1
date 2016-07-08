@@ -20,9 +20,9 @@ limits:
     memory: '200'
     time: '30'
     output: '2'
-name: 'Mission 11 : Maximum d''une liste'
+name: 'Mission 11 : Question intermédiaire 4 : Maximum d''une liste'
 network_grading: false
-order: 5
+order: 13
 problems:
     q1:
         language: java

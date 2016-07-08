@@ -20,9 +20,9 @@ limits:
     memory: '200'
     time: '30'
     output: '2'
-name: 'Mission 11 : Minimum d''une liste'
+name: 'Mission 11 : Question intermédiaire 3 : Minimum d''une liste'
 network_grading: false
-order: 5
+order: 12
 problems:
     q1:
         language: java

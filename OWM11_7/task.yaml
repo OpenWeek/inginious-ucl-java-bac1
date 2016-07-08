@@ -29,9 +29,10 @@ limits:
     memory: '32'
     output: '1024'
     time: '60'
-name: 'Mission 11 : Insertion d''un élément au milieu d''une liste doublement chainée'
+name: 'Mission 11 : Question de démarrage 6 : Insertion d''un élément au milieu d''une
+    liste doublement chainée'
 network_grading: false
-order: 9
+order: 7
 problems:
     idFirstExercice:
         choices:
@@ -79,5 +80,5 @@ problems:
         error_message: '``You failed!!!``... '
         type: multiple-choice
         limit: 5
-        name: The first exercice
+        name: Insertion d'un élément au milieu de la liste
 weight: 1.0

@@ -1,19 +1,6 @@
 #! /bin/python
 # -*- coding: utf-8 -*-
 
-#   Copyright (c) 2015, 2016 Massart Aurélie
-#   This program is free software: you can redistribute it and/or modify
-#   it under the terms of the GNU Affero General Public License as published by
-#   the Free Software Foundation, either version 3 of the License, or
-#   (at your option) any later version.
-#
-#   This program is distributed in the hope that it will be useful,
-#   but WITHOUT ANY WARRANTY; without even the implied warranty of
-#   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#   GNU Affero General Public License for more details.
-#
-#   You should have received a copy of the GNU Affero General Public License
-#   along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 import subprocess 
 import shlex
@@ -21,11 +8,12 @@ import sys
 import re
 from inginious import feedback
 
-EXERCICE = "M11Q4"
+EXERCICE = "M11Q23"
 CUSTOMSCRIPT="custom.sh"
 CORR=0
 
 # EXECCUSTOM vaut 0 si on n'exécute pas de script "custom" pour faire des vérifications supplémentaires
+INEXECCUSTOM=1
 EXECCUSTOM=0
 NEXERCICES=1
 CODELITTERAL=".. code-block:: java\n\n"
@@ -39,7 +27,7 @@ subprocess.call(['parsetemplate', '-o', 'student/' + EXERCICE + 'Stu.java', 'stu
 
 OUTCUSTOM=0
 if EXECCUSTOM != 0:
-	OUTCUSTOM=subprocess.call(['sh', CUSTOMSCRIPT], universal_newlines=True)
+	OUTCUSTOM=subprocess.call(['python', CUSTOMSCRIPT], universal_newlines=True)
 
 if OUTCUSTOM != 0:
 	exit()
@@ -158,7 +146,7 @@ if OUTPUT == "":
                     OUTERR = PROC.stdout.read()
                     PROC.communicate()
             with open('feedback1ex.out', 'w+') as f:
-                f.write("Il semb que vous ayiez fait des erreurs dans votre code...\n " + CODELITTERAL + OUTERR + "\n")
+                f.write("Il semble que vous ayiez fait des erreurs dans votre code...\n " + CODELITTERAL + OUTERR + "\n")
                 f.flush()
                 f.seek(0)
                 feed = f.read()

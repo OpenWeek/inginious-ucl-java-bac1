@@ -1,7 +1,7 @@
 accessible: true
 author: Aurélie Massart & Alexandre Kühn & Hua Yang Hu
 context: |-
-    Le but de cet exercice est de supprimer un noeud au milieu d'une liste doublement chainée. Concrètement, vous devez supprimer le noeud ayant comme valeur 2 de la liste doublement chainée illustrée ci-dessous.
+    Le but de cet exercice est de supprimer un noeud au milieu et à la fin d'une liste doublement chainée.
 
     .. image:: OWM11_8/Fin.png
         :height: 367px
@@ -22,16 +22,17 @@ context: |-
 
     Cette liste est donc telle que p.value = 1.
 
-    Parmi les différentes propositions, une seule est correcte. Pouvez-vous deviner laquelle?
+    Répondez aux deux questions ci-dessous.
 environment: default
 groups: false
 limits:
     memory: '32'
     output: '1024'
     time: '60'
-name: 'Mission 11 : Suppression d''un élément au milieu d''une liste doublement chainée'
+name: 'Mission 11 : Question de démarrage 7 : Retrait d''un élément d''une liste doublement
+    chainée'
 network_grading: false
-order: 9
+order: 8
 problems:
     idFirstExercice:
         choices:
@@ -69,9 +70,17 @@ problems:
 
                     p.next.next.previous = p;
                     p.next = p.next.next;
-        header: ''
+        header: 'Écrivez ici la ligne de code effectuant le retrait de l''élément
+            ayant comme valeur 2 dans la liste. '
         error_message: '``You failed!!!``... '
         type: multiple-choice
         limit: 4
-        name: The first exercice
+        name: Suppression d'un élément au milieu de la liste
+    q2:
+        name: Suppression d'un élément à la fin de la liste
+        type: match
+        header: Écrivez ici la ligne de code effectuant le retrait de l'élément ayant
+            comme valeur 4 dans la liste. Attention, on considère toujours la liste
+            de départ et pas la liste dont on a supprimé l'élément 2.
+        answer: p.next.next = null;
 weight: 1.0
