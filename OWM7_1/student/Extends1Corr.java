@@ -18,13 +18,22 @@ package student;
 public class Extends1Stu {
 
 	public class Animal {
+    
+    	private int nombre_de_pattes;
+    	private boolean fourrure;
+    
     	public Animal(){}
         public Animal(int p, boolean f){
         	this.nombre_de_pattes = p;
         	this.fourrure = f;
     	}
-    	protected int nombre_de_pattes;
-    	protected boolean fourrure;
+        
+        public void set_nombre_de_pattes(int n){
+        	this.nombre_de_pattes = n;
+        }
+        public void set_fourrure(boolean f){
+        	this.fourrure = f;
+        }
  	}
     
     public class Lapin extends Animal{

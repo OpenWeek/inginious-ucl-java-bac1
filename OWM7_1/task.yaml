@@ -6,11 +6,19 @@ context: |
     .. code-block:: java
 
         public class Animal {
-            protected int nombre_de_pattes;
-            protected boolean fourrure;
+            private int nombre_de_pattes;
+            private boolean fourrure;
 
             public Animal(int p, boolean f){
                 this.nombre_de_pattes = p;
+                this.fourrure = f;
+            }
+
+            public void set_nombre_de_pattes(int n){
+                this.nombre_de_pattes = n;
+            }
+
+            public void set_fourrure(boolean f){
                 this.fourrure = f;
             }
         }
