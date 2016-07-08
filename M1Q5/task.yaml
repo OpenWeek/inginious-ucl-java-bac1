@@ -1,5 +1,5 @@
 accessible: true
-author: Tom & Lucas
+author: Lucas Ody & Tom Rousseaux 
 context: Le XOR est un opérateur logique, aussi connu comme "ou exclusif", à l'instar
     du "et" et du "ou". Il vous est demandé d'implémenter ce XOR, sachant que, pour
     A et B deux booléens, le résultat ed A XOR B est vrai si un et un seul des booléens

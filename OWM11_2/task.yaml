@@ -1,0 +1,132 @@
+accessible: true
+author: Alexandre KÜHN
+context: |
+    Nous nous intéressons à des exemples d'ajout de noeuds dans une liste simplement chaînée.
+
+    Pour toutes les questions ci-dessous, nous considérons la représentation d'une liste simplement chaînée suivante ``p`` :
+
+    ``p: a(value: 10) -> b(value: 20) -> c(value: 30)``
+
+
+environment: java7
+groups: false
+limits:
+    memory: '200'
+    output: '2'
+    time: '30'
+name: 'Mission 11 : Question de démarrage 2 : Ajouts dans une liste'
+network_grading: false
+order: 2
+problems:
+    '1':
+        header: |-
+            Depuis la représentation originale de ``p``, nous souhaitons lui ajouter un noeud ``d(value: 40)`` entre les noeuds ``b`` et ``c``, afin d'obtenir la liste chaînée suivante :
+
+            ``p: a(value: 10) -> b(value: 20) -> d(value: 40) -> c(value: 30)``
+
+            Parmis ces 4 propositions d'opération à effectuer sur la liste originale, sélectionnez celle(s) qui est(sont) correcte(s).
+        choices:
+        -   text: |-
+                .. code-block:: java
+
+                    Node d = new Node(40);
+                    d.next = p.first.next.next.next;
+                    p.next.next = d;
+            valid: true
+        -   text: |-
+                .. code-block:: java
+
+                    Node d = new Node(40);
+                    p.first.next.next = d;
+                    d.next = p.next.next.next;
+        -   text: |-
+                .. code-block:: java
+
+                    Node d = new Node(40);
+                    p.first.next = d;
+                    d.next = p.first.next.next;
+        -   text: |-
+                .. code-block:: java
+
+                    Node d = new Node(40);
+                    d.next = p.first.next.next;
+                    p.first.next = d;
+        multiple: true
+        type: multiple-choice
+        limit: 0
+        name: Simple ajout au milieu d'une liste simplement chaînée
+    '2':
+        choices:
+        -   valid: true
+            text: |-
+                .. code-block:: java
+
+                    Node d = new Node(40);
+                    Node a = p.first;
+                    p.first = d;
+                    d.next = a;
+        -   text: |-
+                .. code-block:: java
+
+                    Node d = new Node(40);
+                    Node a = p.first;
+                    d.next = a;
+                    p.first = d;
+            valid: true
+        -   valid: true
+            text: |-
+                .. code-block:: java
+
+                    Node d = new Node(40);
+                    d.next = p.first;
+                    p.first = d;
+        -   text: |-
+                .. code-block:: java
+
+                    Node d = new Node(40);
+                    p.first = d;
+                    d.next = p.first;
+        header: |-
+            Depuis la représentation originale de ``p``, nous souhaitons lui ajouter un noeud ``d(value: 40)`` avant le noeud ``a``, afin d'obtenir la liste chaînée suivante :
+
+            ``p: `d(value: 40) -> a(value: 10) -> b(value: 20) -> c(value: 30)``
+
+            Parmis ces 4 propositions d'opération à effectuer sur la liste originale, sélectionnez celle(s) qui est(sont) correcte(s)
+        type: multiple-choice
+        name: Simple ajout au début d'une liste simplement chaînée
+        multiple: true
+        limit: 0
+    '3':
+        choices:
+        -   text: |-
+                .. code-block:: java
+
+                    Node d = new Node(40);
+                    p.first.next.next.next = d;
+            valid: true
+        -   text: |-
+                .. code-block:: java
+
+                    Node d = new Node(40);
+                    p.first.next.next = d;
+        -   text: |-
+                .. code-block:: java
+
+                    Node d = new Node(40);
+                    p.first.next = d;
+        -   text: |-
+                .. code-block:: java
+
+                    Node d = new Node(40);
+                    p.first.next.next.next.next = d;
+        header: |-
+            Depuis la représentation originale de ``p``, nous souhaitons lui ajouter un noeud ``d(value: 40)`` avant le noeud ``a``, afin d'obtenir la liste chaînée suivante :
+
+            ``p: a(value: 10) -> b(value: 20) -> c(value: 30) -> d(value: 40)``
+
+            Parmis ces 4 propositions d'opération à effectuer sur la liste originale, sélectionnez celle(s) qui est(sont) correcte(s)
+        type: multiple-choice
+        limit: 0
+        name: Simple ajout à la fin d'une liste simplement chaînée
+        multiple: true
+weight: 1.0

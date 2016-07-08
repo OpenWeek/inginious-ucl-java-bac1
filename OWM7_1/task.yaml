@@ -1,0 +1,44 @@
+accessible: true
+author: Olivier MARTIN
+context: |
+    Nous avons une classe Animal. On souhaite créer une classe Lapin qui hérite de la classe Animal. Ecrit la classe Lapin qui hérite de la classe Animal et instantie le nombre de pattes à 4 et la fourrure à true car les lapins ont de la fourrure. Le constructeur de Lapin de doit pas prendre d'arguments.
+
+    .. code-block:: java
+
+        public class Animal {
+            protected int nombre_de_pattes;
+            protected boolean fourrure;
+
+            public Animal(int p, boolean f){
+                this.nombre_de_pattes = p;
+                this.fourrure = f;
+            }
+        }
+
+    Ainsi grâce à notre classe Lapin, quand nous auront besoin d'un lapin, il suffira de faire :
+
+    .. code-block:: java
+
+        Lapin monLapin = new Lapin();
+
+    plutôt que de créer un Animal et préciser le nombre de pattes et la fourrure dans le constructeur à chaque fois.
+
+    .. code-block:: java
+
+        Animal monLapin = new Animal(4, true);
+environment: java7
+groups: false
+limits:
+    memory: '200'
+    time: '30'
+    output: '2'
+name: 'Mission 7 : Exercice Facile : Héritage simple'
+network_grading: false
+order: 5
+problems:
+    q1:
+        language: Java
+        type: code
+        name: Lapin
+        header: Écrivez ici la classe Lapin qui hérite de la classe Animal.
+weight: 1.0
