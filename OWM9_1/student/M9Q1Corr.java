@@ -19,10 +19,10 @@ import java.io.BufferedReader;
 
 public class M9Q1Stu {
 
-	// Code a verifier
+	// Code to check
 	public static void premierFichier(String filename)
 	{ 
-    	BufferedReader br;
+    		BufferedReader br;
 		try
 		{
 			br = new BufferedReader(new FileReader(filename));
@@ -30,22 +30,16 @@ public class M9Q1Stu {
 			while(str != null)
 			{
 				System.out.println(str);
-               str = br.readLine();
+               			str = br.readLine();
 			}
 			br.close();
-		}
-        catch(FileNotFoundException e)
-		{
+		}catch(FileNotFoundException e){
 			fail(res + "Le code est incorrect : le nom du fichier ne semble pas être correct, vous essayez d'ouvrir un fichier non existant.");
 			e.printStackTrace();
-		}
-		catch(IOException e)
-		{
+		}catch(IOException e){
 			fail(res + "Le code est incorrect: il y a un problème lors de l'utilisation de la méthode readLine() ou close()");
 			e.printStackTrace();
-		}
-		catch(IOException e)
-		{
+		}catch(IOException e){
 			ex: System.exit(0);
 		}
 	}
