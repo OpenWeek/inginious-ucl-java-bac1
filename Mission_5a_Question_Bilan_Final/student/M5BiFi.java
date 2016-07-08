@@ -50,7 +50,7 @@ public class M5BiFi {
 	@Test
 	public void testQ1(){
     	String str = "Question 1 : \n Le code semble comporter des erreurs : ";
-		try{
+	try{
         	int n = 5; // longueur du tableau 
             int shift = 3; // longueur du décalage
         	int[] tab = new int[n];
@@ -63,15 +63,17 @@ public class M5BiFi {
             M5BiFiStu.shiftRightOne(stuShiftRightOne);
             shiftRightOne(shiftRightOne);
                        
-			assertTrue("Question 1 : \n Votre fonction shiftRight ne fournit pas les bons résultats,\n votre fonction retourne " + Arrays.toString(stuShiftRightOne) + " avec ce tableau " + Arrays.toString(tab) + ".", Arrays.equals(stuShiftRightOne, shiftRightOne));
-            
+		assertTrue("Question 1 : \n Votre fonction shiftRight ne fournit pas les bons résultats,\n votre fonction retourne " + Arrays.toString(stuShiftRightOne) + " avec ce tableau " + Arrays.toString(tab) + ".", Arrays.equals(stuShiftRightOne, shiftRightOne));
+            boolean err=false;
             try { 
             	M5BiFiStu.shiftRightOne(null);
-                assertTrue("Question 1 : \n Vous devez utiliser de la programmation défensive.", false);
-                
+            	err=true;
             } catch (AssertionError e) {
             	// Pour vérifier qu'une Assertion a bien été lancé
             } catch (NullPointerException e) {
+            	err=true;
+            }
+            if (err){
             	fail("Question 1 : \n Vous devez utiliser de la programmation défensive.");
             }
         }catch (ArithmeticException e){
@@ -116,14 +118,17 @@ public class M5BiFi {
             shiftRight(shiftRight, shift);
             
             assertTrue("Question 2 :\n Votre fonction shiftRight ne fournit pas les bons résultats,\n votre fonction retourne " + Arrays.toString(stuShiftRight) + " avec ce tableau " + Arrays.toString(tab) + ".", Arrays.equals(stuShiftRight, shiftRight));
-            
+            boolean err=false;
             try {
             	M5BiFiStu.shiftRight(null, shift);
-                assertTrue("Question 2 : \n Vous devez utiliser de la programmation défensive.", false);
+                err=true;
                 
             } catch (AssertionError e) {
             // Pour vérifier qu'une Assertion a bien été lancé
             } catch (NullPointerException e) {
+            	err=true;
+            }
+            if(err){
             	fail("Question 2 : \n Vous devez utiliser de la programmation défensive.");
             }
 		}catch (ArithmeticException e){
