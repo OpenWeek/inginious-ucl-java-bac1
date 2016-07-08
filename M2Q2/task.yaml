@@ -1,7 +1,7 @@
 accessible: true
-author: Tom & Lucas
+author: Lucas Ody & Tom Rousseaux 
 context: |-
-    Tracez sur une seule ligne une séquence de tirets (-) et de points (.). Cette ligne contiendra la séquence composée de ``nTiret`` tirets puis ``nPoint`` point le tout ``nMorceau`` fois. Par exemple les valeurs
+    Tracez sur une seule ligne une séquence de tirets (-) et de points (.). Cette ligne contiendra la séquence composée de ``nTiret`` tirets puis ``nPoint`` point, le tout, ``nMorceau`` fois. Par exemple les valeurs
 
     .. code-block:: java
 

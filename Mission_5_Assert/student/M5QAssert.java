@@ -40,7 +40,7 @@ public class M5QAssert {
             // essay avec une valeur non valide
             boolean err = false; // nécessaire car il n'est pas possible de lancer directement dans le block try la méthode fail
             try{
-            	M5QAssertStu.question1(-i);
+            	M5QAssertStu.question1(-i-1);
                 err=true; 
             }catch (AssertionError e) {
             	// c'est bien si un assertion à bien été lancé
