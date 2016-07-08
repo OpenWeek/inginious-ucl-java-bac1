@@ -1,0 +1,64 @@
+accessible: true
+author: Justine Doutreloux, Carolina Urinza Salamanca, Charline Outters
+context: |+
+    Dans cet exercice, nous allons vous donner un morceau de code contenant des erreurs. Vous allez devoir les corriger.
+
+    .. code-block:: java
+
+        //ligne 1
+
+        public class M9Q2Stu
+        {
+
+            public static void deuxiemeFichier(String filename)
+            {
+                //ligne 2
+                try
+                {
+                    br  = new BufferedReader(new FileReader(filename));
+                    String str = br.readLine();
+                    while(str != null)
+                    {
+                        System.out.println(str);
+                        //ligne 3
+                    }
+                    //ligne 4
+                }
+                catch(IOException e)
+                {
+                    ex: System.exit(0);
+                }
+            }
+
+        }
+
+environment: java7
+groups: false
+limits:
+    memory: '100'
+    output: '2'
+    time: '30'
+name: 'Mission 9 : Exercice facile - Cherchez l''erreur'
+network_grading: false
+problems:
+    q1:
+        type: match
+        name: Ligne 1
+        header: Insérez ci-dessous ce qu'il manque à la ligne 1
+        answer: import java.io.*;
+    q2:
+        name: Ligne 2
+        type: match
+        header: Insérez ci-dessous ce qu'il manque à la ligne 2
+        answer: BufferedReader br;
+    q3:
+        answer: str = br.readLine();
+        name: Ligne 3
+        header: Insérez ci-dessous ce qu'il manque à la ligne 3
+        type: match
+    q4:
+        type: match
+        answer: br.close();
+        header: Insérez ci-dessous ce qu'il manque à la ligne 3
+        name: Ligne 4
+weight: 1.0
