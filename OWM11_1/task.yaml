@@ -29,7 +29,7 @@ limits:
     output: '2'
     memory: '200'
     time: '30'
-name: 'Mission 11: Question de démarrage 1 : Accès dans une liste'
+name: 'Mission 11 : Question de démarrage 1 : Accès dans une liste'
 network_grading: false
 order: 1
 problems:

@@ -72,7 +72,7 @@ limits:
     memory: '200'
     time: '30'
     output: '2'
-name: 'Mission 11: Question intermédiaire : RemoveDuplicates de liste'
+name: 'Mission 11 : Question intermédiaire 7 : RemoveDuplicates de liste'
 network_grading: false
 order: 23
 problems:
