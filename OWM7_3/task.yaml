@@ -1,0 +1,64 @@
+accessible: true
+author: Olivier MARTIN
+context: |-
+    Nous avons une classe abstraite Animal. Chaque animal a une variable "faim". Plus la faim est proche de 0, plus l'animal a faim. Si la faim tombe à 0, l'animal meurt. Chaque animal possède une méthode abstraite (à définir dans les classes filles) manger() afin de remonter leur faim. Pour manger, les animaux utilisent le panier de nourriture. Ce panier contient des carottes et des poulets. Les Chevres mangent des carottes et une carotte agumente la faim de 15. Les Ours mangent des poulets et un poulet augmente la faim de 10.
+
+    .. code-block:: java
+
+        public abstract class Animal{
+            public int faim = 0;
+            /*
+             * L'animal mange de la nourriture (dépend de l'animal) et
+                 sa variable faim augmente (dépend de l'animal).
+             * Quand l'animal mange, il ne mange qu'une seule
+                 carotte/poulet. Il ne vide pas le panier.
+             * L'animal mange même si la faim est <=0
+             * Dans tous les cas , retourne false si la faim est <= 0, true sinon
+             */
+            public abstract boolean manger(PanierDeNourriture panier);
+        }
+
+    La classe PanierDeNourriture contient quand à elle les opérations suivantes :
+
+    .. code-block:: java
+
+        public class PanierDeNourriture{
+            /*
+             * @post
+             * Si il n'y a plus de carottes, retourne false.
+             * Si il reste des carottes, diminue le nombre de carottes de 1 et retourne true.
+             */
+            public boolean manger_carotte(){ /* ... */ }
+
+            /*
+             * @post
+             * Si il n'y a plus de poulets, retourne false.
+             * Si il reste des poulets, diminue le nombre de poulets de 1 et retourne true.
+             */
+            public boolean manger_poulet(){ /* ... */ }
+        }
+environment: java7
+groups: false
+limits:
+    memory: '200'
+    output: '2'
+    time: '30'
+name: 'Mission 7 : Exercice Intermédiaire : Polymorphisme et méthode abstraite'
+network_grading: false
+order: 5
+problems:
+    q1:
+        name: Ours
+        header: Écrivez ici la classe Ours qui hérite de Animal et implémente la méthode
+            manger() en respectant la post-conditions. La faim doit valoir 200 par
+            défaut.
+        language: Java
+        type: code
+    q2:
+        name: Chèvre
+        type: code
+        language: Java
+        header: Écrivez ici la classe Chevre qui hérite de Animal et implémente la
+            méthode manger() en respectant la post-conditions. La faim doit valoir
+            100 par défaut.
+weight: 1.0

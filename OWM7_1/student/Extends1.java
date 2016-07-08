@@ -31,7 +31,7 @@ public class Extends1 {
 	
 	@Test
 	public void testLapin(){
-		try{
+		try{        
         	Extends1Stu mission = new Extends1Stu();
             Class<?> enclosingClass = Class.forName("student.Extends1Stu");
         	Object enclosingInstance = enclosingClass.newInstance();
