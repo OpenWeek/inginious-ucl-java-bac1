@@ -19,14 +19,13 @@ public class MorseStu {
 
 	public static String drawLine(int nMorceau, int nTiret, int nPoint){
 
+            ByteArrayOutputStream baos = new ByteArrayOutputStream();
+            PrintStream ps = new PrintStream(baos);
+            PrintStream old = System.out;
+            System.setOut(ps);
 
-        ByteArrayOutputStream baos = new ByteArrayOutputStream();
-        PrintStream ps = new PrintStream(baos);
-        PrintStream old = System.out;
-        System.setOut(ps);
-
-		for (int i = 0; i < nMorceau; i++)
-    	{
+            for (int i = 0; i < nMorceau; i++)
+    	    {
         	// Tirets
         	for (int j = 0; j < nTiret; j++)
         	{
@@ -37,7 +36,7 @@ public class MorseStu {
         	{
          	   sb.append('.');
         	}
-    	}
+    	    }
 
         System.setOut(old);
         return baos.toString();
