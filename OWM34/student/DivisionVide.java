@@ -14,12 +14,15 @@
  */
 
 package student;
-import java.util.*;
-import java.io.*;
-public class SWStu {
 
-	// Code a verifier
-	public static void antiSpoiler (ArrayList<Personne> l,String filename){
+public class DivisionStu {
+
+	/*
+         *@pré: d2 != 0.0
+         *@post: Retourne la division de d1 par d2, arrondie à l'entier inférieur le plus proche
+         */
+	public static double DivideAndRound(double d1, double d2){
 @		@q1@@
+		
 	}
 }

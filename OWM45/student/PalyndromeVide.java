@@ -14,12 +14,15 @@
  */
 
 package student;
-import java.util.*;
-import java.io.*;
-public class SWStu {
 
-	// Code a verifier
-	public static void antiSpoiler (ArrayList<Personne> l,String filename){
+public class PalyndromeStu {
+
+	/*
+ 	 *@pré: str != null
+         *@post: Retourne true si le String str est un palyndrome, false sinon.
+         */
+	public static boolean isPalyndrome(String str){
+    
 @		@q1@@
 	}
 }

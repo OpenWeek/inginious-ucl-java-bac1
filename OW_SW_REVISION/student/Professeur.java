@@ -1,4 +1,6 @@
-public class Professeur extends Personne{
+package student;
+
+public class Professeur implements Personne{
   String name;
   int age;
   boolean seen;

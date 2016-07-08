@@ -14,12 +14,14 @@
  */
 
 package student;
-import java.util.*;
-import java.io.*;
-public class SWStu {
 
-	// Code a verifier
-	public static void antiSpoiler (ArrayList<Personne> l,String filename){
+public class StringComparaisonStu {
+
+	/**
+	 * @pre str1 != null str2 != null
+	 * @post retourne true si str1 et str2 sont les même, false sinon
+	 */
+	public static boolean stringcmp(String str1,String str2){
 @		@q1@@
 	}
 }

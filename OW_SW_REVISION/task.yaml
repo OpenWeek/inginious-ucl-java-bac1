@@ -58,6 +58,8 @@ context: |-
          public static void antiSpoiler(List<Personne> l,String filename){
          /* Code à compléter */
          }
+
+    Attention, vous devez lire le fichier ligne par ligne et respecter cet ordre pour écrire dans votre fichier.
 environment: java7
 groups: false
 limits:

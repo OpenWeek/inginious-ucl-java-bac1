@@ -1,5 +1,5 @@
 /**
- *  Copyright (c) 2015, 2016 Fitvoye Florian, Dubray Alexandre
+ *  Copyright (c) 2015, 2016 Fitvoy Florian,Dubray Alexandre
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU Affero General Public License as published by
  *  the Free Software Foundation, either version 3 of the License, or
@@ -14,12 +14,20 @@
  */
 
 package student;
-import java.util.*;
-import java.io.*;
-public class SWStu {
 
-	// Code a verifier
-	public static void antiSpoiler (ArrayList<Personne> l,String filename){
-@		@q1@@
-	}
+public class PalyndromeStu {
+
+	/*
+	 *@pré: str != null
+	 *@post: Retourne true si le String str est un palyndrome, false sinon.
+         */
+	public static boolean isPalyndrome(String str){
+    	int length = str.length();
+        for(int i=0;i<str.length()/2;i++){
+        	if(str.charAt(i) != str.charAt(length-i))
+            	return false;
+        }
+        return true;
+    }
+		
 }

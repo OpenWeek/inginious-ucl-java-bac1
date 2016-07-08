@@ -1,4 +1,6 @@
-public class Tuteur extends Personne{
+package student;
+
+public class Tuteur implements Personne{
   String name;
   int age;
   boolean seen;

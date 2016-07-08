@@ -1,4 +1,6 @@
-public class Assistant extends Personne{
+package student;
+
+public class Assistant implements Personne{
   String name;
   int age;
   boolean seen;
