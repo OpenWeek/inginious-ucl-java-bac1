@@ -20,18 +20,15 @@ public class M5QShuffleStu {
 
 	public static void shuffle(int tab[]){
     	assert(tab!=null);
-        int t[]=Arrays.copyOf(tab,tab.length);
-        for(int i=0;i<t.length;i++){
+        for(int i=0;i<tab.length;i++){
 
             // À chaque passage dans la boucle on regarde un élément à la fin en moins, et l'élément qui est choisit est mis à la fin
             int randomPosition=(int)(Math.random()*(tab.length-i));
-            t[i]=tab[randomPosition];
 
             // switch de l'élément sélectionner à la dernière position
             int tmp=tab[randomPosition];
             tab[randomPosition]=tab[tab.length-i-1];
             tab[tab.length-i-1]=tmp;
         }
-        tab=t;
 	}
 }

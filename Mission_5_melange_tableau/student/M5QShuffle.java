@@ -108,7 +108,7 @@ public class M5QShuffle {
                 //fail("Question 1 :\n Vous n'utilisez pas correctement assert.");
             }
 
-            boolean found=false;
+            /*boolean found=false;
             for (int i=0; i<len;i++){// parcour le tableau de mélanger par l'étudiant		found=false;
             	for (int j=0; j<len-i;i++){ //parcourt le tableau initial sans regarder les derniers élémnents avec len-i qui ont déjà été trouvé
                 	if (tabShuf[i]==tab[j]){ // si on trouve un élément qui à la même valeur on la permute avec le dernier élémentmet à la place du dernier élément
@@ -121,8 +121,11 @@ public class M5QShuffle {
                 if(!found){
                 	fail("Question 1 :\n Votre code ne mélange pas correctement le tablleau, votre tableau: "+Arrays.toString(tabShuf)+" avec ce tableau comme paramettre : "+Arrays.toString(t));
                 }
-            }
-
+            }*/
+            int tabShufSort[] = Arrays.copyOf(tabShuf, tab.length);
+            Arrays.sort(tab);
+            Arrays.sort(tabShufSort);
+            assertTrue("Question 1 :\n Votre code ne mélange pas correctement le tablleau, votre tableau: "+Arrays.toString(tabShuf)+" avec ce tableau comme paramettre : "+Arrays.toString(t)+"." + "bon tableau: " + Arrays.toString(tab) + "tableau étudiant: " + Arrays.toString(tabShufSort), Arrays.equals(tab, tabShufSort));
 
 		}catch (ArithmeticException e){
 			fail(str + "Le code est incorrect : il est interdit de diviser par zéro.");
