@@ -32,7 +32,7 @@ context: |-
 
         }
 
-    Répondez aux questions ci-dessus en respectant le modèele suivant : "N° de la ligne : votre correction". Veuillez compléter les encandrés ci-dessous dans l'ordre du code.
+    Répondez aux questions ci-dessus en respectant le modèele suivant : "N° de la ligne : votre correction" (exemple : 12 : String str = "blabla";). Veuillez compléter les encadrés ci-dessous dans l'ordre du code.
 environment: default
 groups: false
 limits:
