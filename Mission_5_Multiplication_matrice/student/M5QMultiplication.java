@@ -38,9 +38,9 @@ public class M5QMultiplication {
         return sol;
     }
     
-    //fonction pour comparer 2 tableaux de tableaux, nécssaire carimpossible directement avec Arrays.equals()
+    //fonction pour comparer 2 tableaux de tableaux, nécessaire car impossible directement avec Arrays.equals()
     private boolean isEquals(int l[][],int m[][]){
-    	if (l.length!=m.length){ // la concordance des autre dimention n'est pas nécessaire puisque vérifier par la suite avec le Arrays.equals
+    	if (l.length!=m.length){ // la concordance des autres dimensions n'est pas nécessaire puisque vérifié par la suite avec le Arrays.equals
         	return false;
         }
         for(int i=0; i<l.length; i++){
@@ -89,7 +89,7 @@ public class M5QMultiplication {
             int solStu[][]=M5QMultiplicationStu.multiplication(l,m);
             int sol[][]=mul(l,m);
             if (!isEquals(solStu,sol)){
-            	String err="Question 1 :\n Votre solution ne fournis pas un réponse correcte\n\n";
+            	String err="Question 1 :\n Votre solution ne fournit pas une réponse correcte\n\n";
                err+="l :\n";
                 err=printMatr(err, l);
                 err+="\n";
@@ -134,7 +134,7 @@ public class M5QMultiplication {
 	
     
     @Test
-	public void testProgDef(){ // verification de l'utilisation de la programation défensive
+	public void testProgDef(){ // vérification de l'utilisation de la programation défensive
 		try{
         	int ll=2+(int)(Math.random()*3); // nombre de ligne de la matrice l(de 2 à 4)
             int lc=2+(int)(Math.random()*3); // nombre de colone de la matrice l(de 2 à 4)
@@ -149,27 +149,27 @@ public class M5QMultiplication {
             	M5QMultiplicationStu.multiplication(l,m);
                 err=true;                
             } catch (AssertionError e) {
-            	// Pour vérifier qu'une Assertion a bien été lancé
+            	// Pour vérifier qu'une Assertion a bien été lancée
             } catch (NullPointerException e) {
             	err=true;
             }
             if(err){
                 err=false;
-            	fail("Question 1 : \n Vous devez utiliser de la programmation défensive.\n Aucune assertion vérifie que les matrices sont compatibles pour la multiplication.");
+            	fail("Question 1 : \n Vous devez utiliser de la programmation défensive.\n Aucune assertion vérifie que les matrices soient compatibles pour la multiplication.");
             }
          	
            ///////////////
-            //test avec une des deux matrices null
+            // test avec une des deux matrices nulles
            try{
             	M5QMultiplicationStu.multiplication(l,null);
                 err=true;
             } catch (AssertionError e) {
-            	// Pour vérifier qu'une Assertion a bien été lancé
+            	// Pour vérifier qu'une Assertion a bien été lancée
             } catch (NullPointerException e) {
-            	fail("Question 1 : \n Vous devez utiliser de la programmation défensive.\n Vous devez vérifier avant tout que les matrices ne sont pas null.");
+            	fail("Question 1 : \n Vous devez utiliser de la programmation défensive.\n Vous devez vérifier avant tout que les matrices ne soient pas nulles.");
             }
             if (err){
-            	fail("Question 1 : \n Vous devez utiliser de la programmation défensive.\n Les assertions ne vérifie pas que les matrices ne sont pas null.");
+            	fail("Question 1 : \n Vous devez utiliser de la programmation défensive.\n Les assertions ne vérifient pas que les matrices ne sont pas nulles.");
             }
             
             try{
@@ -177,12 +177,12 @@ public class M5QMultiplication {
                 err=true;
                 
             } catch (AssertionError e) {
-            	// Pour vérifier qu'une Assertion a bien été lancé
+            	// Pour vérifier qu'une Assertion a bien été lancée
             } catch (NullPointerException e) {
-            	fail("Question 1 : \n Vous devez utiliser de la programmation défensive.\n Vous devez vérifier avant tout que les matrices ne sont pas null.");
+            	fail("Question 1 : \n Vous devez utiliser de la programmation défensive.\n Vous devez vérifier avant tout que les matrices ne soient pas nulles.");
             }
             if (err){
-            	fail("Question 1 : \n Vous devez utiliser de la programmation défensive.\n Les assertions ne vérifie pas que les matrices ne sont pas null.");
+            	fail("Question 1 : \n Vous devez utiliser de la programmation défensive.\n Les assertions ne vérifient pas que les matrices ne soient pas nulles.");
             }
             
 		}catch (ArithmeticException e){
