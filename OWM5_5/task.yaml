@@ -30,7 +30,10 @@ problems:
                  *       d'une position vers la droite (le dernier élément revenant
                  *       en première position)
                  */
-                public static void shiftRightOne (int[] tab)
+                public static void shiftRightOne (int[] tab) {
+                    /* Code a complèter */
+                }
+
         language: Java
         type: code
     q2:
@@ -48,5 +51,8 @@ problems:
                   *       de n positions vers la droite, c'est-à-dire que les éléments
                   *       qui se trouvaient en i se retrouvent en (i + n) % tab.length
                   */
-                public static void shiftRight (int[] tab, int n)
+                public static void shiftRight (int[] tab, int n) {
+                    /* Code a complèter */
+                }
+
 weight: 1.0

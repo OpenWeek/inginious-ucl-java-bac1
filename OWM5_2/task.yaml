@@ -25,5 +25,7 @@ problems:
                  * @pre: tab != null
                  * @post: le tableau tab est inverse
                  */
-                public static void inverse(int tab[])
+                public static void inverse(int tab[]) {
+                    /* Code à compléter */
+                }
 weight: 1.0
