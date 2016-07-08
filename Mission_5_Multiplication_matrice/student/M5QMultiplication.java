@@ -166,7 +166,7 @@ public class M5QMultiplication {
             } catch (AssertionError e) {
             	// Pour vérifier qu'une Assertion a bien été lancé
             } catch (NullPointerException e) {
-            	fail("Question 1 : \n Vous devez utiliser de la programmation défensive.\n Vous devez vériffier avant tout que les matrices ne sont pas null.");
+            	fail("Question 1 : \n Vous devez utiliser de la programmation défensive.\n Vous devez vérifier avant tout que les matrices ne sont pas null.");
             }
             if (err){
             	fail("Question 1 : \n Vous devez utiliser de la programmation défensive.\n Les assertions ne vérifie pas que les matrices ne sont pas null.");
@@ -179,7 +179,7 @@ public class M5QMultiplication {
             } catch (AssertionError e) {
             	// Pour vérifier qu'une Assertion a bien été lancé
             } catch (NullPointerException e) {
-            	fail("Question 1 : \n Vous devez utiliser de la programmation défensive.\n Vous devez vériffier avant tout que les matrices ne sont pas null.");
+            	fail("Question 1 : \n Vous devez utiliser de la programmation défensive.\n Vous devez vérifier avant tout que les matrices ne sont pas null.");
             }
             if (err){
             	fail("Question 1 : \n Vous devez utiliser de la programmation défensive.\n Les assertions ne vérifie pas que les matrices ne sont pas null.");
