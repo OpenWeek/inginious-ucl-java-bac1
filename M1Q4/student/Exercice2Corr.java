@@ -16,7 +16,10 @@ package student;
 
 public class Exercice2Stu {
 
-    // Soluce
+    /**
+    * @pre : 
+    * @post : distribue 3 polynomes de 1er degré, et retourne  les coefficients du polynome de 3ème degré obtenu dans un tableau.
+    */
     public static int[] prodAlgeb(int a, int b, int c){
 
         int xCube = 1;
