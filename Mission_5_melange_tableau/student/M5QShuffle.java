@@ -54,13 +54,16 @@ public class M5QShuffle {
 
 
             // verification de l'utilisation de la programation défensive
+            boolean err = false;
             try {
-                    M5QShuffleStu.shuffle(null);
-                    assertTrue("Question 1 : \n Vous devez utiliser de la programmation défensive.", false);
-
+		M5QShuffleStu.shuffle(null);
+		err=true;
             } catch (AssertionError e) {
             	// Pour vérifier qu'une Assertion a bien été lancé
             } catch (NullPointerException e) {
+            	err=true;
+            }
+            if (err){
             	fail("Question 1 : \n Vous devez utiliser de la programmation défensive.");
             }
 
