@@ -1,0 +1,90 @@
+accessible: true
+author: Aurélie Massart
+context: |
+    Les fragments de code ci-dessous représentent différentes implémentations parcourant une liste chainée et affichant tous les éléments de cette liste. Parmi les propositions ci-dessous, une seule est correcte. Pouvez-vous deviner laquelle?
+    La liste chainée parcourue est implémentée par la classe Node dont le code est fourni ci-dessous:
+
+    .. code-block:: java
+
+        public class Node{
+            int value;
+            Node next;
+
+            ...
+        }
+environment: default
+groups: false
+limits:
+    memory: '32'
+    output: '1024'
+    time: '60'
+name: 'Mission 11 : Question de démarrage 4 : Parcours d''une liste simplement chainée'
+network_grading: false
+order: 4
+problems:
+    idFirstExercice:
+        choices:
+        -   text: |+
+                .. code-block:: java
+
+                    public void parcours(Node n)
+                        Node current = n;
+
+                        while(current != null){
+                            System.out.println(current.value);
+                        }
+                    }
+
+
+
+            feedback: 'Ce fragment de code est erronné car on ne parcourt pas la liste:
+                le pointeur current n''est pas mis à jour'
+        -   text: |+
+                .. code-block:: java
+
+                    public void parcours(Node n)
+                        Node current = n;
+
+                        while(current != null){
+                            current = current.next;
+                            System.out.println(current.value);
+                        }
+                    }
+
+
+
+            feedback: 'Ce fragment de code est erronné : le premier élément de la
+                liste ne sera jamais affiché'
+        -   text: |+
+                .. code-block:: java
+
+                    public void parcours(Node n)
+                        Node current = n;
+
+                        while(current.next != null){
+                            System.out.println(current.value);
+                            current = current.next;
+                        }
+                    }
+
+
+            feedback: 'Ce fragment de code est erronné : le dernier élément de la
+                liste ne sera pas affiché'
+        -   text: |
+                .. code-block:: java
+
+                  public void parcours(Node n)
+                      Node current = n;
+
+                      while(current != null){
+                          System.out.println(current.value);
+                          current = current.next;
+                      }
+                  }
+            valid: true
+        header: ''
+        error_message: '``You failed!!!``...'
+        type: multiple-choice
+        limit: 4
+        name: The first exercice
+weight: 1.0
