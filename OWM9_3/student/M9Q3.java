@@ -66,7 +66,7 @@ public class M9Q3
 			FileWriter fw = new FileWriter(file);
 			BufferedWriter bw = new BufferedWriter(fw);
 			bw.write(content);
-			bw.close;
+			bw.close();
 			int res = M9Q3Stu.charNumber("file.txt");
 			int res1 = M9Q3Corr.charNumber("file.txt");
 			assertEquals(res, res1);
