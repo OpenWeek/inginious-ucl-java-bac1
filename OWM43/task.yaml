@@ -23,7 +23,7 @@ problems:
                 /*
                  * pre : str est un String non vide
                  * post: la fonction separe str a chaque c et affiche tout les sous String
-                 * exemple : str = "bonjour.hello.java" et c='.' affiche bonjour, hello et java chacun sur un ligne
+                 * exemple : str = "bonjour.hello.java" et c='.' affiche bonjour, hello et java chacun sur une ligne
                  */
                 public static void cut (String str, char c){
                     /* code a completer */

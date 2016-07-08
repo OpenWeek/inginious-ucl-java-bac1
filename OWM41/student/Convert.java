@@ -24,18 +24,18 @@ import java.util.Random;
 import org.junit.runner.notification.Failure;
 
 public class Convert {
-	
+
 	private static String str = "Le code semble comporter des erreurs : ";
-	
+
 	@Test
 	public void testConvert(){
 		try{
         	String str1 = "1";
             String str2 = "16";
             String str3 = "-1";
-            assertEquals("Vous avez mal converti \"1\" ",1, ConvertStu.Convert(str1));
-            assertEquals("Vous avez mal converti \"16\" ",16,ConvertStu.Convert(str2));
-            assertEquals("Vous avez mal converti \"-1\" ",-1,ConvertStu.Convert(str3));
+            assertEquals("Vous avez mal converti \"1\" ",1, ConvertStu.convert(str1));
+            assertEquals("Vous avez mal converti \"16\" ",16,ConvertStu.convert(str2));
+            assertEquals("Vous avez mal converti \"-1\" ",-1,ConvertStu.convert(str3));
 			}
 		catch (ArithmeticException e){
 			fail(str + "Le code est incorrect : il est interdit de diviser par zéro.");
@@ -59,7 +59,7 @@ public class Convert {
 			e.printStackTrace();
 		}
 	}
-	
+
 	// Code verificateur
 	public static void main(String[] args) {
 		Result result = JUnitCore.runClasses(Convert.class);

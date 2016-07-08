@@ -24,21 +24,24 @@ import org.junit.runner.notification.Failure;
 import java.io.*;
 
 public class Cut {
-	
+
 	private static String str = "Le code semble comporter des erreurs : ";
-	
+
 	@Test
 	public void testCut(){
     	try{
-    		CutStu.cut("je.suis.belge.",'.');
+    		CutStu.cut("je.suis.belge.",'.',"test1.txt");
     		BufferedReader bf1 = new BufferedReader(new FileReader("student/ans.txt"));
-    		BufferedReader bf2 = new BufferedReader(new FileReader("answer.txt"));
+    		BufferedReader bf2 = new BufferedReader(new FileReader("test1.txt"));
             String s1=bf1.readLine();
             String s2=bf2.readLine();
             while (s1!=null && s2!=null){
-                assertTrue("expected : " + s1 +", found : "+s2,s1.equals(s2));
+                assertTrue("sortie attendue : " + s1 +", sortie trouvee : "+s2,s1.equals(s2));
             	s1=bf1.readLine();
                 s2=bf2.readLine();
+            }
+            if (s2==null&&s1!=null){
+            	fail(str + "Vous n'affichez rien alors que "+s1+" etait attendu");
             }
             bf1.close();
             bf2.close();
@@ -64,18 +67,22 @@ public class Cut {
 			e.printStackTrace();
             }
         }
-        
+
+        @Test
         public void testCut2(){
     	try{
-    		CutStu.cut("hello",'.');
-    		BufferedReader bf3 = new BufferedReader(new FileReader("student/ans.txt"));
-    		BufferedReader bf4 = new BufferedReader(new FileReader("answer2.txt"));
+    		CutStu.cut("hello",'.',"test2.txt");
+    		BufferedReader bf3 = new BufferedReader(new FileReader("student/ans2.txt"));
+    		BufferedReader bf4 = new BufferedReader(new FileReader("test2.txt"));
             String s3=bf3.readLine();
             String s4=bf4.readLine();
             while (s3!=null && s4!=null){
-                assertTrue("expected : " + s3 +", found : "+s4,s3.equals(s4));
+                assertTrue("sortie attendue : " + s3 +", sortie trouvee : "+s4,s3.equals(s4));
             	s3=bf3.readLine();
                 s4=bf4.readLine();
+            }
+            if (s4==null&&s3!=null){
+            	fail(str + "Vous n'affichez rien alors que \""+s3+"\" etait attendu");
             }
             bf3.close();
             bf4.close();
@@ -101,7 +108,7 @@ public class Cut {
 			e.printStackTrace();
             }
         }
-	
+
 	public static void main(String[] args) {
 		Result result = JUnitCore.runClasses(Cut.class);
 		for (Failure failure: result.getFailures()) {
