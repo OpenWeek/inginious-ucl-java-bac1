@@ -16,7 +16,11 @@ package student;
 
 public class Exercice1Stu {
 
-    // Soluce
+    /*
+    * @pre : -
+    * @post : trouve une solution d'une équation du 3ème degré dont les coefficients sont donnés.
+    *
+    */
     public static int eqSolv(int xCube, int xCarre, int x, int tI){
         int r =0;
         for(int i=0; i<=20; i=i+1)
