@@ -87,7 +87,7 @@ public class M9Q2 {
 	public void testPos1(){
 		try{
 			String content = generateString(5) + " " + generateString(6);
-			File file = new File("file.txt");
+			File file = new File("student/file.txt");
 			FileWriter fw = new FileWriter(file);
 			BufferedWriter bw = new BufferedWriter(fw);
 			bw.write(content);
@@ -95,7 +95,7 @@ public class M9Q2 {
 			
 			MyBufferedReader.openSuccess = true;
 			MyBufferedReader.closeSuccess = true;
-			M9Q2Stu.deuxiemeFichier("student/fichier.txt");
+			M9Q2Stu.deuxiemeFichier("student/file.txt");
 			BufferedReader verif;
 			verif = new BufferedReader(new FileReader("student/outStu.txt"));
 			String res = verif.readLine();
