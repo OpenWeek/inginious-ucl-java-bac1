@@ -14,28 +14,26 @@
  */
 package student;
 
-public class Exercice3Stu {
+public class Exercice5Stu {
 
-    // Soluce
-    public static boolean imaginairePur = false;
-    public static boolean reelPur = false;
-    public static int[] multiplicationComplexe(int xR, int xI, int yR, int yI)
+    /**
+     * @pre : - 
+     * @post : remplace l'opérateur xor (^)
+     */
+    public static boolean xor(boolean A, boolean B)
     {
 
-        int a = 0;
-        int b = 0;
+        boolean XOR = false;
        
         //<exercice>
-       
-        a = xR*yR - xI*yI;
-        b = xI*yR + xR*yI;
-        if(a == 0)
-            imaginairePur = true;
-        if(b == 0)
-            reelPur = true;
+        
+        if((!A&&B)||(!B&&A))
+        {
+            XOR=true;
+        }
        
         //</exercice>
-        int[] res = {a, b};
-        return res; 
+        
+        return XOR; 
     }
 }

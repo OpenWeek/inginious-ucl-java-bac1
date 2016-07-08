@@ -14,17 +14,32 @@
  */
 package student;
 
-public class Exercice2Stu {
+public class Exercice3Stu {
 
-    // Soluce
-    public static int[] prodAlgeb(int a, int b, int c){
+    /**
+    * @pre : -
+    * @post : calcule et caractérise le produit de deux complexes, dont les
+    *        parties réelles et imaginaires sont passées en paramètre
+    */
+    public static boolean imaginairePur = false;
+    public static boolean reelPur = false;
+    public static int[] multiplicationComplexe(int xR, int xI, int yR, int yI)
+    {
 
-        int xCube = 1;
-        int xCarre = -(a+b+c);
-        int x = (a*b+a*c+b*c);
-        int tI = -a*b*c;
-        
-        int i[] = {xCube, xCarre, x, tI};
-        return i;
-        }
+        int a = 0;
+        int b = 0;
+       
+        //<exercice>
+       
+        a = xR*yR - xI*yI;
+        b = xI*yR + xR*yI;
+        if(a == 0)
+            imaginairePur = true;
+        if(b == 0)
+            reelPur = true;
+       
+        //</exercice>
+        int[] res = {a, b};
+        return res; 
+    }
 }

@@ -14,22 +14,22 @@
  */
 package student;
 
-public class Exercice5Stu {
+public class Exercice1Stu {
 
-    public static boolean xor(boolean A, boolean B)
-    {
-
-        boolean XOR = false;
-       
-        //<exercice>
-        
-        if((!A&&B)||(!B&&A))
+    /*
+    * @pre : -
+    * @post : trouve une solution d'une équation du 3ème degré dont les coefficients sont donnés.
+    *
+    */
+    public static int eqSolv(int xCube, int xCarre, int x, int tI){
+        int r =0;
+        for(int i=0; i<=20; i=i+1)
         {
-            XOR=true;
+            if(xCube*i*i*i+xCarre*i*i+x*i+tI==0)
+            {
+                r=i;
+            }
         }
-       
-        //</exercice>
-        
-        return XOR; 
+        return r;
     }
 }
