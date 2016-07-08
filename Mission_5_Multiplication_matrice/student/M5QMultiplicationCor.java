@@ -19,6 +19,7 @@ public class M5QMultiplicationStu {
 
 
 	public static int[][] multiplication(int l[][], int m[][]){
+	assert(l!=null && m!=null);
         assert(l[0].length==m.length);
         int sol[][]=new int[l.length][m[0].length];
         for(int i=0; i<sol.length; i++){
