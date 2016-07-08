@@ -55,6 +55,13 @@ context: |-
             public boolean equals (Cours cours) { /* non fourni */ }
 
         }
+
+        public static void main(String[] args) {
+            Cours info;
+            Cours math;
+
+            /* A COMPLETER */
+        }
 environment: java7
 groups: false
 limits:
@@ -67,7 +74,7 @@ problems:
     q1:
         name: Créer deux objets
         header: |
-            Initialisez deux objets nommés respectivement "info" et "math". Les informations de chaque cours sont :
+            Initialisez les deux objets "info" et "math". Les informations de chaque cours sont :
 
             pour "info" : prof : Pecheur / code : LFSAB1401 / credit : 6
 
