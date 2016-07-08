@@ -1,6 +1,6 @@
 accessible: true
 author: Justine Doutreloux, Charline Outters, Carolina Unriza Salamanca
-context: ''
+context: 'Cette mission vous permettra de vous familiariser avec l''utilisation des fichiers.'
 environment: java7
 groups: false
 limits:
@@ -29,5 +29,5 @@ problems:
 			\\à compléter
 		  }
 
-            Piste: utiliser la méthode readLine() pour afficher la première ligne.
+            Piste: utiliser la méthode ``readLine()`` pour afficher la première ligne.
 weight: 1.0
