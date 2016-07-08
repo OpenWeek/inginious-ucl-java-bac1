@@ -1,5 +1,5 @@
 accessible: true
-author: Aurélie Massart
+author: Aurélie MASSART, Alexandre KÜHN & Hua Yang HU
 context: |
     Les fragments de code ci-dessous représentent différentes implémentations parcourant une liste chainée et affichant tous les éléments de cette liste. Parmi les propositions ci-dessous, une seule est correcte. Pouvez-vous deviner laquelle?
     La liste chainée parcourue est implémentée par la classe Node dont le code est fourni ci-dessous:

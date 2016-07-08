@@ -1,5 +1,5 @@
 accessible: true
-author: Alexandre KÜHN
+author: Aurélie MASSART, Alexandre KÜHN & Hua Yang HU
 context: |+
     Soit une implémentation d'une liste **simplement chaînée** et **triée en ordre croissant** utilisant les classes ``SNode`` et ``SList`` suivantes :
 
@@ -28,39 +28,39 @@ context: |+
     .. code-block:: java
 
         /*
-         * @pre:  'sl1' et 'sl2' sont des instances de SList triée.
+         * @pre:  'sl1' et 'sl2' sont des instances de SList triées.
          * @post: - 'sl1' et 'sl2' sont inchangées;
          *        - La méthode renvoie une nouvelle liste SList;
          *        - Cette nouvelle liste est triée en ordre croissant;
-         *        - Cette nouvelle liste contient tous les noeuds de 'sl1' et 'sl2' (longueur de la nouvelle liste = somme des longueurs de 'sl1' et 'sl2').
+         *        - Cette nouvelle liste contient tous les noeuds de 'sl1' et 'sl2'
+         *        (longueur de la nouvelle liste = somme des longueurs de 'sl1' et 'sl2').
          */
         public SList sortedMerge(SList sl1, SList sl2)
 
     Par exemple, supposons que vous avons les deux listes ``SList`` **sla** et **slb** suivantes :
 
-    .. image:: OWM11_21/MergeSort.png
-        :height: 675px
-        :width: 1166px
-        :scale: 50%
-
     ``sla: snode(value: 10) -> snode(value: 30) -> snode(value: 40)``
 
     ``slb: snode(value: 20) -> snode(value: 50)``
 
-    Le résultat de ``sortedMerge(sla, slb)`` est la nouvelle liste suivante :
+    Le résultat de ``sortedMerge(sla, slb)`` est la nouvelle liste ``sl`` suivante :
 
-    ``sortedMerge(sla, slb): snode(value: 10) -> snode(value: 20) -> snode(value: 30) -> snode(value: 40) -> snode(value: 50)``
+    ``sl: snode(value: 10) -> snode(value: 20) -> snode(value: 30) -> snode(value: 40) -> snode(value: 50)``
 
+    .. image:: OWM11_21/SortedMerge.png
+        :height: 767px
+        :width: 1163px
+        :scale: 50%
 
-
-    **Hint:** nous vous suggérons d'implémenter une méthode ``insert(SNode sn)`` à ``SList`` qui insère ``sn`` dans l'instance de ``SList`` courtant, tout en préservant celle-ci triée.
+    **Hint:** nous vous suggérons d'implémenter une méthode ``insert(SNode sn)`` à ``SList`` qui insère ``sn`` dans l'instance de ``SList`` courante, tout en préservant celle-ci triée.
 
     .. code-block:: java
 
         /*
          * @pre:  'sn' est une instance de SNode.
          * @post: - La liste courante est modifiée;
-         *        - 'sn' est ajouté à la liste courante de telle manière à ce qu'elle reste triée.
+         *        - 'sn' est ajouté à la liste courante de telle manière
+         *           à ce qu'elle reste triée.
          */
         public void insert(SNode sn)
 
@@ -90,7 +90,7 @@ limits:
     memory: '200'
     time: '30'
     output: '2'
-name: 'Mission 11 : Question intermédiaire 5 : SortedMerge de listes'
+name: 'Mission 11 : Question intermédiaire 6 : SortedMerge de listes'
 network_grading: false
 order: 21
 problems:

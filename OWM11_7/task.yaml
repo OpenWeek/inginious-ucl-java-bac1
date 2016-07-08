@@ -1,5 +1,5 @@
 accessible: true
-author: Aurélie Massart & Alexandre Kühn & Hua Yang Hu
+author: Aurélie MASSART, Alexandre KÜHN & Hua Yang HU
 context: |-
     Le but de cet exercice est d'ajouter un noeud au milieu d'une liste doublement chainée. Concrètement, vous devez insérer un noeud nommé NewNode et ayant comme valeur 3 entre les noeuds ayant les valeurs 2 et 4 dans la liste doublement chainée illustrée ci-dessous.
 

@@ -1,5 +1,5 @@
 accessible: true
-author: Aurélie Massart & Alexandre Kühn & Hua Yang Hu
+author: Aurélie MASSART, Alexandre KÜHN & Hua Yang HU
 context: |-
     Le but de cet exercice est de supprimer un noeud au milieu et à la fin d'une liste doublement chainée.
 

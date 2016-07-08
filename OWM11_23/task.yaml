@@ -1,5 +1,5 @@
 accessible: true
-author: Alexandre KÜHN
+author: Aurélie MASSART, Alexandre KÜHN & Hua Yang HU
 context: |+
     Soit une implémentation d'une liste **simplement chaînée** et **triée** utilisant les classes ``SNode`` et ``SList`` suivantes :
 
@@ -30,7 +30,8 @@ context: |+
         /*
          * @pre:  /
          * @post: La liste courante est modifiée:
-         *        - La liste courante ne contient jamais deux noeuds avec la même valeur;
+         *        - La liste courante ne contient jamais
+         *          deux noeuds avec la même valeur;
          *        - La liste reste triée;
          */
         public void removeDuplicates()
@@ -43,7 +44,11 @@ context: |+
 
     ``sl: snode(value: 10) -> snode(value: 20) -> snode(value: 30)``
 
-    
+    .. image:: OWM11_23/RemoveDuplicates.png
+        :height: 587px
+        :width: 1197px
+        :scale: 60%
+
     Le code que vous écrivez sera inséré à la zone commentée ci-dessous :
 
     .. code-block:: java
@@ -72,7 +77,7 @@ limits:
     memory: '200'
     time: '30'
     output: '2'
-name: 'Mission 11 : Question intermédiaire 7 : RemoveDuplicates de liste'
+name: 'Mission 11 : Question intermédiaire 8 : RemoveDuplicates de liste'
 network_grading: false
 order: 23
 problems:

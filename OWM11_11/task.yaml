@@ -1,5 +1,5 @@
 accessible: true
-author: Aurélie Massart
+author: Aurélie MASSART, Alexandre KÜHN & Hua Yang HU
 context: |
     Soit une liste d'entiers doublement chainée triée en ordre croissant. La liste est implémentée par la classe Node décrite comme :
 

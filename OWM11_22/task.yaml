@@ -1,5 +1,5 @@
 accessible: true
-author: Alexandre KÜHN
+author: Aurélie MASSART, Alexandre KÜHN & Hua Yang HU
 context: |+
     Soit une implémentation d'une liste **simplement chaînée** utilisant les classes ``Node`` et ``List`` suivantes :
 
@@ -30,8 +30,10 @@ context: |+
         /*
          * @pre:  /
          * @post: La liste courante est modifiée:
-         *        - La liste courante est inversée, càd que les liens next sont inversées;
-         *        - L'ancien premier noeud devient le dernier noeud, et l'ancien dernier noeud devient le premier noeud;
+         *        - La liste courante est inversée,
+         *          càd que les liens next sont inversées;
+         *        - L'ancien premier noeud devient le dernier noeud,
+         *          et l'ancien dernier noeud devient le premier noeud;
          */
         public void reverse()
 
@@ -43,8 +45,12 @@ context: |+
 
     ``l: node(value: 30) -> node(value: 20) -> node(value: 10)``
 
+    .. image:: OWM11_22/Reverse.png
+        :height: 481px
+        :width: 951px
+        :scale: 70%
 
-    Important: vous devez implémenter ``reverse`` de telle manière à traverser qu'une seule fois la liste.
+    Idéalement, ``reverse`` devrait traverser qu'une seule fois la liste.
 
     **Hint:** vous pouvez utiliser plusieurs pointeurs pour parcourir la liste.
 
@@ -77,7 +83,7 @@ limits:
     memory: '200'
     time: '30'
     output: '2'
-name: 'Mission 11 : Question intermédiaire 6 : Reverse de liste'
+name: 'Mission 11 : Question intermédiaire 7 : Reverse de liste'
 network_grading: false
 order: 22
 problems:
