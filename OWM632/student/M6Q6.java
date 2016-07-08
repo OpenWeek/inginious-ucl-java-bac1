@@ -45,7 +45,8 @@ public class M6Q6 {
 		try{ 
         	   boolean res=etu.inscription(info);
 				assertTrue(str + "La fonction renvoie false alors qu'elle devrait renvoyer true",res);
-               assertEquals("Le cours n'a pas été ajouté correctement","Van Roy",((etu.getCours(2)).getProf()));
+               assertNotNull("Le cours n'a pas été ajouté correctement",etu.getCours(2));
+               assertEquals("Le cours n'a pas été ajouté correctement","Van Roy",((etu.getCours(2).getProf()));
                assertEquals("vous n'avez pas mis à jour le nombre de cours",3,etu.getNbCours());
 			}
 		catch(StringIndexOutOfBoundsException e){
@@ -57,7 +58,7 @@ public class M6Q6 {
 			fail(str + "Attention, vous tentez de lire en dehors des limites d'un tableau ! (ArrayIndexOutOfBoundsException)");
 			e.printStackTrace();
 		}catch(NullPointerException e){
-			fail(str + "Attention, vous faites une opération sur un objet qui vaut null ! Veillez à bien gérer ce cas.");
+			fail(str + "Le cours n'a pas été ajouté correctement");
 			e.printStackTrace();
 		}catch(Exception e){
 			fail(str + "\n" + e.getMessage());

@@ -1,0 +1,30 @@
+accessible: true
+author: Arnaud Gellens & Pablo Gonzalez Alvarez
+context: |
+    Dans cette question, on s'intéresse à l'écriture d'une fonction dont le but est de renvoyer la matrice résultat de la multiplication de deux matrices ``l`` et ``m``. Ces deux matrices sont stockées chaqu'une dans un tableau de tableau, passées en paramètres de la fonction à implémenter.
+environment: java7
+groups: false
+limits:
+    memory: '100'
+    time: '30'
+    output: '2'
+name: 'Mission 5: Multiplication de matrices'
+network_grading: false
+problems:
+    q1:
+        language: java
+        type: code
+        name: Multiplication de matrices
+        header: |-
+            En programation défensive, écrivez ici le corps de la fonction ``multiplication`` qui retourne le résultat de la multiplication.
+
+            .. code-block:: java
+
+                /**
+                 * @pre: l et m sont de dimensions compatibles pour être multipliées
+                 * @post: retourne le résultat de l.m
+                 */
+                public static int[][] multiplication(int l[][], int m[][]){
+                    /* Code a complèter */
+                }
+weight: 1.0

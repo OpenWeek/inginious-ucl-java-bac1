@@ -1,5 +1,5 @@
 accessible: true
-author: 'Tom & Lucas  '
+author: Lucas Ody & Tom Rousseaux 
 context: |-
     À partir d'un produit de 3 polynomes de 1er degré, dont l'expression est ``(x-a)(x-b)(x-c)``. Vous devez retrouver les coefficients du polynome de 3ème dégré résultant d'une distribution, et les stocker dans leur variables respectives.
 

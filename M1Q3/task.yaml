@@ -1,5 +1,5 @@
 accessible: true
-author: Tom & Lucas
+author: Lucas Ody & Tom Rousseaux 
 context: |-
     Les coefficients d'une équation de 3ème degré vous sont donnés. A vous d'en trouver une des solutions entières, qui se trouve entre 0 et 20 inclus, en utilisant une boucle pour tester ces possibilités. Stockez votre réponse dans la variable ``r``.
 

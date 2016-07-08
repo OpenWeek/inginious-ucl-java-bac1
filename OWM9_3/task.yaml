@@ -1,0 +1,31 @@
+accessible: true
+author: Justine Doutreloux, Carolina Unriza Salamanca, Charline Outters
+context: Dans cet exercice nous allons vous demander de compter les caractères d'un
+    fichier txt.
+environment: java7
+groups: false
+limits:
+    memory: '200'
+    output: '2'
+    time: '30'
+name: 'Mission 9 : Exercice intermédiare - Compter les caractères'
+network_grading: false
+problems:
+    q1:
+        language: Java
+        type: code
+        header: |-
+            Vous allez devoir compléter le corps d'une fonction qui ouvre un fichier de texte, compte le nombre de caractères à l'intérieur de celui-ci et le referme. N'oubliez pas de gérer les éventuelles execptions.
+
+            .. code-block:: java
+
+                /**
+                 * @pre -
+                 * @post retourne le nombre de caractères contenus dans le fichier
+                 */
+                public static int charNumber(String filename)
+                {
+                    //A compléter
+                }
+        name: Compter les caractères
+weight: 1.0

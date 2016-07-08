@@ -1,5 +1,5 @@
 accessible: true
-author: Aurélie Massart
+author: Aurélie MASSART, Alexandre KÜHN & Hua Yang HU
 context: |
     Soit une liste d'entiers doublement chainée triée en ordre croissant. La liste est implémentée par la classe Node décrite comme :
 
@@ -21,9 +21,9 @@ limits:
     memory: '200'
     time: '30'
     output: '2'
-name: 'Mission 11 : Minimum d''une liste triée'
+name: 'Mission 11 : Question intermédiaire 1 : Minimum d''une liste triée'
 network_grading: false
-order: 5
+order: 10
 problems:
     '1':
         header: Apellons p la liste triée. Elle est donc de type Node. Écrivez ici

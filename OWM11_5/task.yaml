@@ -1,5 +1,5 @@
 accessible: true
-author: Aurélie Massart
+author: Aurélie MASSART, Alexandre KÜHN & Hua Yang HU
 context: |
     Les fragments de code ci-dessous représentent différentes implémentations retournant le plus petit élément d'une liste simplement chainée. Parmi les propositions ci-dessous, une seule est correcte. Pouvez-vous deviner laquelle?
     La liste chainée est implémentée par la classe Node dont le code est fourni ci-dessous:
@@ -18,9 +18,9 @@ limits:
     memory: '32'
     output: '1024'
     time: '60'
-name: 'Mission 11 : Plus petit élément d''une liste'
+name: 'Mission 11 : Question de démarrage 5 : Plus petit élément d''une liste'
 network_grading: false
-order: 9
+order: 5
 problems:
     idFirstExercice:
         choices:

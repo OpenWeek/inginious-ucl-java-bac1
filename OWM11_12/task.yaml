@@ -1,5 +1,5 @@
 accessible: true
-author: Aurélie Massart
+author: Aurélie MASSART, Alexandre KÜHN & Hua Yang HU
 context: |
     Soit une liste doublement chainée. La liste est implémentée par la classe Node décrite comme :
 
@@ -20,9 +20,9 @@ limits:
     memory: '200'
     time: '30'
     output: '2'
-name: 'Mission 11 : Minimum d''une liste'
+name: 'Mission 11 : Question intermédiaire 3 : Minimum d''une liste'
 network_grading: false
-order: 5
+order: 12
 problems:
     q1:
         language: java
