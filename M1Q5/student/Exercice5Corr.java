@@ -16,6 +16,10 @@ package student;
 
 public class Exercice5Stu {
 
+    /**
+     * @pre : - 
+     * @post : remplace l'opérateur xor (^)
+     */
     public static boolean xor(boolean A, boolean B)
     {
 
