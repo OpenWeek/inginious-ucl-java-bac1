@@ -51,7 +51,7 @@ public class M5QInversion {
     } catch(AssertionError e) {
       fail("Question 1 :\n Vous n'utilisez pas correctement assert.");
     }
-    assertTrue("Question 1 :\n Le tableau est mal inverser, votre solution est "+ Arrays.toString(stuTabInv)+" avec le tableau suivant "+Arrays.toString(tab),Arrays.equals(tabInv,stuTabInv) + ".");
+    assertTrue("Question 1 :\n Le tableau est mal inversé, votre solution est "+ Arrays.toString(stuTabInv)+" avec le tableau suivant "+Arrays.toString(tab) + ".",Arrays.equals(tabInv,stuTabInv));
 
   }
 
