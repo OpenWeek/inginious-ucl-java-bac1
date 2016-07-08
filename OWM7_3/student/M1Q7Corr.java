@@ -17,28 +17,28 @@ package student;
 
 public class M1Q7Stu {
 
-	//Classe Ours
-	public class Ours extends Animal{
-    	public Ours(){
-        	faim = 200;
-    	}
-    	public boolean manger(PanierDeNourriture p){
-        	if(p.manger_carotte())
-           		faim += 10;
-        	return faim > 0;
-    	}
-	}
-    
-    //Classe Chèvre
+	//Classe Chevre
 	public class Chevre extends Animal{
     	public Chevre(){
-        	faim = 100;
+        	set_faim(100);
     	}
     	public boolean manger(PanierDeNourriture p){
         	if(p.manger_carotte()){
-            	faim += 15;
+            	set_faim(get_faim() + 15);
         	}
-        	return faim > 0;
-   		}
+        	return get_faim() > 0;
+    	}
+	}
+    
+	public class Ours extends Animal{
+    	public Ours(){
+        	set_faim(200);
+    	}
+    	public boolean manger(PanierDeNourriture p){
+        	if(p.manger_carotte()){
+            	set_faim(get_faim() + 10);
+        	}
+        	return get_faim() > 0;
+    	}
 	}
 }

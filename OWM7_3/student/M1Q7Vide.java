@@ -18,8 +18,17 @@ package student;
 public class M1Q7Stu {
 	
 	public abstract class Animal{
-		public int faim; //Plus la faim est proche de 0, plus l'animal à faim.
-		/*
+		private int faim; //Plus la faim est proche de 0, plus l'animal à faim.
+        
+        public void set_faim(int faim){
+        	this.faim = faim;
+        }
+        
+        public int get_faim(){
+        	return this.faim;
+        }
+		
+        /*
 		 * L'animal mange de la nourriture (dépend de l'animal) et sa faim augmente (dépend de l'animal).
 		 * Les Chevres mangent des carottes et une carotte agumente la faim de 15.
 		 * Les Ours mangent des poulets et un poulet augmente la faim de 10. 

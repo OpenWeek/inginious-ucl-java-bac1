@@ -23,8 +23,14 @@ public class Extends1Stu {
         	this.nombre_de_pattes = p;
         	this.fourrure = f;
     	}
-    	protected int nombre_de_pattes;
-    	protected boolean fourrure;
+        public void set_nombre_de_pattes(int n){
+        	this.nombre_de_pattes = n;
+        }
+        public void set_fourrure(boolean f){
+        	this.fourrure = f;
+        }
+    	private int nombre_de_pattes;
+    	private boolean fourrure;
  	}
     
     @@q1@@

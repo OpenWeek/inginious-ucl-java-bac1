@@ -10,9 +10,13 @@ context: |-
     .. code-block:: java
 
         public class Kirby {
-            protected final String nom = "Kirby";
-            protected final String couleur = "rose";
-            protected final int pv;
+            public final String nom = "Kirby";
+            public final String couleur = "rose";
+            private int pv;
+
+            public int get_pv(){
+                return this.pv;
+            }
 
             // Redéfinir la méthode toString()
         }
