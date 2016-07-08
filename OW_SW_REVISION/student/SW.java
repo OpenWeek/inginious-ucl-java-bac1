@@ -15,6 +15,8 @@
 
 
 package student;
+import java.util.*;
+import java.io.*;
 import static org.junit.Assert.*;
 import org.junit.runner.JUnitCore;
 import org.junit.runner.Result;
@@ -29,20 +31,74 @@ public class SW {
 	@Test
 	public void testSW(){
 		try{
-      Professeur p = new Professeur("Pecheur",35,false,true);
-      Professeur p1 = new Professeur("Jeannette",54,true,true);
-      Professeur p = new Professeur("Elise",42,true,false);
-      Professeur p2 = new Professeur("Pecheur",35,false,true);
-      Etudiant e = new Etudiant("Antoine",22,true,false);
-      Etudiant e1 = new Etudiant("Manon",18,true,true);
-      Etudiant e2 = new Etudiant("Adrien",21,true,true);
-      Etudiant e3 = new Etudiant("Bastien",20,false,true);
-      Tuteur t = new Tuteur("Charles",24,true,true);
-      Tuteur t = new Tuteur("Charles",24,true,true);
-      Tuteur t = new Tuteur("Charles",24,true,true);
-      Tuteur t = new Tuteur("Charles",24,true,true);
-      Assistant a = new Assistant("Jean",28,false,false);
-
+      Professeur p1 = new Professeur("Pecheur",35,false,true);
+      Professeur p2 = new Professeur("Jeannette",54,true,true);
+      Professeur p3 = new Professeur("Elise",42,true,false);
+      Professeur p4 = new Professeur("Olivier",35,true,false);
+      Etudiant e1 = new Etudiant("Antoine",22,true,false);
+      Etudiant e2 = new Etudiant("Manon",18,true,true);
+      Etudiant e3 = new Etudiant("Adrien",21,true,true);
+      Etudiant e4 = new Etudiant("Bastien",20,false,true);
+      Tuteur t1 = new Tuteur("Charles",24,true,true);
+      Tuteur t2 = new Tuteur("Pierre",22,false,true);
+      Tuteur t3 = new Tuteur("Paul",21,true,false);
+      Tuteur t4 = new Tuteur("Jacques",20,false,false);
+      Assistant a1 = new Assistant("Jean",28,false,false);
+      Assistant a2 = new Assistant("Fabien",26,true,true);
+      Assistant a3 = new Assistant("David",27,true,true);
+      Assistant a4 = new Assistant("Michael",29,true,true);
+	  ArrayList<Personne> l=new ArrayList<Personne>();
+      ArrayList<Personne> l2=new ArrayList<Personne>();
+      l.add(p1);
+      l.add(p2);
+      l2.add(p3);
+      l2.add(p4);
+      l.add(e1);
+      l.add(e2);
+      l2.add(e3);
+      l2.add(e4);
+      l.add(t1);
+      l.add(t2);
+      l2.add(t3);
+      l2.add(t4);
+      l.add(a1);
+      l.add(a2);
+      l2.add(a3);
+      l2.add(a4);
+      String filename = "StudentSol1";
+      String filename2 = "StudentSol2";
+      SWStu.antiSpoiler(l,"student/"+filename);
+      SWStu.antiSpoiler(l2,"student/"+filename2);
+      	String StudentSol1="";
+        String line="";
+		BufferedReader bf = new BufferedReader(new FileReader("student/"+filename));
+        while((line=bf.readLine()) != null)
+        	StudentSol1+=line+"\n";
+        bf.close();
+        
+        String StudentSol2="";
+        bf = new BufferedReader(new FileReader("student/"+filename2));
+        while((line=bf.readLine()) != null)
+        	StudentSol2+=line+"\n";
+        bf.close();
+        
+        String Sol1="";
+        bf = new BufferedReader(new FileReader("student/sol1"));
+        while((line=bf.readLine()) != null)
+        	Sol1+=line+"\n";
+        bf.close();
+        
+        String Sol2="";
+        bf = new BufferedReader(new FileReader("student/sol2"));
+        while((line=bf.readLine()) != null)
+        	Sol2+=line+"\n";
+        bf.close();
+        
+        if(!StudentSol1.equals(Sol1))
+        	fail("\nVotre contenu:\n"+StudentSol1+"Contenu attendu:\n"+Sol1);
+        if(!StudentSol2.equals(Sol2))
+        	fail("Votre contenu:\n"+StudentSol2+"Contenu attendu:\n"+Sol2);
+            
 		}catch (ArithmeticException e){
 			fail(str + "Le code est incorrect : il est interdit de diviser par zéro.");
 			e.printStackTrace();

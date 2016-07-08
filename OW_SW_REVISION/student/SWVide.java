@@ -14,11 +14,12 @@
  */
 
 package student;
-
+import java.util.*;
+import java.io.*;
 public class SWStu {
 
 	// Code a verifier
-	public static void decimale (String str){
+	public static void antiSpoiler (ArrayList<Personne> l,String filename){
 @		@q1@@
 	}
 }

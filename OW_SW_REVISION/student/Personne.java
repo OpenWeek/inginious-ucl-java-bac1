@@ -1,3 +1,5 @@
+package student;
+
 public interface Personne{
   /**
    * @pre -
