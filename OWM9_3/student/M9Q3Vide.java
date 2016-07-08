@@ -28,6 +28,6 @@ public class M9Q3Stu
 	 */
 	public static int charNumber(String filename)
 	{
-		@@q3@@
+		@@q1@@
 	}
 }
