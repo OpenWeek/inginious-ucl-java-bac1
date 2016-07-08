@@ -27,7 +27,7 @@ public class M9Q2Stu
 	public static void deuxiemeFichier(String filename) throws IOException
 	{
 		MyBufferedReader br; // attention!, il faut leur dire d'utiliser MyBufferedReader dans l'énoncé
-		PrintStream out = System.out;
+		PrintStream out = System.out; //on redirige la sortie standard pour récupérer la réponse des étudiants
 		FileOutputStream f = new FileOutputStream("student/outStu.txt");
 		System.setOut(new PrintStream(f));
 		@@q1@@
