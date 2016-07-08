@@ -18,7 +18,7 @@ package student;
 public class M5QAssertStu {
 	// q1
 	public static void question1(int n){
-    	assert(n>0);
+    	assert(n>=0);
 	}
     
 	// q2

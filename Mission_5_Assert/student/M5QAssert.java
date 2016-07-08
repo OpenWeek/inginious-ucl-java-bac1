@@ -101,7 +101,7 @@ public class M5QAssert {
             	M5QAssertStu.question2(tabM, tabL);
                 err=true; 
             }catch (AssertionError e) {
-            	// c'est bien si un assertion à bien été lancé
+            	// c'est bien si un assertion a bien été lancée
             }
             
             if (err)
@@ -115,10 +115,10 @@ public class M5QAssert {
             } catch (AssertionError e) {
             	// Pour vérifier qu'une Assertion a bien été lancé
             } catch (NullPointerException e) {
-            	fail("Question 2 : \n Vous devez utiliser de la programmation défensive.\n Vous devez vérifier avant tout que les matrices ne sont pas null.");
+            	fail("Question 2 : \n Vous devez utiliser de la programmation défensive.\n Vous devez vérifier avant tout que les matrices ne soient pas nulles.");
             }
             if (err){
-            	fail("Question 2 : \n Vous devez utiliser de la programmation défensive.\n Les assertions ne vérifie pas que les matrices ne sont pas null.");
+            	fail("Question 2 : \n Vous devez utiliser de la programmation défensive.\n Les assertions ne vérifient pas que les matrices ne sont pas nulles.");
             }
             
             try{
@@ -126,12 +126,12 @@ public class M5QAssert {
                 err=true;
                 
             } catch (AssertionError e) {
-            	// Pour vérifier qu'une Assertion a bien été lancé
+            	// Pour vérifier qu'une Assertion a bien été lancée
             } catch (NullPointerException e) {
-            	fail("Question 2 : \n Vous devez utiliser de la programmation défensive.\n Vous devez vérifier avant tout que les matrices ne sont pas null.");
+            	fail("Question 2 : \n Vous devez utiliser de la programmation défensive.\n Vous devez vérifier avant tout que les matrices ne soient pas nulles.");
             }
             if (err){
-            	fail("Question 2 : \n Vous devez utiliser de la programmation défensive.\n Les assertions ne vérifie pas que les matrices ne sont pas null.");
+            	fail("Question 2 : \n Vous devez utiliser de la programmation défensive.\n Les assertions ne vérifient pas que les matrices ne sont pas nulles.");
             }
             
 		}catch (ArithmeticException e){

@@ -12,15 +12,15 @@ network_grading: false
 problems:
     q1:
         name: Positif
-        header: Écrivez l'appelle à la fonction assert qui permet de vériffier que
-            *n* est bien possitif
+        header: Écrivez l'appel à la fonction assert qui permet de vérifier que *n*
+            est bien positif.
         language: java
         type: code-single-line
     q2:
         name: Matrice compatible pour une multiplication
         type: code
         language: java
-        header: Écrivez l'appelles à la fonction assert qui permet de vériffier que
-            la multiplication des matrices rectangles l par m est possible. l et m
-            sont deux tableaux de tableaux où l[0] est une ligne.
+        header: Écrivez l'appel à la fonction assert qui permet de vérifier que la
+            multiplication des matrices rectangles *l* par *m* est possible. *l* et
+            *m* sont deux tableaux de tableaux où ``l[0]`` est une ligne.
 weight: 1.0
