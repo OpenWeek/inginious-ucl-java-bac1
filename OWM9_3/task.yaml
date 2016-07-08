@@ -1,51 +1,31 @@
-#   Copyright (c) 2016 François Michel, Clémentine Munyabarenzi
-#   This program is free software: you can redistribute it and/or modify
-#   it under the terms of the GNU Affero General Public License as published by
-#   the Free Software Foundation, either version 3 of the License, or
-#   (at your option) any later version.
-#
-#   This program is distributed in the hope that it will be useful,
-#   but WITHOUT ANY WARRANTY; without even the implied warranty of
-#   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#   GNU Affero General Public License for more details.
-#
-#   You should have received a copy of the GNU Affero General Public License
-#   along with this program.  If not, see <http://www.gnu.org/licenses/>.
-
-# Écrivez votre nom derrière la balise "author"
-# Écrivez le nom de la tâche entre simples guillements ( ' )  derrière la balise "name"
-# Écrivez l'énoncé de l'exercice sous la balise "context". N'oubliez pas d'indenter tout votre texte par rapport à la balise.
-# Sous la balise "problems", écrivez une nouvelle balise "q1" qui corresond à votre sous-question, indentée par rapport à la balise "problems"
-# Sous la balise "q1", complétez les balises nécessaires ("name" correspond au titre de la sous-question, "header" à un court énoncé de celle-ci).  
-# Inutile de toucher aux autres balises.
-# Le texte de l'énoncé de l'exercice (sous la balise "context") est écrit en langage reStructuredText (rst) :
-# "::" permet d'afficher un bloc de code. Le code doit  être séparé de "::" par une ligne vide et être indenté par rapport à "::"
-# ".. code-block:: java correspond à "::" mais avec la précision qu'il doit le mettre en couleur en fonction de la syntaxe java
-
-
-
 accessible: true
-author: Justine Doutreloux
-context: |+
-    Ecrivez la signature et le corps d'une méthode qui prend un String représentant le nom d'un fichier en argument, et qui calcule le nombre de caractère de ce fichier. La spécification de cette méthode est :
-    .. code-block:: java
-        /**
-         * @pre -
-         * @post affiche le nombre de caractères contenus dans le fichier
-         */
+author: Justine Doutreloux, Carolina Unriza Salamanca, Charline Outters
+context: Dans cet exercice nous allons vous demander de compter les caractères d'un
+    fichier txt.
 environment: java7
 groups: false
 limits:
     memory: '200'
-    time: '30'
     output: '2'
-name: 'Mission 10: Q1'
+    time: '30'
+name: 'Mission 9 : Exercice intermédiare - Compter les caractères'
 network_grading: false
-order: 5
 problems:
-    q1:
+    q3:
         language: Java
         type: code
-        name: Nombre de caractères
-        header: 'Écrivez ici le bout de programme permettant de calculer le nombre de caractères :'
+        header: |-
+            Vous allez devoir compléter le corps d'une fonction qui ouvre un fichier de texte, compte le nombre de caractères à l'intérieur de celui-ci et le referme. N'oubliez pas de gérer les éventuelles execptions.
+
+            .. code-block:: java
+
+                /**
+                 * @pre -
+                 * @post retourne le nombre de caractères contenus dans le fichier
+                 */
+                public static int charNumber(String filename)
+                {
+                    //A compléter
+                }
+        name: Compter les caractères
 weight: 1.0
