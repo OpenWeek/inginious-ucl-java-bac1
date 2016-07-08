@@ -30,7 +30,7 @@ public class M9Q2Stu
 		PrintStream out = System.out;
 		FileOutputStream f = new FileOutputStream("student/outStu.txt");
 		System.setOut(new PrintStream(f));
-		@@q2@@
+		@@q1@@
 		System.setOut(out);
         f.close();
 	}
