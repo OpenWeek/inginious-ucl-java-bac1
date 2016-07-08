@@ -22,9 +22,9 @@ public class M9Q1Stu {
 	// Code a verifier
 	public static void premierFichier(String filename)
 	{ 
+    	BufferedReader br;
 		try
 		{
-        	BufferedReader br;
 			br = new BufferedReader(new FileReader(filename));
 			String str = br.readLine();
 			while(str != null)

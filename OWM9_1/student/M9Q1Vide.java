@@ -25,10 +25,11 @@ public class M9Q1Stu
 	// Code a verifier
 	public static void premierFichier(String filename)
 	{
-			try
+		BufferedReader br;
+            try
 		{
         	PrintStream out = System.out;
-            FileOutputStream f = new FileOutputStream("outStu.txt");
+            FileOutputStream f = new FileOutputStream("student/outStu.txt");
             System.setOut(new PrintStream(f));
 			@@q1@@
             System.setOut(out);

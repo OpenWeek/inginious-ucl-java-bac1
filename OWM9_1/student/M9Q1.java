@@ -21,20 +21,44 @@ import org.junit.Test;
 import java.util.Random;
 import org.junit.runner.notification.*;
 
+
 public class M9Q1 {
 	
 	private static String str = "Le code semble comporter des erreurs : ";
-	
+	private static String writed;
+	public static String generateString(int length){
+		String s = "";
+		Random r = new Random();
+		for(int i = 0 ; i < length ; i++){
+			s += (char) ((r.nextInt('z' - 'a') + 'a'));
+		}
+        writed = s;
+		return s;
+	}
+    
+	public static void writeFile(){
+        String toW = generateString(6);
+		try{
+			PrintWriter pw = new PrintWriter(new FileWriter("student/fichier.txt"));
+			pw.println(toW);
+			pw.close();
+        }
+        catch(IOException e){
+			e.printStackTrace();
+		}
+    }
+    
+   
 	@Test
 	public void testPos(){
-    
+    	writeFile();
 		try{
-				M9Q1Stu.premierFichier("student/fichier.txt");
-                BufferedReader verif;
-                verif = new BufferedReader(new FileReader("outStu.txt"));
-               String res = verif.readLine();
-               verif.close();
-				assertEquals("Hello", res);
+            M9Q1Stu.premierFichier("student/fichier.txt");
+            BufferedReader stuFile;
+            stuFile = new BufferedReader(new FileReader("student/outStu.txt"));
+            String res = stuFile.readLine();
+            stuFile.close();
+            assertEquals(writed, res);
 			}
 		catch(FileNotFoundException e){
 			fail(str + "Le code est incorrect : le nom du fichier ne semble pas être correct, vous essayez d'ouvrir un fichier non existant.");
