@@ -16,8 +16,11 @@
 package student;
 
 public class MedianeStu {
-
-	// Code a verifier
+	
+	/**
+	 * @pre a != b != c
+	 * @post retourne la médiane de l'ensemble {a,b,c}
+	 */
 	public static int mediane (int a, int b, int c){
 		if (a<b){
     		if (c<a){return a;}

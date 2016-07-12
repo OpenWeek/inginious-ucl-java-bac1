@@ -1,6 +1,6 @@
 accessible: true
 author: Fitvoye Florian, Dubray Alexandre
-context: Créez une fonction permettant de calculer la médiane de 3 nombres différents.
+context: En statistique, la médiane d'un ensemble est un ensemble (de 1 ou plusieurs éléments) qui détermine deux parties égales de l'ensemble de départ. Par exemple, si nous prenons l'ensemble de nombre X={1,2,3}, la médiane de X est 2 car il y a autant de nombre plus petit et plus grand que 2 dans X. Dans cette tâche, vous allez devoir écrire une fonction qui permet de trouver la médiane de trois ``int`` passé en paramètre.
 environment: java7
 groups: false
 limits:
@@ -18,7 +18,11 @@ problems:
             Voici la signature de la fonction :
 
             .. code-block:: java
-
+                
+                /**
+                 *@pre a != b != c
+                 *@post retourne la mediane de l'ensemble {a,b,c}
+                 */
                 public static int mediane (int a, int b, int c){
                     /* code a completer */
                 }
