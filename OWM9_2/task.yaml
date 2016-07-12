@@ -1,14 +1,15 @@
 accessible: true
 author: Justine Doutreloux, Carolina Unriza Salamanca, Charline Outters
-context: 'Dans cet exercice, on vous demande de compléter le code que vous avez fourni pour l''exercice précédent. Vous devrez donc ouvrir un fichier qui ne contient qu''une seule ligne, afficher cette ligne sur la sortie standard et fermer le fichier.'
-    'En plus de tout cela, vous devez gérer les problèmes éventuels qui pourraient apparaître.'
+context: 'Dans cet exercice, on vous demande de compléter le code que vous avez fourni pour l''exercice précédent. Vous devrez donc ouvrir un fichier qui ne contient qu''une seule ligne, afficher cette ligne sur la sortie standard et fermer le fichier.
+
+En plus de tout cela, vous devez gérer les problèmes éventuels qui pourraient apparaître.'
 environment: java7
 groups: false
 limits:
     memory: '200'
     time: '30'
     output: '2'
-name: Mission 9 : Exercice facile - Premiers fichiers II
+name: 'Mission 9 : Exercice facile - Premiers fichiers II'
 network_grading: false
 problems:
     q1:
