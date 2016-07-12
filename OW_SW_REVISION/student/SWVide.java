@@ -17,8 +17,11 @@ package student;
 import java.util.*;
 import java.io.*;
 public class SWStu {
-
-	// Code a verifier
+	
+	/**
+	 * @pre l.isEmpty() == false
+	 * @post écrit dans le fichier de nom filename le nom et l'âge des personnes de la liste l qui ont vu le film Star Wars et aiment raconter la fin des films, en séparant le nom et l'âge par un espace. Une seule personne est écrite par ligne.
+	 */
 	public static void antiSpoiler (ArrayList<Personne> l,String filename){
 @		@q1@@
 	}

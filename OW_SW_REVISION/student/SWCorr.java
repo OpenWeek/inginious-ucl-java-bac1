@@ -15,8 +15,26 @@
 
 package student;
 
+import java.util.*;
+import java.io.*;
+
 public class SWStu {
-
-	// Code a verifier
-
+	/**
+	 * @pre l.isEmpty() == false
+	 * @post écrit dans le fichier de nom filename le nom et l'âge des personnes de la list l qui ont vu le film Star Wars et aiment raconter la fin des films, en séparant le nom et l'âge par un espace. Une seule personne est écrite par ligne.
+	 */
+	public static void antiSpoiler(ArrayList<Personne> l, String filename){
+		Iterator<Personne> iterator = l.iterator();
+		try{
+			FileWriter fw = new FileWriter(filename);
+			while(iterator.hasNext()){
+				Personne p = iterator.next();
+				if(p.hasSeenStarWars() && p.spoilerAlert())
+					fw.write(p.getName()+" "+p.getAge()+"\n");
+			}
+			fw.close();
+		} catch(IOException e){
+			e.printStackTrace();
+		}
+	}
 }
