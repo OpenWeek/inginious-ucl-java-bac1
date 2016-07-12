@@ -30,7 +30,13 @@ public class Deci {
 	@Test
 	public void testDeci(){
 		try{
+			DeciStu.decimale("0000000");
+			DeciStu.decimale("0001");
+			DeciStu.decimale("1001");
+			DeciStu.decimale("0110");
         	DeciStu.decimale("10010011101");
+        	DeciStu.decimale("10010110110001101010");
+        	DeciStu.decimale("010010110110001101010");
             BufferedReader bf1 = new BufferedReader(new FileReader("student/ans.txt"));
     		BufferedReader bf2 = new BufferedReader(new FileReader("answer.txt"));
             String s1=bf1.readLine();
@@ -65,43 +71,6 @@ public class Deci {
 		}
 	}
     
-    public void testDeci2(){
-		try{
-        	DeciStu.decimale("10010110110001101010");
-            BufferedReader bf3 = new BufferedReader(new FileReader("student/ans.txt"));
-    		BufferedReader bf4 = new BufferedReader(new FileReader("answer.txt"));
-            String s3=bf3.readLine();
-            String s4=bf4.readLine();
-            while (s3!=null && s4!=null){
-                assertTrue("expected : " + s3 +", found : "+s4,s3.equals(s4));
-            	s3=bf3.readLine();
-                s4=bf4.readLine();
-            }
-            bf3.close();
-            bf4.close();
-		}catch (ArithmeticException e){
-			fail(str + "Le code est incorrect : il est interdit de diviser par zéro.");
-			e.printStackTrace();
-		}catch(ClassCastException e){
-			fail(str + "Attention, certaines variables ont été mal castées	!");
-			e.printStackTrace();
-		}catch(StringIndexOutOfBoundsException e){
-			e.printStackTrace();
-			fail(str + "Attention, vous tentez de lire en dehors des limites d'un String ! (StringIndexOutOfBoundsException)");
-			e.printStackTrace();
-		}catch(ArrayIndexOutOfBoundsException e){
-			e.printStackTrace();
-			fail(str + "Attention, vous tentez de lire en dehors des limites d'un tableau ! (ArrayIndexOutOfBoundsException)");
-			e.printStackTrace();
-		}catch(NullPointerException e){
-			fail(str + "Attention, vous faites une opération sur un objet qui vaut null ! Veillez à bien gérer ce cas.");
-			e.printStackTrace();
-		}catch(Exception e){
-			fail(str + "\n" + e.getMessage());
-			e.printStackTrace();
-		}
-	}
-	
 	// Code verificateur
 	public static void main(String[] args) {
 		Result result = JUnitCore.runClasses(Deci.class);
