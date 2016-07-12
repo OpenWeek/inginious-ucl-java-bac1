@@ -17,7 +17,10 @@ package student;
 
 public class IterStu {
 
-	// Code a verifier
+	/**
+	 * @pre s != null
+	 * @post retourne le nombre d'itération de c dans s
+	 */
 	public static int countIter(char c, String s){
     	int count = 0;
     	int l = s.length();

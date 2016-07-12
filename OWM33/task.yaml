@@ -1,7 +1,7 @@
 accessible: true
 author: Fitvoye Florian, Dubray Alexandre
-context: Écrivez une fonction permettant de compter le nombre d'itérations d'un char
-    dans un string.
+context: Écrivez une fonction permettant de compter le nombre d'itérations d'un ``char``
+    dans un ``String``. Par exemple, le caractère 'o' se trouve 2 fois dans la chaîne de caractère "Chocolat".
 environment: java7
 groups: false
 limits:
@@ -20,7 +20,8 @@ problems:
 
             .. code-block:: java
 
-                /* pre :
+                /**
+                 * pre s n'est pas vide
                  * post: Renvoie le nombre d'iteration du char c dans le String s
                  */
                  public static int countIter (char c,String s){
