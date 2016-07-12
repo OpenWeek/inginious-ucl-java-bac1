@@ -3,7 +3,7 @@ author: Fitvoye Florian, Dubray Alexandre
 context: |-
     Un palyndrome est un mot, un nombre ou tout autre séquence de caractères qui se lit de la même manière dans les deux sens (e.g le mot "kayak" est un palyndrome).
     Dans cette tâche, vous allez devoir compléter le corps de la fonction ``isPalyndrome`` qui vérifie si un ``String`` est un palyndrome. Nous considérerons le ``String`` vide (i.e str = "") est un palyndrome.
-environmen: java7
+environment: java7
 groups: false
 limits:
     memory: '100'

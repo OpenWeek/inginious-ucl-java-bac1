@@ -4,7 +4,7 @@ context: |-
         Dans un exercice précédent, vous avez implémenter une fonction qui permet de vérifier si un ``String`` est un palyndrome. Cependant, il est possible qu'un sous-séquence d'un ``String`` soit un palyndrome.
         Dans cet exercice, vous allez devoir compléter le corps de la fonction ``findPalyndrome`` qui recherche des palyndromes parmis les sous-séquences d'un ``String``. Par exemple ``findPalyndrome("unkayakbeau"`` renverra ``true`` car le mot kayak est un palyndrome.
         Pour cet exercice, vous pouvez considérer que la fonction ``isPalyndrome`` que vous avez implémenter est disponible.
-environmen: java7
+environment: java7
 groups: false
 limits:
     memory: '100'
