@@ -24,9 +24,9 @@ import java.util.Random;
 import org.junit.runner.notification.Failure;
 
 public class Convert {
-
+	
 	private static String str = "Le code semble comporter des erreurs : ";
-
+	
 	@Test
 	public void testConvert(){
 		try{
@@ -59,7 +59,7 @@ public class Convert {
 			e.printStackTrace();
 		}
 	}
-
+	
 	// Code verificateur
 	public static void main(String[] args) {
 		Result result = JUnitCore.runClasses(Convert.class);
