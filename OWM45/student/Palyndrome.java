@@ -36,6 +36,8 @@ public class Palyndrome {
            String str5 = "123456";
            String str6 = "ab11ba";
            String str7 = "ab13hd";
+           String str8 = "ab";
+           String str9 = "aa";
            
            assertEquals("Votre fonction ne renvoie pas la bonne réponse pour le string : String vide",true,PalyndromeStu.isPalyndrome(str1));
            assertEquals("Votre fonction ne renvoie pas la bonne réponse pour le string : "+str2,true,PalyndromeStu.isPalyndrome(str2));
@@ -44,6 +46,8 @@ public class Palyndrome {
            assertEquals("Votre fonction ne renvoie pas la bonne réponse pour le string : "+str5,false,PalyndromeStu.isPalyndrome(str5));
            assertEquals("Votre fonction ne renvoie pas la bonne réponse pour le string : "+str6,true,PalyndromeStu.isPalyndrome(str6));
            assertEquals("Votre fonction ne renvoie pas la bonne réponse pour le string : "+str7,false,PalyndromeStu.isPalyndrome(str7));
+           assertEquals("Votre fonction ne renvoie pas la bonne réponse pour le string : "+str8,false,PalyndromeStu.isPalyndrome(str8));
+           assertEquals("Votre fonction ne renvoie pas la bonne réponse pour le string : "+str9,true,PalyndromeStu.isPalyndrome(str9));
        
 		}catch (ArithmeticException e){
 			fail(str + "Le code est incorrect : il est interdit de diviser par zéro.");

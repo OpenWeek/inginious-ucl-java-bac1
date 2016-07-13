@@ -1,16 +1,16 @@
 accessible: true
 author: Fitvoye Florian, Dubray Alexandre
 context: |-
-        Dans un exercice précédent, vous avez implémenter une fonction qui permet de vérifier si un ``String`` est un palyndrome. Cependant, il est possible qu'un sous-séquence d'un ``String`` soit un palyndrome.
-        Dans cet exercice, vous allez devoir compléter le corps de la fonction ``findPalyndrome`` qui recherche des palyndromes parmis les sous-séquences d'un ``String``. Par exemple ``findPalyndrome("unkayakbeau"`` renverra ``true`` car le mot kayak est un palyndrome.
-        Pour cet exercice, vous pouvez considérer que la fonction ``isPalyndrome`` que vous avez implémenter est disponible.
+    Dans un exercice précédent, vous avez implémenter une fonction qui permet de vérifier si un ``String`` est un palyndrome. Cependant, il est possible qu'une sous-séquence d'un ``String`` soit un palyndrome.
+    Dans cet exercice, vous allez devoir compléter le corps de la fonction ``findPalyndrome`` qui recherche des palyndromes parmis les sous-séquences d'un ``String``. Par exemple ``findPalyndrome("unkayakbeau")`` renverra ``true`` car le mot kayak est un palyndrome.
+    Pour cet exercice, vous pouvez considérer que la fonction ``isPalyndrome`` que vous avez implémenter est disponible.
 environment: java7
 groups: false
 limits:
     memory: '100'
     time: '30'
     output: '2'
-name: Palyndrome
+name: Palyndrome caché
 network_grading: false
 problems:
     q1:
@@ -21,7 +21,7 @@ problems:
             Voici la signature de la fonction :
 
             .. code-block:: java
-                
+
                 /*
                  *@pré: -
                  *@post: Retourne true si str contient un palyndrome, false sinon

@@ -37,13 +37,13 @@ public class PalyndromeCaché {
            String str6 = "ab11ba";
            String str7 = "aab13hd";
            
-           assertEquals("Votre fonction ne renvoie pas la bonne réponse pour le string : String vide",true,PalyndromeStu.isPalyndrome(str1));
-           assertEquals("Votre fonction ne renvoie pas la bonne réponse pour le string : "+str2,true,PalyndromeStu.isPalyndrome(str2));
-           assertEquals("Votre fonction ne renvoie pas la bonne réponse pour le string : "+str3,true,PalyndromeStu.isPalyndrome(str3));
-           assertEquals("Votre fonction ne renvoie pas la bonne réponse pour le string : "+str4,true,PalyndromeStu.isPalyndrome(str4));
-           assertEquals("Votre fonction ne renvoie pas la bonne réponse pour le string : "+str5,false,PalyndromeStu.isPalyndrome(str5));
-           assertEquals("Votre fonction ne renvoie pas la bonne réponse pour le string : "+str6,true,PalyndromeStu.isPalyndrome(str6));
-           assertEquals("Votre fonction ne renvoie pas la bonne réponse pour le string : "+str7,true,PalyndromeStu.isPalyndrome(str7));
+           assertEquals("Votre fonction ne renvoie pas la bonne réponse pour le string : String vide",true,PalyndromeCachéStu.findPalyndrome(str1));
+           assertEquals("Votre fonction ne renvoie pas la bonne réponse pour le string : "+str2,true,PalyndromeCachéStu.findPalyndrome(str2));
+           assertEquals("Votre fonction ne renvoie pas la bonne réponse pour le string : "+str3,true,PalyndromeCachéStu.findPalyndrome(str3));
+           assertEquals("Votre fonction ne renvoie pas la bonne réponse pour le string : "+str4,true,PalyndromeCachéStu.findPalyndrome(str4));
+           assertEquals("Votre fonction ne renvoie pas la bonne réponse pour le string : "+str5,false,PalyndromeCachéStu.findPalyndrome(str5));
+           assertEquals("Votre fonction ne renvoie pas la bonne réponse pour le string : "+str6,true,PalyndromeCachéStu.findPalyndrome(str6));
+           assertEquals("Votre fonction ne renvoie pas la bonne réponse pour le string : "+str7,true,PalyndromeCachéStu.findPalyndrome(str7));
        
 		}catch (ArithmeticException e){
 			fail(str + "Le code est incorrect : il est interdit de diviser par zéro.");
@@ -70,7 +70,7 @@ public class PalyndromeCaché {
 	
 	// Code verificateur
 	public static void main(String[] args) {
-		Result result = JUnitCore.runClasses(Palyndrome.class);
+		Result result = JUnitCore.runClasses(PalyndromeCaché.class);
 		for (Failure failure: result.getFailures()) {
 			System.err.println(failure.toString());
 		}

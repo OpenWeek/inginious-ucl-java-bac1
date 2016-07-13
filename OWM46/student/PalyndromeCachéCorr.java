@@ -33,13 +33,15 @@ public class PalyndromeStu {
          *@post: Retourne true si str contient un palyndrome, false sinon
          */
 	public static boolean findPalyndrome(String str){
-		for(int i=0;i<str.length();i++){
-			for(j=i+1;j<str.length;j++){
-				if(isPalyndrome(str.substring(i,j))
+		if(str.equals(""))
+        	return true;
+        for(int i=0;i<str.length();i++){
+			for(int j=i+1;j<str.length();j++){
+                System.out.println(str+" :"+isPalyndrome(str.substring(i,j)));
+				if(isPalyndrome(str.substring(i,j+1)))
 						return true;
 			}
 		}
 		return false;
-    	}
-		
+    }	
 }

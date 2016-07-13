@@ -15,7 +15,7 @@
 
 package student;
 
-public class PalyndromeStu {
+public class PalyndromeCachéStu {
 
 	/* Fonction à la disposition des étudiants pour réussir l'exercice */
 	/*
@@ -23,11 +23,13 @@ public class PalyndromeStu {
 	 *@post: Retourne true si le String str est un palyndrome, false sinon.
          */
 	public static boolean isPalyndrome(String str){
-    	int length = str.length();
+    	int length = str.length()-1;
         for(int i=0;i<str.length()/2;i++){
         	if(str.charAt(i) != str.charAt(length-i))
             	return false;
         }
+        return true;
+    }
 
         /*
          *@pré: -
