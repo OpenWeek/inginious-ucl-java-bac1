@@ -31,23 +31,203 @@ public class Deci {
 	public void testDeci(){
 		try{
 			DeciStu.decimale("0000000");
-			DeciStu.decimale("0001");
+    		BufferedReader bf = new BufferedReader(new FileReader("answer.txt"));
+            String s2=bf.readLine();
+            String s1="0";
+            assertTrue("expected : " + s1 +", found : "+s2,s1.equals(s2));
+            bf.close();
+		}catch (ArithmeticException e){
+			fail(str + "Le code est incorrect : il est interdit de diviser par zéro.");
+			e.printStackTrace();
+		}catch(ClassCastException e){
+			fail(str + "Attention, certaines variables ont été mal castées	!");
+			e.printStackTrace();
+		}catch(StringIndexOutOfBoundsException e){
+			e.printStackTrace();
+			fail(str + "Attention, vous tentez de lire en dehors des limites d'un String ! (StringIndexOutOfBoundsException)");
+			e.printStackTrace();
+		}catch(ArrayIndexOutOfBoundsException e){
+			e.printStackTrace();
+			fail(str + "Attention, vous tentez de lire en dehors des limites d'un tableau ! (ArrayIndexOutOfBoundsException)");
+			e.printStackTrace();
+		}catch(NullPointerException e){
+			fail(str + "Attention, vous faites une opération sur un objet qui vaut null ! Veillez à bien gérer ce cas.");
+			e.printStackTrace();
+		}catch(Exception e){
+			fail(str + "\n" + e.getMessage());
+			e.printStackTrace();
+		}
+	}
+    
+    @Test
+	public void testDeci2(){
+		try{
+			DeciStu.decimale("0000001");
+    		BufferedReader bf = new BufferedReader(new FileReader("answer.txt"));
+            String s2=bf.readLine();
+            String s1="1";
+            assertTrue("expected : " + s1 +", found : "+s2,s1.equals(s2));
+            bf.close();
+		}catch (ArithmeticException e){
+			fail(str + "Le code est incorrect : il est interdit de diviser par zéro.");
+			e.printStackTrace();
+		}catch(ClassCastException e){
+			fail(str + "Attention, certaines variables ont été mal castées	!");
+			e.printStackTrace();
+		}catch(StringIndexOutOfBoundsException e){
+			e.printStackTrace();
+			fail(str + "Attention, vous tentez de lire en dehors des limites d'un String ! (StringIndexOutOfBoundsException)");
+			e.printStackTrace();
+		}catch(ArrayIndexOutOfBoundsException e){
+			e.printStackTrace();
+			fail(str + "Attention, vous tentez de lire en dehors des limites d'un tableau ! (ArrayIndexOutOfBoundsException)");
+			e.printStackTrace();
+		}catch(NullPointerException e){
+			fail(str + "Attention, vous faites une opération sur un objet qui vaut null ! Veillez à bien gérer ce cas.");
+			e.printStackTrace();
+		}catch(Exception e){
+			fail(str + "\n" + e.getMessage());
+			e.printStackTrace();
+		}
+	}
+    
+    @Test
+	public void testDeci3(){
+		try{
 			DeciStu.decimale("1001");
+    		BufferedReader bf = new BufferedReader(new FileReader("answer.txt"));
+            String s2=bf.readLine();
+            String s1="-7";
+            assertTrue("expected : " + s1 +", found : "+s2,s1.equals(s2));
+            bf.close();
+		}catch (ArithmeticException e){
+			fail(str + "Le code est incorrect : il est interdit de diviser par zéro.");
+			e.printStackTrace();
+		}catch(ClassCastException e){
+			fail(str + "Attention, certaines variables ont été mal castées	!");
+			e.printStackTrace();
+		}catch(StringIndexOutOfBoundsException e){
+			e.printStackTrace();
+			fail(str + "Attention, vous tentez de lire en dehors des limites d'un String ! (StringIndexOutOfBoundsException)");
+			e.printStackTrace();
+		}catch(ArrayIndexOutOfBoundsException e){
+			e.printStackTrace();
+			fail(str + "Attention, vous tentez de lire en dehors des limites d'un tableau ! (ArrayIndexOutOfBoundsException)");
+			e.printStackTrace();
+		}catch(NullPointerException e){
+			fail(str + "Attention, vous faites une opération sur un objet qui vaut null ! Veillez à bien gérer ce cas.");
+			e.printStackTrace();
+		}catch(Exception e){
+			fail(str + "\n" + e.getMessage());
+			e.printStackTrace();
+		}
+	}
+    
+    @Test
+	public void testDeci4(){
+		try{
 			DeciStu.decimale("0110");
-        	DeciStu.decimale("10010011101");
-        	DeciStu.decimale("10010110110001101010");
-        	DeciStu.decimale("010010110110001101010");
-            BufferedReader bf1 = new BufferedReader(new FileReader("student/ans.txt"));
-    		BufferedReader bf2 = new BufferedReader(new FileReader("answer.txt"));
-            String s1=bf1.readLine();
-            String s2=bf2.readLine();
-            while (s1!=null && s2!=null){
-                assertTrue("expected : " + s1 +", found : "+s2,s1.equals(s2));
-            	s1=bf1.readLine();
-                s2=bf2.readLine();
-            }
-            bf1.close();
-            bf2.close();
+    		BufferedReader bf = new BufferedReader(new FileReader("answer.txt"));
+            String s2=bf.readLine();
+            String s1="6";
+            assertTrue("expected : " + s1 +", found : "+s2,s1.equals(s2));
+            bf.close();
+		}catch (ArithmeticException e){
+			fail(str + "Le code est incorrect : il est interdit de diviser par zéro.");
+			e.printStackTrace();
+		}catch(ClassCastException e){
+			fail(str + "Attention, certaines variables ont été mal castées	!");
+			e.printStackTrace();
+		}catch(StringIndexOutOfBoundsException e){
+			e.printStackTrace();
+			fail(str + "Attention, vous tentez de lire en dehors des limites d'un String ! (StringIndexOutOfBoundsException)");
+			e.printStackTrace();
+		}catch(ArrayIndexOutOfBoundsException e){
+			e.printStackTrace();
+			fail(str + "Attention, vous tentez de lire en dehors des limites d'un tableau ! (ArrayIndexOutOfBoundsException)");
+			e.printStackTrace();
+		}catch(NullPointerException e){
+			fail(str + "Attention, vous faites une opération sur un objet qui vaut null ! Veillez à bien gérer ce cas.");
+			e.printStackTrace();
+		}catch(Exception e){
+			fail(str + "\n" + e.getMessage());
+			e.printStackTrace();
+		}
+	}
+    
+    @Test
+	public void testDeci5(){
+		try{
+			DeciStu.decimale("10010011101");
+    		BufferedReader bf = new BufferedReader(new FileReader("answer.txt"));
+            String s2=bf.readLine();
+            String s1="-867";
+            assertTrue("expected : " + s1 +", found : "+s2,s1.equals(s2));
+            bf.close();
+		}catch (ArithmeticException e){
+			fail(str + "Le code est incorrect : il est interdit de diviser par zéro.");
+			e.printStackTrace();
+		}catch(ClassCastException e){
+			fail(str + "Attention, certaines variables ont été mal castées	!");
+			e.printStackTrace();
+		}catch(StringIndexOutOfBoundsException e){
+			e.printStackTrace();
+			fail(str + "Attention, vous tentez de lire en dehors des limites d'un String ! (StringIndexOutOfBoundsException)");
+			e.printStackTrace();
+		}catch(ArrayIndexOutOfBoundsException e){
+			e.printStackTrace();
+			fail(str + "Attention, vous tentez de lire en dehors des limites d'un tableau ! (ArrayIndexOutOfBoundsException)");
+			e.printStackTrace();
+		}catch(NullPointerException e){
+			fail(str + "Attention, vous faites une opération sur un objet qui vaut null ! Veillez à bien gérer ce cas.");
+			e.printStackTrace();
+		}catch(Exception e){
+			fail(str + "\n" + e.getMessage());
+			e.printStackTrace();
+		}
+	}
+    
+    @Test
+	public void testDeci6(){
+		try{
+			DeciStu.decimale("10010110110001101010");
+    		BufferedReader bf = new BufferedReader(new FileReader("answer.txt"));
+            String s2=bf.readLine();
+            String s1="-430998";
+            assertTrue("expected : " + s1 +", found : "+s2,s1.equals(s2));
+            bf.close();
+		}catch (ArithmeticException e){
+			fail(str + "Le code est incorrect : il est interdit de diviser par zéro.");
+			e.printStackTrace();
+		}catch(ClassCastException e){
+			fail(str + "Attention, certaines variables ont été mal castées	!");
+			e.printStackTrace();
+		}catch(StringIndexOutOfBoundsException e){
+			e.printStackTrace();
+			fail(str + "Attention, vous tentez de lire en dehors des limites d'un String ! (StringIndexOutOfBoundsException)");
+			e.printStackTrace();
+		}catch(ArrayIndexOutOfBoundsException e){
+			e.printStackTrace();
+			fail(str + "Attention, vous tentez de lire en dehors des limites d'un tableau ! (ArrayIndexOutOfBoundsException)");
+			e.printStackTrace();
+		}catch(NullPointerException e){
+			fail(str + "Attention, vous faites une opération sur un objet qui vaut null ! Veillez à bien gérer ce cas.");
+			e.printStackTrace();
+		}catch(Exception e){
+			fail(str + "\n" + e.getMessage());
+			e.printStackTrace();
+		}
+	}
+    
+    @Test
+	public void testDeci7(){
+		try{
+			DeciStu.decimale("010010110110001101010");
+    		BufferedReader bf = new BufferedReader(new FileReader("answer.txt"));
+            String s2=bf.readLine();
+            String s1="617578";
+            assertTrue("expected : " + s1 +", found : "+s2,s1.equals(s2));
+            bf.close();
 		}catch (ArithmeticException e){
 			fail(str + "Le code est incorrect : il est interdit de diviser par zéro.");
 			e.printStackTrace();

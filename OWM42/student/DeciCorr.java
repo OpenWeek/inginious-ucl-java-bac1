@@ -22,15 +22,15 @@ public class DeciStu {
 	 * @post affiche l'entier représenter par str sous forme binaire, en forme décimal
 	 */
 	public static void decimale (String str){
-		double r=0.0;
-		for(int i=str.length()-1;i>=0;i--){
-			if(str.charAt(i) == '1'){
+		int r=0;
+		for(int i=0;i<str.length();i++){
+			if(str.charAt(i)=='1'){
 				if(i==0)
-					r-=Math.pow(2,str.length()-i)
+					r-=Math.pow(2,str.length()-1-i);
 				else
-					r+=Math.pow(2,str.length())
+					r+=Math.pow(2,str.length()-1-i);
 			}
 		}
-		System.out.println((int)r);
+		System.out.println(r);
 	}
 }
