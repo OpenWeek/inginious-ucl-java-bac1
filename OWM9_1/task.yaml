@@ -19,14 +19,15 @@ problems:
 
             .. code-block:: java
 
-                /* @pre: le fichier à ouvrir existe déjà
+                /**
+                 * @pre: le fichier à ouvrir existe déjà
                  * @post: une fois le fichier ouvert, afficher la première ligne
                  *           refermer le fichier.
                  */
                  public static void premierFichier(String filename, String res)
                  {
                     BufferedReader br;
-                    \\à compléter
+                    /* à compléter */
                  }
 
             Piste: utiliser la méthode ``readLine()`` pour afficher la première ligne.
