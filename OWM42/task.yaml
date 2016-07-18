@@ -2,7 +2,7 @@ accessible: true
 author: Fitvoye Florian, Dubray Alexandre
 context: |
     Créer une méthode qui affiche l'entier correspondant à un ``String`` représentant un entier sous sa forme binaire. Nous utiliserons la représentation dites "complément à deux". Cette méthode permet de représenter les nombre négatif en appliquant un signe négatif sur le bit le plus à gauche est de signe négatif.
-    Donc, pour le ``String`` "1001", votre méthode doit afficher 7 tandis que pour le ``String`` "0110" elle doit afficher 5.
+    Donc, pour le ``String`` "1001", votre méthode doit afficher -7 tandis que pour le ``String`` "0110" elle doit afficher 6.
 environment: java7
 groups: false
 limits:
