@@ -22,12 +22,18 @@ import java.lang.*;
 public class M9Q1Stu
 {
 
+	public static void not_throwing() throws IOException {
+    	return;
+    }
+
+
 	// Code to check
 	public static void premierFichier(String filename)
 	{
 		BufferedReader br;
-        	try	{
-		    	PrintStream out = System.out;
+        try	{
+			not_throwing();
+		   	PrintStream out = System.out;
 			FileOutputStream f = new FileOutputStream("student/outStu.txt");
 			System.setOut(new PrintStream(f));
 			@@q1@@

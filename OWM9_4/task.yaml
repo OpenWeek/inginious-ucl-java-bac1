@@ -26,7 +26,7 @@ context: |+
                 }
                 catch(IOException e)
                 {
-                    ex: System.exit(0);
+                    System.exit(0);
                 }
             }
 
@@ -60,6 +60,6 @@ problems:
     q4:
         type: match
         answer: br.close();
-        header: "Insérez ci-dessous ce qu'il manque à la ligne 3"
+        header: "Insérez ci-dessous ce qu'il manque à la ligne 4"
         name: Ligne 4
 weight: 1.0
