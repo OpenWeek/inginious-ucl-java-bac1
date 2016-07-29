@@ -46,7 +46,7 @@ public class M6Q6 {
         	   boolean res=etu.inscription(info);
 				assertTrue(str + "La fonction renvoie false alors qu'elle devrait renvoyer true",res);
                assertNotNull("Le cours n'a pas été ajouté correctement",etu.getCours(2));
-               assertEquals("Le cours n'a pas été ajouté correctement","Van Roy",((etu.getCours(2).getProf()));
+               assertEquals("Le cours n'a pas été ajouté correctement","Van Roy",((etu.getCours(2).getProf())));
                assertEquals("vous n'avez pas mis à jour le nombre de cours",3,etu.getNbCours());
 			}
 		catch(StringIndexOutOfBoundsException e){
