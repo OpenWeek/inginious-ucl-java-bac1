@@ -1,21 +1,21 @@
-accessible: true
+accessible: false
 author: ''
 context: Dans cette tâche, vous devrez comparer deux ``String``. Deux ``String`` sont
     les mêmes si ils ont la même taille et que le i-ème caractère de la première chaîne
     de caractère est le même que le i-ème caractère de la deuxième chaîne de caractère.
 environment: java7
+evaluate: best
 groups: false
 limits:
-    memory: '100'
-    time: '30'
     output: '2'
+    time: '30'
+    memory: '100'
 name: Comparaison de String
 network_grading: false
 problems:
     q1:
         language: java
         type: code
-        name: Comparaison de String
         header: |-
             Voici la signature de la fonction à compléter :
 
@@ -24,4 +24,9 @@ problems:
                 public static boolean stringcmp(String str1,String str2){
                     /* Code à compléter */
                 }
+        name: Comparaison de String
+stored_submissions: 0
+submission_limit:
+    amount: -1
+    period: -1
 weight: 1.0

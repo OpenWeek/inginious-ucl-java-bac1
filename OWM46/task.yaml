@@ -4,19 +4,18 @@ context: |-
     Dans un exercice précédent, vous avez implémenter une fonction qui permet de vérifier si un ``String`` est un palyndrome. Cependant, il est possible qu'une sous-séquence d'un ``String`` soit un palyndrome.
     Dans cet exercice, vous allez devoir compléter le corps de la fonction ``findPalyndrome`` qui recherche des palyndromes parmis les sous-séquences d'un ``String``. Par exemple ``findPalyndrome("unkayakbeau")`` renverra ``true`` car le mot kayak est un palyndrome.
     Pour cet exercice, vous pouvez considérer que la fonction ``isPalyndrome`` que vous avez implémenter est disponible.
-environment: java7
+environment: java8scala
+evaluate: best
 groups: false
 limits:
-    memory: '100'
-    time: '30'
     output: '2'
+    time: '30'
+    memory: '100'
 name: Palyndrome caché
 network_grading: false
 problems:
     q1:
-        language: java
         type: code
-        name: Question 1
         header: |-
             Voici la signature de la fonction :
 
@@ -29,4 +28,10 @@ problems:
                 public static boolean findPalyndrome(String str){
                 /* Code à compléter */
                 }
+        language: java
+        name: Question 1
+stored_submissions: 0
+submission_limit:
+    amount: -1
+    period: -1
 weight: 1.0

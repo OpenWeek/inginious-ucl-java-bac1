@@ -30,7 +30,7 @@ public class M6Q5 {
 		try{
         	M6Q5Stu a = new M6Q5Stu();
         	a.exo1();
-			assertNotNull("Question 1 : L'objet 'info' n'est pas initialisé.", a.getInfoAdm());
+			assertNotNull("Question 1 :\n L'objet 'info' n'est pas initialisé.", a.getInfoAdm());
              
 		}catch (ArithmeticException e){
 			fail(str + "Le code est incorrect : il est interdit de diviser par zéro.");
@@ -60,7 +60,7 @@ public class M6Q5 {
 		try{
         	M6Q5Stu a = new M6Q5Stu();
         	a.exo1();
-			assertNotNull("Question 1 : L'objet 'math' n'est pas initialisé.", a.getMathAdm());
+			assertNotNull("Question 1 :\n L'objet 'math' n'est pas initialisé.", a.getMathAdm());
              
 		}catch (ArithmeticException e){
 			fail(str + "Le code est incorrect : il est interdit de diviser par zéro.");
@@ -90,7 +90,7 @@ public class M6Q5 {
 		try{
         	M6Q5Stu a = new M6Q5Stu();
         	a.exo1();
-            assertEquals("Question 1 : L'objet 'info' est mal initialisé.", "PecheurLFSAB14016", (a.getInfoAdm()).getProf() + (a.getInfoAdm()).getCode() + (a.getInfoAdm()).getCredit());
+            assertEquals("Question 1 :\n L'objet 'info' est mal initialisé.", "PecheurLFSAB14016", (a.getInfoAdm()).getProf() + (a.getInfoAdm()).getCode() + (a.getInfoAdm()).getCredit());
 			
 		}catch (ArithmeticException e){
 			fail(str + "Le code est incorrect : il est interdit de diviser par zéro.");
@@ -119,7 +119,7 @@ public class M6Q5 {
 		try{
         	M6Q5Stu a = new M6Q5Stu();
         	a.exo1();
-            assertEquals("Question 1 : L'objet 'math' est mal initialisé.", "BenNaoumLFSAB11018", (a.getMathAdm()).getProf() + (a.getMathAdm()).getCode() + (a.getMathAdm()).getCredit());
+            assertEquals("Question 1 :\n L'objet 'math' est mal initialisé.", "BenNaoumLFSAB11018", (a.getMathAdm()).getProf() + (a.getMathAdm()).getCode() + (a.getMathAdm()).getCredit());
             
 		}catch (ArithmeticException e){
 			fail(str + "Le code est incorrect : il est interdit de diviser par zéro.");
@@ -151,7 +151,7 @@ public class M6Q5 {
         	M6Q5Stu a = new M6Q5Stu();
             a.exo1();
         	a.exo2(a.getInfoAdm(), a.getMathAdm());
-            assertEquals("Question 2 : L'objet 'info' est mal mis à jour.", "PECHEURLFSAB14016", (a.getInfoAdm()).getProf() + (a.getInfoAdm()).getCode() + (a.getInfoAdm()).getCredit());
+            assertEquals("Question 2 :\n L'objet 'info' est mal mis à jour.", "PECHEURLFSAB14016", (a.getInfoAdm()).getProf() + (a.getInfoAdm()).getCode() + (a.getInfoAdm()).getCredit());
             
 		}catch (ArithmeticException e){
 			fail(str + "Le code est incorrect : il est interdit de diviser par zéro.");
@@ -182,7 +182,7 @@ public class M6Q5 {
         	M6Q5Stu a = new M6Q5Stu();
             a.exo1();
         	a.exo2(a.getInfoAdm(), a.getMathAdm());
-            assertEquals("Question 2 : L'objet 'math' est mal mis à jour.", "BenNaoumLFSAB10005", (a.getMathAdm()).getProf() + (a.getMathAdm()).getCode() + (a.getMathAdm()).getCredit());
+            assertEquals("Question 2 :\n L'objet 'math' est mal mis à jour.", "BenNaoumLFSAB10005", (a.getMathAdm()).getProf() + (a.getMathAdm()).getCode() + (a.getMathAdm()).getCredit());
             
 		}catch (ArithmeticException e){
 			fail(str + "Le code est incorrect : il est interdit de diviser par zéro.");
@@ -213,7 +213,7 @@ public class M6Q5 {
         	M6Q5Stu a = new M6Q5Stu();
             a.exo1();
         	a.exo2(a.getInfoAdm(), a.getMathAdm());
-            assertEquals("Question 2 : Il faut utiliser les get et set fournis dans la classe Cours.", 3, a.getCountSets());
+            assertEquals("Question 2 :\n Il faut utiliser les get et set fournis dans la classe Cours.", 3, a.getCountSets());
             
 		}catch (ArithmeticException e){
 			fail(str + "Le code est incorrect : il est interdit de diviser par zéro.");
@@ -244,7 +244,7 @@ public class M6Q5 {
         	M6Q5Stu a = new M6Q5Stu();
             a.exo1();
             boolean comp = a.exo3(a.getInfoAdm(), a.getMathAdm());
-            assertEquals("Question 3 : La comparaison est mal réalisée.", true, comp);
+            assertEquals("Question 3 :\n La comparaison est mal réalisée.", true, comp);
             
 		}catch (ArithmeticException e){
 			fail(str + "Le code est incorrect : il est interdit de diviser par zéro.");
@@ -275,7 +275,7 @@ public class M6Q5 {
         	M6Q5Stu a = new M6Q5Stu();
             a.exo1();
             boolean comp = a.exo3(a.getInfoAdm(), a.getMathAdm());
-            assertEquals("Question 3 : Il faut utiliser la fonction equals fournie par la classe Cours", 2, a.getCountEquals());
+            assertEquals("Question 3 :\n Il faut utiliser la fonction equals fournie par la classe Cours", 2, a.getCountEquals());
             
 		}catch (ArithmeticException e){
 			fail(str + "Le code est incorrect : il est interdit de diviser par zéro.");
