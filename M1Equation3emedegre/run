@@ -188,7 +188,7 @@ def run(exercice, customscript, corr, execcustom, nexercices, javac_args, java_a
                 i = 1
                 while i <= nexercices:
                     # On récupère un feedback par question dans le System.err, en suivant le format imposé par convention
-                    regex_question = re.findall('Question ' + str(i) + ' :\n(.*?)\n^[^\n]*Question [^\D1] :',
+                    regex_question = re.findall('Question ' + str(i) + ' :\n(.*?)\n^(?:[^\n]*Question [^\D1] :)?',
                                                 outerr, re.DOTALL | re.MULTILINE)
                     if len(regex_question) == 0:
                         feedback.set_global_result('success')
@@ -226,7 +226,7 @@ if __name__ == '__main__':
         print(e)
         task_options = None
         exit()
-    code_litteral = ".. code-block:: java\n\n"
+    code_litteral = ".. code-block::\n\n"
     javac = "javac -encoding UTF8 -cp .:/usr/share/java/junit.jar:/usr/share/java/hamcrest-core.jar"
     java = "run_student --time 20 java -ea -cp .:./student:/usr/share/java/junit.jar:/usr/share/java/hamcrest-core.jar"
     javac_args = shlex.split(javac)
