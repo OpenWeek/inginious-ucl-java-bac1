@@ -30,21 +30,17 @@ public class Cut {
 	@Test
 	public void testCut(){
     	try{
-    		CutStu.cut("je.suis.belge.",'.',"test1.txt");
+    		CutStu.cut("Hello, world! It's a nice day to make some Java programming!",' ',"test1.txt");
     		BufferedReader bf1 = new BufferedReader(new FileReader("student/ans.txt"));
     		BufferedReader bf2 = new BufferedReader(new FileReader("test1.txt"));
-            String s1=bf1.readLine();
-            String s2=bf2.readLine();
-            while (s1!=null && s2!=null){
-                assertTrue("sortie attendue : " + s1 +", sortie trouvee : "+s2,s1.equals(s2));
-            	s1=bf1.readLine();
-                s2=bf2.readLine();
-            }
-            if (s2==null&&s1!=null){
-            	fail(str + "Vous n'affichez rien alors que "+s1+" etait attendu");
-            }
-            bf1.close();
-            bf2.close();
+		String s1;
+		String s2;
+		for(s1 = bf1.readLine(),s2 = bf2.readLine(); s1 != null && s2 != null;s1 = bf1.readLine(), s2 = bf2.readLine())
+			assertTrue("Erreur. String attendu : "+s1+" . String donné : "+s2+" .",s1.compareTo(s2)==0);
+		if(s1 != s2)
+			assertTrue("Erreur. Vous avez afficher trop/pas asser de lignes!",false);
+		bf1.close();
+		bf2.close();
 		}catch (ArithmeticException e){
 			fail(str + "Le code est incorrect : il est interdit de diviser par zéro.");
 			e.printStackTrace();
@@ -72,20 +68,14 @@ public class Cut {
         public void testCut2(){
     	try{
     		CutStu.cut("hello",'.',"test2.txt");
-    		BufferedReader bf3 = new BufferedReader(new FileReader("student/ans2.txt"));
-    		BufferedReader bf4 = new BufferedReader(new FileReader("test2.txt"));
-            String s3=bf3.readLine();
-            String s4=bf4.readLine();
-            while (s3!=null && s4!=null){
-                assertTrue("sortie attendue : " + s3 +", sortie trouvee : "+s4,s3.equals(s4));
-            	s3=bf3.readLine();
-                s4=bf4.readLine();
-            }
-            if (s4==null&&s3!=null){
-            	fail(str + "Vous n'affichez rien alors que \""+s3+"\" etait attendu");
-            }
-            bf3.close();
-            bf4.close();
+    		BufferedReader bf1 = new BufferedReader(new FileReader("student/ans2.txt"));
+    		BufferedReader bf2 = new BufferedReader(new FileReader("test2.txt"));
+		String s1;
+		String s2;
+		for(s1 = bf1.readLine(),s2 = bf2.readLine(); s1 != null && s2 != null;s1 = bf1.readLine(), s2 = bf2.readLine())
+			assertTrue("Erreur. String attendu : "+s1+" . String donné : "+s2+" .",s1.compareTo(s2)==0);
+            bf1.close();
+            bf2.close();
 		}catch (ArithmeticException e){
 			fail(str + "Le code est incorrect : il est interdit de diviser par zéro.");
 			e.printStackTrace();

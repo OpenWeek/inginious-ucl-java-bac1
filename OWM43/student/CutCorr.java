@@ -17,19 +17,15 @@ package student;
 
 public class CutStu {
 
-	// Code a verifier
+	/**
+	  * @param str: String représentant la chaine de caractère. Ne peut pas être null
+	  * @param c: Caractère qui sert de délimiteur.
+	  *
+	  * @return -
+	  */
 	public static void cut(String str, char c){
-    	int l = str.length();
-    	String r = "";
-    	for (int i=0; i<l;i++){
-            if (str.charAt(i)==c){
-                System.out.println(r);
-                r = "";
-            }
-            else {
-                r+=str.charAt(i);
-            }
-    	}
-			System.out.println(r);	
-    }
+		String [] t = str.split(c);
+		for(String s : t)
+			System.out.println(s);
+	}	
 }

@@ -1,3 +1,11 @@
-je
-suis
-belge
+Hello,
+world!
+It's
+a
+nice
+day
+to
+make
+some
+Java
+programming!
