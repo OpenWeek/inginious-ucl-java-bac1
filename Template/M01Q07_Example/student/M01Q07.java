@@ -22,7 +22,7 @@ import org.junit.Test;
 import java.util.Random;
 import org.junit.runner.notification.Failure;
 
-public class M1Q7 {
+public class M01Q07 {
 	
 	private static String str = "Le code semble comporter des erreurs : ";
 	
@@ -32,7 +32,7 @@ public class M1Q7 {
 			int sum = 0;
 			for(int i = 0 ; i < 100 ; i++){
 				sum += i*2;
-				int res = M1Q7Stu.sumFirstEvenIntegers(i);
+				int res = M01Q07Stu.sumFirstEvenIntegers(i);
 				assertEquals(str + "pour les "+i+" premiers entiers pairs, la somme devrait donner "+sum+" mais le résultat obtenu est "+res+".",
 																												 				  sum, res);
 			}
@@ -65,7 +65,7 @@ public class M1Q7 {
 			int sum = 0;
 			for(int i = 0 ; i < 10 ; i++){
 				sum += i*2;
-				int resneg = M1Q7Stu.sumFirstEvenIntegers(-i);
+				int resneg = M01Q07Stu.sumFirstEvenIntegers(-i);
 				assertEquals(str + "pour un n négatif, le résultat retourné devrait être zéro, or, le résultat obtenu est "
 						 + resneg + ".", 0, resneg);
 			}
@@ -94,7 +94,7 @@ public class M1Q7 {
 	
 	// Code verificateur
 	public static void main(String[] args) {
-		Result result = JUnitCore.runClasses(M1Q7.class);
+		Result result = JUnitCore.runClasses(M01Q07.class);
 		for (Failure failure: result.getFailures()) {
 			System.err.println(failure.toString());
 		}
