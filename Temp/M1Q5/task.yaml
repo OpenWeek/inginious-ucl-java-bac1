@@ -1,0 +1,28 @@
+accessible: true
+author: Lucas Ody & Tom Rousseaux 
+context: Le XOR est un opérateur logique, aussi connu comme "ou exclusif", à l'instar
+    du "et" et du "ou". Il vous est demandé d'implémenter ce XOR, sachant que, pour
+    A et B deux booléens, le résultat ed A XOR B est vrai si un et un seul des booléens
+    A et B est vrai, et faux sinon.
+environment: java7
+groups: false
+limits:
+    memory: '100'
+    time: '30'
+    output: '2'
+name: 'Mission 1 : porte XOR'
+network_grading: false
+problems:
+    q1:
+        language: java
+        type: code
+        name: ''
+        header: |4-
+             .. code-block:: java
+
+                 boolean A;//paramètres
+                 boolean B;
+
+                 boolean XOR=false;// le résultat de votre Xor
+weight: 1.0
+order: 4

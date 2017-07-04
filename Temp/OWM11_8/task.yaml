@@ -1,0 +1,86 @@
+accessible: true
+author: Aurélie MASSART, Alexandre KÜHN & Hua Yang HU
+context: |-
+    Le but de cet exercice est de supprimer un noeud au milieu et à la fin d'une liste doublement chainée.
+
+    .. image:: OWM11_8/Fin.png
+        :height: 367px
+        :width: 1065px
+        :scale: 60%
+
+    La liste doublement chainée est implémentée par la classe Node dont le code est fourni ci-dessous:
+
+    .. code-block:: java
+
+        public class Node{
+            int value;
+            Node next;
+            Node previous;
+
+            ...
+        }
+
+    Cette liste est donc telle que p.value = 1.
+
+    Répondez aux deux questions ci-dessous.
+environment: default
+groups: false
+limits:
+    memory: '32'
+    output: '1024'
+    time: '60'
+name: 'Mission 11 : Question de démarrage 7 : Retrait d''un élément d''une liste doublement
+    chainée'
+network_grading: false
+order: 8
+problems:
+    idFirstExercice:
+        choices:
+        -   text: |-
+                .. code-block:: java
+
+                    p.next = p.next.next;
+                    p.next.next.previous = p;
+            feedback: 'Ce fragment de code est erronné : la deuxième ligne va provoquer
+                une erreur car p.next.next sera nul après l''exécution de la première
+                ligne.'
+        -   text: |-
+                .. code-block:: java
+
+                    p.next.next.previous = p;
+                    p.next = p.next.next.next;
+            feedback: 'Ce fragment de code est erronné : la deuxième ligne provoquera
+                une erreur car p.next.next est nul.'
+        -   text: |-
+                .. code-block:: java
+
+                    p.next.previous = p;
+                    p.next = p.next.next;
+            feedback: 'Ce fragment de code est erronné : la première ligne ne met
+                pas correctement à jour le previous.'
+        -   feedback: Ce fragment de code est erronné.
+            text: |-
+                .. code-block:: java
+
+                    p.next.previous = p;
+                    p = p.next;
+        -   valid: true
+            text: |-
+                .. code-block:: java
+
+                    p.next.next.previous = p;
+                    p.next = p.next.next;
+        header: 'Écrivez ici la ligne de code effectuant le retrait de l''élément
+            ayant comme valeur 2 dans la liste. '
+        error_message: '``You failed!!!``... '
+        type: multiple-choice
+        limit: 4
+        name: Suppression d'un élément au milieu de la liste
+    q2:
+        name: Suppression d'un élément à la fin de la liste
+        type: match
+        header: Écrivez ici la ligne de code effectuant le retrait de l'élément ayant
+            comme valeur 4 dans la liste. Attention, on considère toujours la liste
+            de départ et pas la liste dont on a supprimé l'élément 2.
+        answer: p.next.next = null;
+weight: 1.0

@@ -1,0 +1,31 @@
+accessible: true
+author: Arnaud Gellens & Pablo Gonzalez Alvarez
+context: Dans cette question, on s'intéresse à l'écriture d'une méthode dont le but est d'inverser les éléments d'un tableau passé en paramètre, c'est-à-dire que le premier élement deviendra le dernier, le deuxième l'avant dernier, etc.
+
+    Par exemple ``[1 2 3 4]`` devient ``[4 3 2 1]``.
+environment: java7
+groups: false
+limits:
+    memory: '100'
+    time: '30'
+    output: '2'
+name: 'Mission 5: inversion de tableau'
+network_grading: false
+problems:
+    q1:
+        language: java
+        type: code
+        name: Inversion d'un tableau
+        header: |-
+            Écrivez ci-dessous le corps de la méthode ``inverse`` permettant d'inverser un tableau d'entier, en utilisant de la programation défensive.
+
+            .. code-block:: java
+
+                /**
+                 * @pre: tab != null
+                 * @post: le tableau tab est inverse
+                 */
+                public static void inverse(int tab[]) {
+                    /* Code à compléter */
+                }
+weight: 1.0

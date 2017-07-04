@@ -1,0 +1,52 @@
+accessible: true
+author: Doriane Olewicki et Marie-Marie van der Beek
+context: |-
+    Dans ce premier exercice, nous vous demandons d'écrire une fontion setName et getName qui permettent respectivement de mettre à jour et récuperer le nom de l'élève (objet Student).
+
+    Ci-dessous, le code à complèter.
+
+    .. code-block:: java
+
+        public class Student {
+            public String name; // Student's name
+
+            public Student(String n) {
+                name = n;
+            }
+
+            /*
+             * pre  : -
+             * post : met à jour le nom de l'élève
+             */
+            public void setName(String n) {
+                /* CODE Q1 */
+            }
+
+            /*
+             * pre  : -
+             * post : retourne le nom de l'élève
+             */
+            public String getName() {
+                /* CODE Q2 */
+            }
+        }
+environment: java7
+groups: false
+limits:
+    memory: '100'
+    output: '2'
+    time: '30'
+name: 'Mission 6: Questionnaire de démarrage 1: set et get'
+network_grading: false
+problems:
+    q1:
+        name: Fonction setName
+        header: ''
+        language: java
+        type: code
+    q2:
+        name: Fonction getName
+        type: code
+        language: java
+        header: ''
+weight: 1.0
