@@ -18,9 +18,9 @@ environment: mcq
 evaluate: best
 groups: false
 limits:
-    memory: '100'
     time: '30'
     output: '2'
+    memory: '100'
 name: 'Mission 2 : IJK'
 network_grading: false
 order: 5
