@@ -1,8 +1,7 @@
 accessible: true
-author: Doriane Olewicki et Marie-Marie van der Beek
-context: |-
-    Ecrivez une fonction qui compare l'objet cours avec un autre donné en argument.
-
+author: Doriane Olewicki & Marie-Marie van der Beek
+context: |+
+    Dans l'exercice précédent, vous avez complété la classe Cours, résumé ci-dessous. On vous demande maintenant de représenter un étudiant qui est inscrit à maximum 5 cours différents et à maximum 60 crédits. Les cours auxquels l'étudiant est inscrit se trouvent dans le tableau tab, celui-ci se remplit de manière croissante (si l'étudiant est inscrit à 3 cours, les 3 premières cases seront remplies et les deux dernières vides). Attention, le tableau pourrait être complètement vide.
 
     .. code-block:: java
 
@@ -11,64 +10,46 @@ context: |-
             private String code;
             private int credit;
 
-            /*
-             * @pre  -
-             * @post crée un objet Cours dont le prof est pr, le code est co et le nombre de
-             * crédit cr.
-             */
-            public Cours (String pr, String co, int cr) { /* non fourni */ }
+            public boolean same(Cours a){/* NON FOURNI */}
+            public String getProf(){return prof;}
+            public String getCode(){return code;}
+            public int getCredit(){return credit;}
+            }
 
-            /*
-             * @pre  -
-             * @post crée un objet Cours dont le prof, le code et le nombre de
-             * crédit sont donnés par texte.
-             */
-            public Cours (String texte) { /* non fourni */ }
+        class Etudiant {
+            private int noma;
+            private Cours[] tab=new Cours[5];
+            private int nbCours;
 
-            /*
-             * @pre -
-             * @post renvoie, respectivement, le nom du prof, le code du cours
-             * et le nombre de crédit
-             */
-            public String getProf() { /* non fourni */ }
-            public String getCode() { /* non fourni */ }
-            public int getCredit() { /* non fourni */ }
+            public Etudiant(int n, Cours[] a){/*NON FOURNI*/}
+            public int nbCredit(){/*QUESTION 1*/}
+            public boolean inscription (Cours a){/*NON FOURNI*/}
+            }
 
-            /*
-             * @pre -
-             * @post mets à jour, respectivement, le nom du prof, le code du cours
-             * et le nombre de crédit
-             */
-            public void setProf(String pr) { /* non fourni */ }
-            public void setCode(String co) { /* non fourni */ }
-            public void setCredit(int cr) { /* non fourni */ }
 
-            /* A COMPLETER */
-        }
+
 environment: java7
 groups: false
 limits:
     memory: '100'
     time: '30'
     output: '2'
-name: 'Mission 6 : Question de démarrage - classe Cours 2.2 (le comparateur)'
+name: 'Mission 6 : Question d''approfondissement -  Etudiant.1'
 network_grading: false
 problems:
     q1:
         language: java
         type: code
-        name: Comparaison de cours
+        name: Nombre de crédits
         header: |-
-            Fournissez le code répondant à la signature suivante :
+            Calculez le nombre total de crédits de l'étudiant.
+
+            hint: parcourez le tableau et recupérez le nombre de crédits de chaque cours.
 
             .. code-block:: java
 
-                /*
-                 * @pre  -
-                 * @post renvoie true si les objets sont identiques, false sinon.
-                 * Si l'objet comparé est null, renvoie false.
-                 */
-                public boolean equals (Cours cours) {
-                    /* A COMPLETER */
-                }
+                /* @pre  -
+                * @post - renvoie le nombre de crédits de l'étudiant
+                */
+                public int nbCredit(){/*VOTRE CODE*/}
 weight: 1.0

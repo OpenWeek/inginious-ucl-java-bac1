@@ -1,11 +1,8 @@
 accessible: true
 author: Doriane Olewicki et Marie-Marie van der Beek
 context: |-
-    Dans cet exercice, il vous est demandé de d'utiliser les fonctions de la classe Cours que vous avez utilisé dans les autres questions.
+    Ecrivez une fonction qui compare l'objet cours avec un autre donné en argument.
 
-    Suivez les différentes étapes des sous-questions.
-
-    Le code source de la classe Cours est fourni ci-dessous :
 
     .. code-block:: java
 
@@ -28,7 +25,6 @@ context: |-
              */
             public Cours (String texte) { /* non fourni */ }
 
-
             /*
              * @pre -
              * @post renvoie, respectivement, le nom du prof, le code du cours
@@ -47,62 +43,32 @@ context: |-
             public void setCode(String co) { /* non fourni */ }
             public void setCredit(int cr) { /* non fourni */ }
 
-            /*
-              * @pre  -
-              * @post renvoie true si les objets sont identiques, false sinon.
-              * Si l'objet comparé est null, renvoie false.
-              */
-            public boolean equals (Cours cours) { /* non fourni */ }
-
-        }
-
-        public static void main(String[] args) {
-            Cours info;
-            Cours math;
-
             /* A COMPLETER */
         }
 environment: java7
 groups: false
 limits:
     memory: '100'
-    output: '2'
     time: '30'
-name: 'Mission 6 : Question de démarrage - classe Cours 2.3 (les applications)'
+    output: '2'
+name: 'Mission 6 : Question de démarrage - classe Cours 2.2 (le comparateur)'
 network_grading: false
 problems:
     q1:
-        name: Créer deux objets
-        header: |
-            Initialisez les deux objets "info" et "math". Les informations de chaque cours sont :
-
-            pour "info" : prof : Pecheur / code : LFSAB1401 / credit : 6
-
-            pour "math" : prof : BenNaoum / code : LFSAB1101 / credit : 8
         language: java
         type: code
-    q2:
-        name: Modifier des instances
-        type: code
-        language: java
+        name: Comparaison de cours
         header: |-
-            Veuillez changer :
+            Fournissez le code répondant à la signature suivante :
 
-            - le nom du prof d'info par "PECHEUR"
+            .. code-block:: java
 
-            - le code du cours de math par "LFSAB1000"
-
-            - le nombre de crédit de math par 5
-    q3:
-        name: Comparaisons d'objets
-        language: java
-        header: |-
-            Veuillez comparer :
-
-            - info avec math (stocker la réponse dans la variable "infoMath")
-
-            - info avec lui-même (stocker la réponse dans la variable "infoInfo")
-
-            Utilisez la fonction equals implémentée dans la classe Cours.
-        type: code
+                /*
+                 * @pre  -
+                 * @post renvoie true si les objets sont identiques, false sinon.
+                 * Si l'objet comparé est null, renvoie false.
+                 */
+                public boolean equals (Cours cours) {
+                    /* A COMPLETER */
+                }
 weight: 1.0
