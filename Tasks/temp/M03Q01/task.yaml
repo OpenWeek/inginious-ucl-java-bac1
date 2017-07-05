@@ -1,0 +1,59 @@
+accessible: true
+author: Fitvoye Florian, Dubray Alexandre, Mawait Maxime, Habran Antoine, Visée William
+context: Créez une méthode "Fact" et une méthode "Exp" permettant de calculer la factorielle
+    ou l'exponentielle du nombre passé en argument.
+environment: java7
+evaluate: best
+groups: false
+limits:
+    output: '2'
+    time: '30'
+    memory: '100'
+name: Factorielle et Exponentielle
+network_grading: false
+problems:
+    q1:
+        header: |-
+            Ecrivez le corps de la fonction fact dont voici la signature :
+
+            .. code-block:: java
+
+                /* pre : a est un entier positif
+                 * post: la fonction renvoie la factorielle de a si a est positif, -1 sinon
+                 */
+                public static int fact (int a){
+                    /* code a completer */
+                }
+        name: Factorielle
+        type: code
+        language: java
+    q2:
+        name: Exponentielle
+        language: java
+        type: code
+        header: |-
+            L'exponentielle peut être calculée grâce à cette série :
+
+            .. math::
+
+                \exp(z) = \sum_{n=0}^\infty   \frac{z^n}{n!}
+
+            Limitez-vous à 15 itérations.
+
+            Utilisez votre méthode fact (pour la factorielle) ainsi que la librairie ``Math`` (pour la puissance) dans cet exercice.
+
+            Ecrivez le corps de la fonction exp dont voici la signature :
+
+            .. code-block:: java
+
+                /* pre : a est un entier >=0
+                 * post: la fonction renvoie l'exponentielle de a si a>=0, -1 sinon
+                 */
+                public static double expon (int a){
+                    /* code a completer */
+                }
+stored_submissions: 0
+submission_limit:
+    amount: -1
+    period: -1
+weight: 1.0
