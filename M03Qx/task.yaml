@@ -1,0 +1,35 @@
+accessible: true
+author: William Visée
+context: 'Il est parfois utile de trouver si un nombre est pair ou impair ! '
+environment: java7
+evaluate: best
+groups: false
+limits:
+    output: '2'
+    time: '30'
+    memory: '100'
+name: 'Mission de Sagawill : Pair'
+network_grading: false
+problems:
+    q1:
+        type: code
+        header: |-
+            Ecrivez le corps de la fonction pair dont voici la signature :
+
+            .. code-block:: java
+
+                /* pre : b est un entier positif
+                 * post: la fonction renvoie true si b est pair et false sinon
+                 */
+                public static boolean pair (int b){
+                    /* code a completer */
+                }
+
+            Vous ne pouvez pas utiliser le '%' !
+        name: Pair
+        language: java
+stored_submissions: 0
+submission_limit:
+    amount: -1
+    period: -1
+weight: 1.0
