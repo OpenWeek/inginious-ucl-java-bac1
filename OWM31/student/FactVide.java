@@ -1,5 +1,5 @@
 /**
- *  Copyright (c) 2015, 2016 Fitvoye Florian, Dubray Alexandre
+ *  Copyright (c) 2015, 2016 Fitvoye Florian, Dubray Alexandre, Antoine Habran, Maxime Mawait, William Visée
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU Affero General Public License as published by
  *  the Free Software Foundation, either version 3 of the License, or
@@ -19,8 +19,11 @@ public class FactStu {
 
 	// Code a verifier
 	public static int fact (int a){
-@		@q1@@
+		@@q1@@
 	}
     
+    public static double expon (int a){
+@		@q2@@
+    }
 }
 
