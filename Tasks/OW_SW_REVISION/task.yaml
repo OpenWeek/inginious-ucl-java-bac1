@@ -1,0 +1,77 @@
+accessible: true
+author: Michel François, Fitvoye Florian, Dubray Alexandre
+context: |-
+    Nous sommes le jeudi 17 Décembre 2015, le lendemain de la sortie du film Star Wars VII : Le Réveil de
+    la Force. Malheureusement, vous n’avez pas eu la chance d’assister à une projection du film hier soir et
+    vous avez peur de vous faire spoiler les événements du film. Vous décidez alors de vous créer une base
+    de données contenant les noms des différentes personnes que vous avez des chances de rencontrer dans
+    la rue et qui sont susceptibles de vous raconter la fin du film. En infiltrant les serveurs de Google+,
+    vous réussisez à récupérer une base de données qui contient les personnes qui sont proches de vous et
+    deux informations cruciales : si elles ont vu le film et si elles aiment raconter la fin des films.
+    La base de données que vous avez récupérée chez Google+ se présente sous la forme d’une List en
+    Java contenant à la fois des objets Professeur, Assistant, Tuteur et Etudiant, mais aussi d’autres
+    classes dont vous ne connaissez pas le nom. Ces classes implémentent l’interface Personne dont le code
+    est repris dans le fichier Personne.java ci-dessous.
+
+    .. code-block:: java
+
+        public interface Personne{
+            /**
+             *@pre -
+             *@post retourne le nom de la personne
+             */
+             public String getName();
+
+             /**
+             *@pre -
+             *@post retourne l'âge de la personne
+             */
+             public int getAge();
+
+             /**
+             *@pre -
+             *@post retourne true si la personne a vu le film, false sinon
+             */
+             public boolean hasSeenStarWars();
+
+             /**
+             *@pre -
+             *@post retourne true si la personne risque de raconter la fin du film, false sinon
+             */
+             public boolean spoilerAlert();
+
+        }
+
+    Vous décidez alors d’implémenter une méthode qui écrit dans un fichier le nom et l’âge de toutes les
+    personnes que vous devrez éviter dans la rue.
+    La base de données est sous la forme d’une List de Personnes. Voici la signature de la méthode
+    qu’implémenter vous devez :
+
+    .. code-block:: java
+
+        /**
+         *@pre l.isEmpty() == false
+         *@post écrit dans le fichier de nom filename le nom et l'âge des personnes de la
+         *liste l qui ont vu le film Star Wars et aiment raconter la fin des films,
+         *en séparant le nom et l'âge par un espace. Une seule personne est écrite par ligne.
+         */
+         public static void antiSpoiler(List<Personne> l,String filename){
+         /* Code à compléter */
+         }
+
+    Attention, vous devez lire le fichier ligne par ligne et respecter cet ordre pour écrire dans votre fichier.
+environment: java7
+groups: false
+limits:
+    memory: '100'
+    time: '30'
+    output: '2'
+name: 'Question de révision : Le réveil de la force'
+network_grading: false
+problems:
+    q1:
+        language: java
+        type: code
+        name: Spoil Alert!
+        header: ''
+weight: 1.0

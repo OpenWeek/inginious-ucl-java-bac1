@@ -1,0 +1,40 @@
+accessible: true
+author: Lucas Ody & Tom Rousseaux 
+context: |+
+    Deux nombres imaginaires vous sont donnés: x et y, par le biais de leus parties imaginaires et réelles, marquées respectivement d'un I et d'un R.
+    Il vous est demandé de calculer leur produit, de stocker ses parties réelle et imaginaire dans respectivement a et b, ainsi que d'indiquer si ce dernier est devenu imaginaire pur, "réel pur", ou reste un complexe standard, via 2 booléens.
+
+    Rappels :
+
+    -La partie réelle comme imaginaire d'un complexe sont tout les deux des réels.
+
+    -Un imaginaire pur est un complexe dont la partie réelle est nulle, et vice versa.
+
+    .. code-block:: java
+
+        int xR, xI, yR, yI ;//parties réelles et imaginaires de x et y.
+
+        //à déterminer, selon le produit de x et y
+        boolean imaginairePur = false;
+        boolean reelPur = false;
+
+        //les parties réelle et imaginaire du produit de x et y
+        int a = 0;
+        int b = 0;
+
+environment: java7
+groups: false
+limits:
+    memory: '100'
+    time: '30'
+    output: '2'
+name: 'Mission 1 : Nombre complexe'
+network_grading: false
+problems:
+    q1:
+        language: java
+        type: code
+        name: ''
+        header: ''
+weight: 1.0
+order: 1

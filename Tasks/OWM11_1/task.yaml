@@ -1,0 +1,77 @@
+accessible: true
+author: Aurélie MASSART, Alexandre KÜHN & Hua Yang HU
+context: |
+    Soit la représentation d'une liste simplement chaînée suivante :
+
+    .. image:: OWM11_1/Q1.png
+        :height: 383px
+        :width: 1058px
+        :scale: 50%
+
+    ``clients: client(name: "Marc", value: 100) -> client(name: "Jean", value: 150) -> client(name: "Marie", value: 200)``
+
+    Pour chacune des questions qui demande un résultat, veuillez entrer la valeur affichée par l'instruction:
+
+    - Si l'instruction renvoit un string, entrez-le sans les guillements;
+    - Si l'instruction renvoit un null, entrez 'null' sans les apostrophes;
+    - Si l'instruction effectue des accès invalides (par ex: accès à un champ de ``null``), entrez 'error' sans les apostrophes.
+
+    Pour chacune des questions qui demande d'écrire une instruction, veuillez entrer l'instruction, veuillez respecter ce format:
+
+    - Pas de point-virgule à la fin de l'instruction;
+    - Pas d'espace avant ou après l'instruction;
+    - Coller les instructions d'accès entre-elles, sans espace (par ex: ``a.b.c``)
+    - Si l'instruction effectue des accès invalides (par ex: accès à un champ de ``null``), entrez 'error' sans les apostrophes
+    - Insérer un espace avant et après une opération mathématique (par ex: ``a + b``).
+environment: java7
+groups: false
+limits:
+    output: '2'
+    memory: '200'
+    time: '30'
+name: 'Mission 11 : Question de démarrage 1 : Accès dans une liste'
+network_grading: false
+order: 1
+problems:
+    q1:
+        type: match
+        name: 'Accès #1'
+        header: Valeur de ``clients.first.next.next.value`` ?
+        answer: '200'
+    q2:
+        name: 'Accès #2'
+        type: match
+        header: Valeur de ``clients.first.value`` ?
+        answer: '100'
+    q3:
+        answer: Marc
+        name: 'Accès #3'
+        header: Valeur de ``clients.first.name`` ?
+        type: match
+    q4:
+        type: match
+        answer: error
+        header: Valeur de ``clients.next.next.name`` ?
+        name: 'Accès #4'
+    q5:
+        type: match
+        answer: '350'
+        name: 'Accès #5'
+        header: Valeur de ``clients.first.next.value + clients.first.next.next.value``
+            ?
+    q6:
+        name: 'Accès #6'
+        type: match
+        answer: clients.first.next.next.name
+        header: Instruction pour accéder à la valeur "Marie" ?
+    q7:
+        answer: clients.first.next.value
+        header: Instruction pour obtenir la valeur 150 ?
+        type: match
+        name: 'Accès #6'
+    q8:
+        type: match
+        answer: clients.first.next.next.name + clients.first.next.name + clients.first.name
+        header: Instruction pour obtenir la valeur "MarieJeanMarc" ?
+        name: 'Accès #7'
+weight: 1.0
