@@ -1,0 +1,28 @@
+accessible: true
+author: 'Tom & Lucas  '
+context: 'À partir d''un produit de 3 polynômes de 1er degré, dont l''expression est
+    ``(x-a)(x-b)(x-c)``. Vous devez retrouver les coefficients du polynôme de 3ème
+    dégré résultant d''une distribution, et les stocker dans leur variable respective. '
+environment: java7
+groups: false
+limits:
+    memory: '100'
+    time: '30'
+    output: '2'
+name: 'Mission 01 : Question 08 : Multiplication algébrique'
+network_grading: false
+problems:
+    q1:
+        language: java
+        type: code
+        name: ''
+        header: |+
+            .. code-block:: java
+
+                int a,b,c; //les racines
+                int xCube = 0; //le coefficient du x³
+                int xCarre = 0; //le coefficient du x²
+                int x = 0; //le coefficient du x
+                int tI = 0; //le terme independant
+
+weight: 1.0

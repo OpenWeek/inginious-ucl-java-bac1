@@ -1,0 +1,77 @@
+accessible: true
+author: Mawait Maxime, Visée Antoine, Habran Antoine
+context: Pour les questions ci-dessous, vous allez jouer avec la transformation d'un
+    String en tableau. En java, ces deux types de données sont représentés par des
+    objets différents alors que, dans d'autres langages informatiques, le C par exemple,
+    les Strings n'existent pas comme type de données et les chaînes de caractères
+    sont donc représentés par un tableau de char. Attention, vous DEVEZ utiliser la
+    programmation défensive
+environment: java7
+evaluate: best
+groups: false
+limits:
+    memory: '100'
+    output: '2'
+    time: '30'
+name: 'Mission 5: transformation d''un String en tableau'
+network_grading: false
+problems:
+    q1:
+        header: |-
+            Pour cette question, vous devez écrire le code de la fonction ``count`` qui calcule le nombre d'occurences d'une lettre dans une liste de caractères sans utiliser ``charAt``.
+
+            Hint: cherchez dans la documentation de la classe String
+
+            Exemple: n = count ("LSINF1252", '2') = 2
+
+            .. code-block:: java
+
+                /*
+                * @pre: str != NULL
+                * @post: retourne le nombre d'occurences de c dans str
+                **/
+                public static int count (String str, char c)
+        language: java
+        name: 'Nombre d''occurrences '
+        type: code
+    q2:
+        type: code
+        header: |-
+            Ecrivez ci-dessous le code de la fonction inverseArray qui inverse le tableau et le transforme en String. Vous avez accès à la fonction ``inverse( char[] tab )`` qui est de type void et qui inverse le tableau. Essayez d'écrire ce code sans utiliser de boucles avec itérations (pas de i++, si i est votre itérateur) si possible.
+
+            Exemple:
+
+            inverseArray(['a','b']) retourne "ba"
+
+            inverseArray(['j','a','v','a']) retourne "avaj"
+
+            Hint: il y a deux possibilités pour résoudre cet exercice:
+
+            - allez voir dans la documentation de la classe String. (Cela donne la solution la plus courte)
+
+            - utilisez une boucle for each.
+
+            Exemple de boucle for each: On chercher à faire la somme des éléments d'un tableau d'entiers.
+
+            .. code-block:: java
+
+                int sum = 0;
+                int[] tab = {1, 2, 3, 4, 5};
+                for (int x: tab){ //pour tous les int appartenant à tab
+                    sum = sum + x;
+                }
+
+            .. code-block:: java
+
+                /*
+                * @pre: tab != NULL
+                * @post: retourne tab renversé et retransformé en String
+                */
+                public static String inverseArray (char[] tab)
+        language: java
+        name: Renversement d'un tableau et retransformation en String
+stored_submissions: 0
+submission_limit:
+    amount: -1
+    period: -1
+weight: 1.0
