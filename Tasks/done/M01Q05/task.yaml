@@ -10,7 +10,7 @@ limits:
     memory: '100'
     time: '30'
     output: '2'
-name: 'Mission 1 : porte XOR'
+name: 'Mission 01 : Question 05 : porte XOR'
 network_grading: false
 problems:
     q1:

@@ -21,7 +21,7 @@ limits:
     time: '30'
     output: '2'
     memory: '100'
-name: 'Mission 2 : IJK'
+name: 'Mission 02 : Question 01 : IJK'
 network_grading: false
 order: 5
 problems:

@@ -21,7 +21,7 @@ limits:
     memory: '100'
     time: '30'
     output: '2'
-name: 'Mission 1 : Multiplication algébrique'
+name: 'Mission 01 : Question 04 : Multiplication algébrique'
 network_grading: false
 order: 3
 problems:
