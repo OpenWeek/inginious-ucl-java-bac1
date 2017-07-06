@@ -1,0 +1,37 @@
+accessible: true
+author: Lucas Ody & Tom Rousseaux
+context: |-
+    Lisez le code suivant, et déterminez quel sera la sortie en console:
+
+     .. code-block:: java
+
+         int k = 0;
+         for(int i = 1; i<= 20; i=i+1)
+         {
+             for(int j = 0; j<=i; j=j+1)
+             {
+                 for(k=i; k>j; k=k-1){}
+             }
+         }
+         System.out.print(k);
+environment: mcq
+evaluate: best
+groups: false
+limits:
+    time: '30'
+    output: '2'
+    memory: '100'
+name: 'Mission 2 : IJK'
+network_grading: false
+order: 5
+problems:
+    q1:
+        type: match
+        answer: '20'
+        header: ''
+        name: ''
+stored_submissions: 0
+submission_limit:
+    amount: -1
+    period: -1
+weight: 1.0
