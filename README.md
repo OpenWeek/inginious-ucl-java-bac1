@@ -4,4 +4,4 @@ Ce repo reprend l'ensemble des exercices destiné aux étudiants du cours [LSFAB
 
 # How to contribute
 
-Les différentes informations utiles se trouvent dans le [wiki](https://github.com/OpenWeek/inginious-ucl-java-bac1/wiki)
+Les différentes informations utiles se trouvent dans le [wiki](wiki)
