@@ -27,7 +27,7 @@
 accessible: true
 author: # Insérez les <auteurs> ici. N'oubliez pas de les rajouter dans la license (première ligne du fichier)
 context: |+ 
-     # Remplacez ce commentaire par l'explication de l'exercice, affiché en dessous du titre.
+     # Remplacez ce commentaire par l'explication de l'exercice, affiché en dessous du titre de la tâche.
 
 
     .. code-block:: java
