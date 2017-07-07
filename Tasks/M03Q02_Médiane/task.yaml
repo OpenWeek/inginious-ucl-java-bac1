@@ -7,7 +7,7 @@ limits:
     memory: '100'
     time: '30'
     output: '2'
-name: Mission 03 : Question 02 : Mediane
+name: 'Mission 03 : Question 02 : Mediane'
 network_grading: false
 problems:
     q1:

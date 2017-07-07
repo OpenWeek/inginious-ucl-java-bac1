@@ -7,7 +7,7 @@ limits:
     memory: '100'
     time: '30'
     output: '2'
-name: Mission 03 : Question 04 : Division et arrondis
+name: 'Mission 03 : Question 04 : Division et arrondis'
 network_grading: false
 problems:
     q1:

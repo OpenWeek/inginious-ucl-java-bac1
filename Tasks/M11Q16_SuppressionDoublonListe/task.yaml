@@ -77,12 +77,8 @@ groups: false
 limits:
     memory: '200'
     output: '2'
-<<<<<<< HEAD
     time: '30'
-name: 'Mission 11 : Question intermédiaire 8 : RemoveDuplicates de liste'
-=======
 name: 'Mission 11 : Question 16 : RemoveDuplicates de liste'
->>>>>>> 15f70f044571011ffba473a81a9be6ec6f9fda6a
 network_grading: false
 order: 23
 problems:

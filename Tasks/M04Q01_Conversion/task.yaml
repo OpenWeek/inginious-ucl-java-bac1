@@ -7,7 +7,7 @@ limits:
     memory: '100'
     time: '30'
     output: '2'
-name: Mission 04 : Question 01 : Convertion de Nombre
+name: 'Mission 04 : Question 01 : Convertion de Nombre'
 network_grading: false
 problems:
     q1:
