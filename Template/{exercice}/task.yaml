@@ -1,4 +1,4 @@
-#   Copyright (c) 2016 François Michel, Clémentine Munyabarenzi
+#   Copyright (c) <Date> <Auteurs>
 #   This program is free software: you can redistribute it and/or modify
 #   it under the terms of the GNU Affero General Public License as published by
 #   the Free Software Foundation, either version 3 of the License, or
@@ -25,29 +25,23 @@
 
 
 accessible: true
-author: François MICHEL & Clémentine MUNYABARENZI
-context: |+
-    Les boucles, notamment les boucles ``for``, sont un concept clé en programmation. Pour vous entraîner à l'utilisation de boucles ``for``, écrivez une boucle for qui permettra de calculer la somme des n premiers entier PAIRS supérieurs à zéro, en fonction de la variable n, déjà définie à une valeur supérieure ou égale à zéro. Le résultat final doit être stocké dans la variable ``sum`` à la fin de la boucle, elle aussi déjà définie. Lorsque n est négatif, le résultat doit valoir zéro.
+author: # Insérez les <auteurs> ici. N'oubliez pas de les rajouter dans la license (première ligne du fichier)
+context: |+ 
+     # Remplacez ce commentaire par l'explication de l'exercice, affiché en dessous du titre.
+
 
     .. code-block:: java
-
-        int n = /* n peut prendre n'importe quelle valeur */
-        int sum = 0;
-
-environment: java7
+      
+	   # Insérez ici le code à afficher aux étudiants, il s'agit de l'encadré en dessous des consignes de la tâche
+     
+environment: # Environnement de la tâche (java pour un exercice de code, mcq pour un qcm)
 groups: false
 limits:
     memory: '200'
     time: '30'
     output: '2'
-name: 'Mission 2: Question de démarrage 2 : Somme d''entiers'
+name: 
 network_grading: false
 order: 5
 problems:
-    q1:
-        language: Java
-        type: code
-        name: Somme des n premiers entiers pairs
-        header: 'Écrivez ici le bout de programme permettant de calculer la somme
-            des n premiers entiers pairs :'
-weight: 1.0
+
