@@ -1,0 +1,88 @@
+accessible: true
+author: Naitali Brandon, Mawait Maxime
+context: |-
+    Les interfaces sont très utiles pour définir des comportements communs à un ensemble d'objets. Ici, nous allons les appliquer dans le jeu d'échecs. Les pions, les fous, les tours,etc... ont tous des actions en commun comme se déplacer, manger une pièce et être mangée. Ainsi, il vous est demandé dans cette tâche d'implémenter une classe PionStu, qui représente un pion. En guise de démarrage, nous vous offrons le constructeur et les 3 attributs: (sa couleur, son nom  et le jeu d'échec sur lequel la pièce est placée)
+
+    .. code-block:: java
+
+
+            String couleur;
+            String nom;
+            ChessAPI c = new ChessAPI();
+            public PionStu(String couleur){
+                this.couleur=couleur;
+                this.nom="pion";
+            }
+
+
+
+    Celle-ci implémenterait l'interface ChessPiece:
+
+    .. code-block:: java
+
+        public interface ChessPiece {
+            public int seDeplacer();
+            public int estMangee(Object mangeur);
+            public int mangePiece(Object victime);
+            public String couleurPiece();
+            public String nomPiece();
+        }
+
+    Bien entendu, nous ne vous demandons pas de coder le jeu d'échecs. Voici un ensemble de méthodes que vous pourrez utiliser pour implémenter l'interface :
+
+    .. code-block:: java
+
+        public class ChessAPI {
+            // Supposez que ces méthodes fonctionnent parfaitement
+            // deplace le pion
+            public static int deplacerPion(){
+                // do something
+            }
+            // fait disparaitre la piece de l'échéquier
+            public static int disparaitre(Object mangeur){
+                // do something
+            }
+            // action de manger une autre piece par le pion
+            public static int mangerPion(Object victime){
+                // do something
+            }
+            //
+            public static String nomPion(){
+                return "pion";
+            }
+        }
+environment: java7
+evaluate: best
+groups: false
+limits:
+    memory: '100'
+    output: '2'
+    time: '30'
+name: 'Mission 08 : Question 02 : Exercice intermédiaire - Implémenter une interface'
+network_grading: false
+problems:
+    q1:
+        header: |-
+            On vous demande donc d'implémenter les méthodes de l'interface ChessPiece à l'aide des méthodes de la classe ChessAPI.
+
+            .. code-block:: java
+
+                public class PionStu implements ChessPiece {
+
+                    String couleur;
+                    String nom;
+                    ChessAPI c = new ChessAPI();
+                    public PionStu(String couleur){
+                        this.couleur = couleur;
+                        this.nom = "pion";
+                    }
+
+                    //Complétez le code
+        language: Java
+        name: Classe PionStu
+        type: code
+stored_submissions: 0
+submission_limit:
+    amount: -1
+    period: -1
+weight: 1.0

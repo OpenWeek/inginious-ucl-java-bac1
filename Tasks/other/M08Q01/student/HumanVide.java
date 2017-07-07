@@ -1,5 +1,0 @@
-package student;
-
-
-@		@q1@@
-	

@@ -1,0 +1,65 @@
+accessible: true
+author: Naitali Brandon, Mawait Maxime
+context: |-
+    Dans cette exercice, nous allons établir que les humains sont représentées par des classes et que la nature a décidé que l'humain doit pouvoir faire un minimum d'actions pour survivre (l'interface). Mettez-vous à la place de Mère Nature et concevez une interface java qui garantirait à chaque humain (classe) qui la suit (qui l'implémente) de survivre et ainsi pouvoir faire vivre les individus.
+
+    Dans cet exercice, il vous donc est demandé de créer l'interface HumanDoing (attention, il faut impérativement appeler votre classe avec ce nom).
+
+    Pour vous aider, nous vous donnons un exemple d'un homme, Joel, qui survivra si votre interface est correcte :
+
+    .. code-block:: java
+
+            public class Joel implements HumanDoing{
+                    public Joel(){
+                        //do something
+                    }
+                    @Override
+                    public void respirer(){
+                        // do something
+                    }
+                    @Override
+                    public void marcher(){
+                        // do something
+                    }
+                    @Override
+                    public void manger(){
+                        // do something
+                    }
+                    @Override
+                    public void boire(){
+                        // do something
+                    }
+                    // Talent propre à Joel
+                    public void mangerPantoufle(){
+                        // do something
+                    }
+                }
+
+
+
+    Sauvez Joel!
+environment: java7
+evaluate: best
+groups: false
+limits:
+    memory: '100'
+    output: '2'
+    time: '30'
+name: 'Mission 8 : Exercice intermédiaire - Concevoir une interface'
+network_grading: false
+problems:
+    q1:
+        header: |-
+            Complétez l'interface HumanDoing.
+
+            .. code-block:: java
+
+                public interface HumanDoing {
+        language: Java
+        name: Interface HumanDoing
+        type: code
+stored_submissions: 0
+submission_limit:
+    amount: -1
+    period: -1
+weight: 1.0
