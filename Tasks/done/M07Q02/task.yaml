@@ -26,7 +26,7 @@ limits:
     memory: '200'
     time: '30'
     output: '2'
-name: 'Mission 7 : Exercice Facile : Redéfinir une méthode existante de la superclasse'
+name: 'Mission 07 : Question 02 : Exercice Facile - Redéfinir une méthode existante de la superclasse'
 network_grading: false
 order: 5
 problems:

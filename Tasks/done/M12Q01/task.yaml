@@ -66,7 +66,7 @@ limits:
     memory: '100'
     time: '30'
     output: '2'
-name: 'Question de révision : Le réveil de la force'
+name: 'Question de révision 01 : Le réveil de la force'
 network_grading: false
 problems:
     q1:

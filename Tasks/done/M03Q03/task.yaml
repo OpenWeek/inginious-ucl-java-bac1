@@ -8,7 +8,7 @@ limits:
     memory: '100'
     time: '30'
     output: '2'
-name: Itérations d'un char dans un String
+name: Mission 03 : Question 03 : Itérations d'un char dans un String
 network_grading: false
 problems:
     q1:

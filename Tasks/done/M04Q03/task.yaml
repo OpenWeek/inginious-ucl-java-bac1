@@ -8,7 +8,7 @@ limits:
     memory: '100'
     time: '30'
     output: '2'
-name: Découper un String
+name: Mission 04 : Question 03 : Découper un String
 network_grading: false
 problems:
     q1:

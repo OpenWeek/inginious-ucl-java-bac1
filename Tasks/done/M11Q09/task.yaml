@@ -21,8 +21,7 @@ groups: false
 limits:
     memory: '200'
     output: '2'
-    time: '30'
-name: 'Mission 11 : Question intermédiare 2 : Maximum d''une liste triée'
+name: 'Mission 11 : Question 09 : Question intermédiare 2 - Maximum d''une liste triée'
 network_grading: false
 order: 11
 problems:

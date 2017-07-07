@@ -51,7 +51,7 @@ limits:
     memory: '100'
     time: '30'
     output: '2'
-name: 'Mission 6 : Question de démarrage - classe Cours 2.2 (le comparateur)'
+name: 'Mission 06 : Question 04 : Question de démarrage - classe Cours 2.2 (le comparateur)'
 network_grading: false
 problems:
     q1:

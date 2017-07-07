@@ -9,7 +9,7 @@ limits:
     memory: '100'
     time: '30'
     output: '2'
-name: 'Mission 5: inversion de tableau'
+name: 'Mission 05 : Question 02 : inversion de tableau'
 network_grading: false
 problems:
     q1:

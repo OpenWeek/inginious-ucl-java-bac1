@@ -21,13 +21,13 @@ context: |
         }
 
     La classe Stack est incomplète : il manque les opérations push et pop ajoutant un élément et retirant un élément du stack. Répondez aux différentes questions théoriques ci-dessous.
-environment: java7
+environment: mcq
 groups: false
 limits:
     memory: '200'
     output: '2'
     time: '30'
-name: 'Mission 11 : Question de démarrage 8 : Opérations sur un stack : théorie'
+name: 'Mission 11 : Question 12 : Opérations sur un stack : théorie'
 network_grading: false
 order: 9
 problems:

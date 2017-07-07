@@ -40,7 +40,7 @@ limits:
     memory: '200'
     time: '30'
     output: '2'
-name: 'Mission 7 : Exercice Facile : Héritage simple'
+name: 'Mission 07 : Question 01 : Exercice Facile - Héritage simple'
 network_grading: false
 order: 5
 problems:

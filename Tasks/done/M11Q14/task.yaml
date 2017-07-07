@@ -69,8 +69,7 @@ groups: false
 limits:
     memory: '200'
     output: '2'
-    time: '30'
-name: 'Mission 11 : Question intermédiaire 6 : SortedMerge de listes'
+name: 'Mission 11 : Question 14 : SortedMerge de listes'
 network_grading: false
 order: 21
 problems:

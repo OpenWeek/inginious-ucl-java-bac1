@@ -9,7 +9,7 @@ limits:
     memory: '200'
     output: '2'
     time: '30'
-name: 'Mission 9 : Exercice intermédiare - Compter les caractères'
+name: 'Mission 09 : Question 03 : Exercice intermédiare - Compter les caractères'
 network_grading: false
 problems:
     q1:

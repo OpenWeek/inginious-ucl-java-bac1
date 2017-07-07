@@ -27,8 +27,7 @@ groups: false
 limits:
     memory: '200'
     output: '2'
-    time: '30'
-name: 'Mission 11 : Question intermédiare 5 : Opérations sur un stack : implémentations'
+name: 'Mission 11 : Question 13 : Opérations sur un stack - implémentations'
 network_grading: false
 order: 14
 problems:

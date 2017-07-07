@@ -17,7 +17,7 @@ limits:
     time: '30'
     output: '2'
     memory: '100'
-name: 'Mission 2 : Division euclidienne'
+name: 'Mission 02 : Question 03 : Division euclidienne'
 network_grading: false
 order: 7
 problems:

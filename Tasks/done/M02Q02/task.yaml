@@ -20,7 +20,7 @@ limits:
     memory: '200'
     time: '30'
     output: '2'
-name: 'Mission 2 : Morse'
+name: 'Mission 02 : Question 02 : Morse'
 network_grading: false
 order: 8
 problems:
