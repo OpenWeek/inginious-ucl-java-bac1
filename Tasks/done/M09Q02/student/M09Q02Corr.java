@@ -1,5 +1,5 @@
 /**
- *  Copyright (c) 2016 Justine Doutreloux, Carolina Unriza, Charline Outters
+ *  Copyright (c) 2016 Justine Doutreloux, Carolina Unriza, Charline Outters, Mawait Maxime
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU Affero General Public License as published by
  *  the Free Software Foundation, either version 3 of the License, or
@@ -16,7 +16,7 @@
 package student;
 import java.io.*;
 
-public class M09Q02Stu 
+public class M09Q02Corr
 {
 	/*
 	 * @pre : /

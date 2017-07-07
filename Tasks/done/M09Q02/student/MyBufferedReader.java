@@ -1,5 +1,5 @@
 /**
- *  Copyright (c) 2016 Justine Doutreloux, Carolina Unriza, Charline Outters
+ *  Copyright (c) 2016 Justine Doutreloux, Carolina Unriza, Charline Outters, Mawait Maxime
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU Affero General Public License as published by
  *  the Free Software Foundation, either version 3 of the License, or
@@ -26,33 +26,15 @@ import java.io.*;
 
 public class MyBufferedReader 
 {
-	//cette classe nous sert à faire échouer open volontairement pour vérifier si les étudiants catch bien les exceptions.
-	public static boolean openSuccess = true; //en changeant cette variable on contrôle l'ouverture du fichier
-	public static boolean closeSuccess = true;//même chose pour la fermeture
-	private BufferedReader bf;
-	
+	BufferedReader bf;
 	public MyBufferedReader(FileReader f) throws IOException, FileNotFoundException
 	{
-		if(openSuccess == true)
-		{
-			bf = new BufferedReader(f);
-		}
-		else
-		{
-			throw new FileNotFoundException();
-		}
+		bf = new BufferedReader(f);
 	}
 	
 	public void close() throws IOException
 	{
-		if(closeSuccess == true)
-		{
-			bf.close();
-		}
-		else
-		{
-			throw new IOException();
-		}
+		bf.close();
 	}
 	public String readLine() throws IOException
     {

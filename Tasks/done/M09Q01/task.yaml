@@ -1,21 +1,20 @@
 accessible: true
-author: Justine Doutreloux, Charline Outters, Carolina Unriza Salamanca
-context: 'Cette mission vous permettra de vous familiariser avec l''utilisation des fichiers.'
+author: Justine Doutreloux, Charline Outters, Carolina Unriza Salamanca, Mawait Maxime
+context: Cette mission vous permettra de vous familiariser avec l'utilisation des
+    fichiers.
 environment: java7
+evaluate: best
 groups: false
 limits:
     memory: '200'
-    time: '30'
     output: '2'
+    time: '30'
 name: 'Mission 9 : Exercice facile - Premiers fichiers'
 network_grading: false
 problems:
     q1:
-        language: Java
-        type: code
-        name: Première ouverture
         header: |-
-            Pour cette première tâche, on vous demande simplement d'ouvrir et de fermer le fichier passé en argument et rien de plus.
+            Pour cette première tâche, on vous demande simplement d'ouvrir et de fermer le fichier passé en argument.
 
             .. code-block:: java
 
@@ -31,4 +30,11 @@ problems:
                  }
 
             Piste: utiliser la méthode ``readLine()`` pour afficher la première ligne.
+        language: Java
+        name: Première ouverture
+        type: code
+stored_submissions: 0
+submission_limit:
+    amount: -1
+    period: -1
 weight: 1.0

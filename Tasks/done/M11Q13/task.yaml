@@ -1,5 +1,5 @@
 accessible: true
-author: Aurélie MASSART, Alexandre KÜHN & Hua Yang HU
+author: Aurélie MASSART, Alexandre KÜHN & Hua Yang HU, Mawait Maxime
 context: |
     Soit un stack défini par la classe suivante :
 
@@ -22,21 +22,19 @@ context: |
 
     La classe Stack est incomplète : il manque les opérations push et pop ajoutant un élément et retirant un élément du stack. Complétez la classe Stack.
 environment: java7
+evaluate: best
 groups: false
 limits:
     memory: '200'
-    time: '30'
     output: '2'
+    time: '30'
 name: 'Mission 11 : Question intermédiare 5 : Opérations sur un stack : implémentations'
 network_grading: false
 order: 14
 problems:
     q1:
-        language: java
-        type: code
-        name: Fonctions pop et push
         header: |
-            Implémentez les fonctions pop et push d'un stack. Les signatures des fonctions sont fournies ci-dessous. Vous **devez** recopier la signature des fonctions dans votre réponse. On considère que la pile contient initialement au moins un élément.
+            Implémentez la fonctions pop d'une stack. La signatures de la fonction est fournie ci-dessous. Utilisez la programmation défensive pour garantir les pré-conditions.
 
             .. code-block:: java
 
@@ -44,11 +42,28 @@ problems:
                  * @pre le stack est non vide
                  * @post retire et retourne un element du stack
                  */
-                public int pop();
+                public int pop(){
+                    //Complétez le code
+        language: java
+        name: Fonction pop
+        type: code
+    q2:
+        type: code
+        header: |-
+            Implémentez la fonctions push d'une stack. La signatures de la fonction est fournie ci-dessous. Utilisez la programmation défensive pour garantir les pré-conditions.
+
+            .. code-block:: java
 
                 /*
                  * @pre -
                  * @post ajoute l'élément val dans le stack
                  */
-                public void push(int val);
+                public void push(int val){
+                    //Complétez le code
+        language: Java
+        name: Fonction push
+stored_submissions: 0
+submission_limit:
+    amount: -1
+    period: -1
 weight: 1.0

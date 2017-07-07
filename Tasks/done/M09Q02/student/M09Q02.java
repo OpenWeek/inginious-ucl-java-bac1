@@ -1,5 +1,5 @@
 /**
- *  Copyright (c) 2016 Justine Doutreloux, Carolina Unriza, Charline Outters
+ *  Copyright (c) 2016 Justine Doutreloux, Carolina Unriza, Charline Outters, Mawait Maxime
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU Affero General Public License as published by
  *  the Free Software Foundation, either version 3 of the License, or
@@ -24,6 +24,7 @@ import org.junit.runner.notification.*;
 public class M09Q02 {
 	
 	private static String str = "Le code semble comporter des erreurs : ";
+    
 	//Generates a random String to avoid student hardcoding the answer
 	public static String generateString(int length){
 		String s = "";
@@ -37,41 +38,10 @@ public class M09Q02 {
 	@Test
 	public void testPos(){
 		try{
-        		MyBufferedReader.openSuccess = true;
-               		MyBufferedReader.closeSuccess = true;
-			M09Q02Stu.deuxiemeFichier("student/fichier.txt");
-			BufferedReader verif;
-			verif = new BufferedReader(new FileReader("student/outStu.txt"));
-			String res = verif.readLine();
-			verif.close();
-			assertEquals("Hello!", res);
-		}catch (FileNotFoundException e){
-			fail(str + "Le code est incorrect : le nom du fichier ne semble pas être correct, vous essayez d'ouvrir un fichier non existant.");
-			e.printStackTrace();
-		}catch(IOException e){
-			fail(str + "Le code est incorrect: il y a un problème lors de l'utilisation de la méthode readLine() ou close()");
-			e.printStackTrace();
-		}catch(IllegalArgumentException  e){
-			e.printStackTrace();
-			fail(str + "Attention, vous tentez de lire en dehors des limites d'un String ! (StringIndexOutOfBoundsException)");
-			e.printStackTrace();
-		}
-	}
-	
-	@Test
-	public void testOpen(){
-		try{	
-        		MyBufferedReader.openSuccess = false;
-               		M09Q02Stu.deuxiemeFichier("student/fichier.txt");
-			BufferedReader verif;
-			verif = new BufferedReader(new FileReader("student/outStu.txt"));
-			verif.close();
-		}catch (FileNotFoundException e){
-			fail(str + "Le code est incorrect : le nom du fichier ne semble pas être correct, vous essayez d'ouvrir un fichier non existant.");
-			e.printStackTrace();
-		}catch(IOException e){
-			fail(str + "Oh dear! Vous ne gérez pas correctement les erreurs liées à open()");
-			e.printStackTrace();
+			String res = M09Q02Stu.deuxiemeFichier("student/fichier.txt");
+			assertEquals(str + "Le code ne retoune pas la bonne valeur","Hello!", res);
+            res = M09Q02Stu.deuxiemeFichier("fichier.txt");
+            assertNull(str + "Vous ne prenez pas compte des post-conditions dans le cas d'une exception (est sensé retourner null)",res);
 		}catch(IllegalArgumentException  e){
 			e.printStackTrace();
 			fail(str + "Attention, vous tentez de lire en dehors des limites d'un String ! (StringIndexOutOfBoundsException)");
@@ -89,14 +59,8 @@ public class M09Q02 {
 			bw.write(content);
 			bw.close();
 			
-			MyBufferedReader.openSuccess = true;
-			MyBufferedReader.closeSuccess = true;
-			M09Q02Stu.deuxiemeFichier("student/file.txt");
-			BufferedReader verif;
-			verif = new BufferedReader(new FileReader("student/outStu.txt"));
-			String res = verif.readLine();
-			verif.close();
-			assertEquals(content, res);
+			String res = M09Q02Stu.deuxiemeFichier("student/file.txt");
+			assertEquals(str + "Le code ne retoune pas la bonne valeur",content, res);
 		}catch (FileNotFoundException e){
 			fail(str + "Le code est incorrect : le nom du fichier ne semble pas être correct, vous essayez d'ouvrir un fichier non existant.");
 			e.printStackTrace();

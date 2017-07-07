@@ -1,6 +1,6 @@
 accessible: true
-author: Aurélie MASSART, Alexandre KÜHN & Hua Yang HU
-context: |+
+author: Aurélie MASSART, Alexandre KÜHN & Hua Yang HU, Mawait Maxime
+context: |-
     Soit une implémentation d'une liste **simplement chaînée** et **triée en ordre croissant** utilisant les classes ``SNode`` et ``SList`` suivantes :
 
     .. code-block:: java
@@ -63,41 +63,51 @@ context: |+
          *           à ce qu'elle reste triée.
          */
         public void insert(SNode sn)
-
-
-    Le code que vous écrivez sera inséré à la zone commentée ci-dessous :
-
-    .. code-block:: java
-            
-        public class SList {
-            public SNode first;
-
-            public SList() {
-                this.first = null;
-            }
-
-            /* votre code */
-        }
-
-        public SNode(int v) {
-            this.value = v;
-            this.next = null;
-        }
-
 environment: java7
+evaluate: best
 groups: false
 limits:
     memory: '200'
-    time: '30'
     output: '2'
+    time: '30'
 name: 'Mission 11 : Question intermédiaire 6 : SortedMerge de listes'
 network_grading: false
 order: 21
 problems:
     q1:
-        language: Java
-        type: code
-        name: SortedMerge de listes simplement chaînées et triées
-        header: 'Insérez le code que vous voulez ajouter dans la classe ``SList``, comme indiqué à la fin de l''énoncé ci-dessus.'
+        header: |-
+            Insérez la méthode sortedMerge dans la classe ``SList`` en utilisant autant de méthodes auxiliaires que vous voulez. **Vous n'avez pas le droit de créer d'autres objects SList que ceux déjà créés**, que ce soit dans la fonction ``sortedMerge`` ou dans les fonctions auxiliaires. **Vous devez utiliser la programmation défensive**.
 
+            .. code-block:: java
+
+                public class SList {
+                    public SNode first;
+
+                    public SList() {
+                        this.first = null;
+                    }
+
+                    /*
+                    * @pre : sl1, sl2 != null
+                    * @post : retourne la liste mergée de sl1 et sl2.
+                    */
+                    public SList sortedMerge(SList sl1, SList sl2){
+                        SList sl = new SList() //Liste à retourner
+                        //Code à compléter
+                    }
+                }
+        language: Java
+        name: SortedMerge de listes simplement chaînées et triées
+        type: code
+    q2:
+        type: code
+        header: Complétez ici le code des fonctions auxiliaires que vous utilisez
+            dans votre fonction ``sortedMerge`` .
+        language: java
+        name: Fonctions auxiliaires
+        optional: true
+stored_submissions: 0
+submission_limit:
+    amount: -1
+    period: -1
 weight: 1.0

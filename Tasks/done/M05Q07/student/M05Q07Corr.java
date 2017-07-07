@@ -15,7 +15,7 @@
  
 package student;
 
-public class M05Q07Cor {
+public class M05Q07Corr {
 
     //Correction
     public static void inverse (char tab[]){
@@ -34,7 +34,7 @@ public class M05Q07Cor {
     public static int count (String str, char c){
         assert str != null: "Le string est nul";
         int x = 0;
-        char[] tab = str.toM05Q07();
+        char[] tab = str.toCharArray();
         for (char i : tab){
             if (i == c){
                 x ++;

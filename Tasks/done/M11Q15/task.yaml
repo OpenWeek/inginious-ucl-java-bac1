@@ -1,5 +1,5 @@
 accessible: true
-author: Aurélie MASSART, Alexandre KÜHN & Hua Yang HU
+author: Aurélie MASSART, Alexandre KÜHN & Hua Yang HU, Mawait Maxime
 context: |+
     Soit une implémentation d'une liste **simplement chaînée** utilisant les classes ``Node`` et ``List`` suivantes :
 
@@ -54,11 +54,11 @@ context: |+
 
     **Hint:** vous pouvez utiliser plusieurs pointeurs pour parcourir la liste.
 
-    
+
     Le code que vous écrivez sera inséré à la zone commentée ci-dessous :
 
     .. code-block:: java
-            
+
         public class List {
             public Node first;
 
@@ -78,19 +78,25 @@ context: |+
         }
 
 environment: java7
+evaluate: best
 groups: false
 limits:
     memory: '200'
-    time: '30'
     output: '2'
+    time: '30'
 name: 'Mission 11 : Question intermédiaire 7 : Reverse de liste'
 network_grading: false
 order: 22
 problems:
     q1:
+        header: Insérez le code que vous voulez ajouter dans la classe ``List``, comme
+            indiqué à la fin de l'énoncé ci-dessus. **Faites attention à bien gérer
+            tous les cas**.
         language: Java
-        type: code
         name: Reverse de liste simplement chaînée
-        header: 'Insérez le code que vous voulez ajouter dans la classe ``List``, comme indiqué à la fin de l''énoncé ci-dessus.'
-
+        type: code
+stored_submissions: 0
+submission_limit:
+    amount: -1
+    period: -1
 weight: 1.0

@@ -1,12 +1,10 @@
 package student;
 
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.util.Scanner;
 
 /**
- *  Copyright (c) 2016 Justine Doutreloux, Carolina Unriza, Charline Outters
+ *  Copyright (c) 2017 Justine Doutreloux, Carolina Unriza, Charline Outters, Mawait Maxime.
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU Affero General Public License as published by
  *  the Free Software Foundation, either version 3 of the License, or
@@ -24,9 +22,9 @@ public class M09Q03Stu
 {
 	/**
 	 * @pre -
-	 * @post retourne le nombre de caractères contenus dans le fichier
+	 * @post retourne le nombre de caractères contenus dans le fichier si Exception, retourne -1
 	 */
-	public static int charNumber(String filename)
+	public static int charNumber(String filename) throws IOException
 	{
 		@@q1@@
 	}

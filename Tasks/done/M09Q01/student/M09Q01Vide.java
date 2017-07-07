@@ -18,6 +18,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.*;
 import java.lang.*;
+import java.util.Random;
 
 public class M09Q01Stu
 {

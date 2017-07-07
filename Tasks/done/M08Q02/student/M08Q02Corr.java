@@ -16,20 +16,20 @@
 
 package student;
 
-public class M08Q02Stu implements ChessPiece {
+public class M08Q02Corr implements ChessPiece {
 	public static final int temp=(int)(Math.random()*(1000000-1));
     
     public String couleur;
     public String nom;
     ChessAPI c = new ChessAPI();
     
-    public M08Q02Stu(String couleur){
+    public M08Q02Corr(String couleur){
         this.couleur = couleur;
         this.nom = "pion";
     }
     
 	public int seDeplacer(){
-        return c.deplacerM08Q02();
+        return c.deplacerPion();
     }
 
     public int estMangee(Object mangeur){
@@ -37,7 +37,7 @@ public class M08Q02Stu implements ChessPiece {
     }
 
     public int mangePiece (Object victime){
-        return c.mangerM08Q02(victime);
+        return c.mangerPion(victime);
     }
 
     public String couleurPiece(){

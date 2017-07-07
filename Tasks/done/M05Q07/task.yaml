@@ -1,11 +1,28 @@
 accessible: true
 author: Mawait Maxime, Visée Antoine, Habran Antoine
-context: Pour les questions ci-dessous, vous allez jouer avec la transformation d'un
-    String en tableau. En java, ces deux types de données sont représentés par des
-    objets différents alors que, dans d'autres langages informatiques, le C par exemple,
-    les Strings n'existent pas comme type de données et les chaînes de caractères
-    sont donc représentés par un tableau de char. Attention, vous DEVEZ utiliser la
-    programmation défensive
+context: |-
+    Pour les questions ci-dessous, vous allez jouer avec la transformation d'un String en tableau. En java, ces deux types de données sont représentés par des objets différents alors que, dans d'autres langages informatiques, le C par exemple, les Strings n'existent pas comme type de données et les chaînes de caractères sont donc représentés par un tableau de char. Attention, vous DEVEZ utiliser la programmation défensive. Pour utilisez la programmation défensive, il faut utiliser ``assert`` pour vérifier les préconditions.
+
+    Exemple: vous avez une méthode qui a pour pré-conditions tab != null.
+
+    .. code-block:: java
+
+        public static void fun(int[] tab){ //On prend un tableau en argument
+            assert (tab != null); //Si tab = null, une erreur va être lancée
+            //Code
+        }
+
+
+    On peut également définir le message d'erreur qui sera lancé:
+
+    .. code-block:: java
+
+        public static void fun(int[] tab){ //On prend un tableau en argument
+            assert (tab != null):"Le tableau en argument est nul";
+            //Code
+        }
+
+     On peut utiliser assert pour tous les types de donnée (int, String, tableaux, objets, ...)
 environment: java7
 evaluate: best
 groups: false

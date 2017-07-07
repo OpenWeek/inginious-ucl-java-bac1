@@ -40,7 +40,7 @@ public class M08Q02 {
             if( p.seDeplacer()!= (M08Q02Stu.temp)+1){
             	fail(str + "Vous n'avez pas correctement implémenté seDeplacer()");
             }
-            //assertEquals(M08Q02Stu.temp,0,0);
+            //assertEquals(PionStu.temp,0,0);
             if( p.estMangee(null)!=(M08Q02Stu.temp)+2){
             	fail(str + "Vous n'avez pas correctement implémenté estMangee()");
             }

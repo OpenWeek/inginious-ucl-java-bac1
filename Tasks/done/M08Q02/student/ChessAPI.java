@@ -2,7 +2,7 @@ package student;
 import java.util.Random;
 
 public class ChessAPI {
-	static PionStu ss;
+	static M08Q02Stu ss;
 	public static int deplacerPion(){
 		return (ss.temp)+1;
 	}

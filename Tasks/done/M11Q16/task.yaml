@@ -1,5 +1,5 @@
 accessible: true
-author: Aurélie MASSART, Alexandre KÜHN & Hua Yang HU
+author: Aurélie MASSART, Alexandre KÜHN & Hua Yang HU, Mawait Maxime
 context: |+
     Soit une implémentation d'une liste **simplement chaînée** et **triée** utilisant les classes ``SNode`` et ``SList`` suivantes :
 
@@ -52,7 +52,7 @@ context: |+
     Le code que vous écrivez sera inséré à la zone commentée ci-dessous :
 
     .. code-block:: java
-            
+
         public class SList {
             public SNode first;
 
@@ -72,19 +72,35 @@ context: |+
         }
 
 environment: java7
+evaluate: best
 groups: false
 limits:
     memory: '200'
-    time: '30'
     output: '2'
+    time: '30'
 name: 'Mission 11 : Question intermédiaire 8 : RemoveDuplicates de liste'
 network_grading: false
 order: 23
 problems:
     q1:
-        language: Java
-        type: code
-        name: RemoveDuplicates de liste
-        header: 'Insérez le code que vous voulez ajouter dans la classe ``SList``, comme indiqué à la fin de l''énoncé ci-dessus.'
+        header: |-
+            Insérez le code que vous voulez ajouter dans la méthode ``removeDuplicates``, comme indiqué à la fin de l'énoncé ci-dessus. **Faites attention à bien gérer tous les cas**.
 
+            .. code-block:: java
+
+                /*
+                 * @pre:  /
+                 * @post: La liste courante est modifiée:
+                 *        - La liste courante ne contient jamais
+                 *          deux noeuds avec la même valeur;
+                 *        - La liste reste triée;
+                 */
+                public void removeDuplicates(){
+        language: Java
+        name: RemoveDuplicates de liste
+        type: code
+stored_submissions: 0
+submission_limit:
+    amount: -1
+    period: -1
 weight: 1.0

@@ -1,12 +1,10 @@
 package student;
 
 import java.util.Scanner;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 
 /**
- *  Copyright (c) 2016 Justine Doutreloux, Carolina Unriza, Charline Outters
+ *  Copyright (c) 2017 Justine Doutreloux, Carolina Unriza, Charline Outters, Mawait Maxime
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU Affero General Public License as published by
  *  the Free Software Foundation, either version 3 of the License, or
@@ -26,28 +24,22 @@ public class M09Q03Corr
 	 * @pre -
 	 * @post retourne le nombre de caractères contenus dans le fichier
 	 */
-	public static int charNumber(String filename)
+	public static int charNumber(String filename) throws  IOException
 	{
-		try
-		{
-			Scanner sc = new Scanner( new FileReader(filename) );
-			int i = 0;
-			while(sc.hasNext())
-			{
-				sc.next(); //on pourrait imaginer une fonction qui ne compte que certains
-				           //caractères mais ici on les compte tous.
-				i++;
-			}
-			sc.close();
-			return i;
-		}
-		catch(FileNotFoundException e)
-		{
-			System.out.println(e.getMessage());
-		}
-		catch(IOException e)
-		{
-			System.out.println(e.getMessage());
-		}
+		try{
+            Scanner sc = new Scanner( new File(filename) );
+            int i = 0;
+            while(sc.hasNext())
+            {
+                sc.next(); //on pourrait imaginer une fonction qui ne compte que certains
+                //caractères mais ici on les compte tous.
+                i++;
+            }
+            sc.close();
+            return i;
+        } catch (IOException e){
+            System.out.println(e.getMessage());
+            return -1;
+        }
 	}
 }

@@ -1,6 +1,6 @@
 package student;
 /**
- *  Copyright (c) 2016 Justine Doutreloux, Carolina Unriza, Charline Outters
+ *  Copyright (c) 2017 Justine Doutreloux, Carolina Unriza, Charline Outters, Mawait Maxime
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU Affero General Public License as published by
  *  the Free Software Foundation, either version 3 of the License, or
@@ -45,49 +45,43 @@ public class M09Q03
 	{
 		try
 		{
-			int res = M09Q03Stu.charNumber("fichier.txt"); //on stocke le nombre retourné par l'etudiant
-			int res1 = M09Q03Corr.charNumber("fichier.txt"); //on stocke le nombre retourné par notre code
+			int res = M09Q03Stu.charNumber("student/fichier.txt"); //on stocke le nombre retourné par l'etudiant
+			int res1 = M09Q03Corr.charNumber("student/fichier.txt"); //on stocke le nombre retourné par notre code
 			assertEquals(res, res1); //les 2 valeurs doivent être identiques
-		}
-		catch(FileNotFoundException e)
-		{
-			fail(str + "Le code est incorrect : le nom du fichier ne semble pas être correct, vous essayez d'ouvrir un fichier non existant.");
-			e.printStackTrace();
+            
+           // Cas où le fichier n'est pas correct (Exception)
+           res = M09Q03Stu.charNumber("fichier.txt"); 
+			res1 = M09Q03Corr.charNumber("fichier.txt"); 
+			assertEquals(res, res1); 
 		}
 		catch(IOException e)
 		{
-			fail(str + "Le code est incorrect: il y a un problème à l'ouverture ou à la fermeture du fichier");
+			fail(str + "Le code est incorrect : le nom du fichier ne semble pas être correct, vous essayez d'ouvrir un fichier non existant. (FileNotFoundException)");
 			e.printStackTrace();
 		}
 	}
-	
+
 	@Test
 	public void test1()
 	{
 		try
 		{
 			String content = generateString(5) + " " + generateString(6); //pour être sûr que les étudiants ne hardcode pas le nombre à retourner, on fait un test sur un fichier contenant un string random
-			File file = new File("file.txt");
+			File file = new File("student/file.txt");
 			FileWriter fw = new FileWriter(file);
 			BufferedWriter bw = new BufferedWriter(fw);
 			bw.write(content);
 			bw.close();
-			int res = M09Q03Stu.charNumber("file.txt");
-			int res1 = M09Q03Corr.charNumber("file.txt");
+			int res = M09Q03Stu.charNumber("student/file.txt");
+			int res1 = M09Q03Corr.charNumber("student/file.txt");
 			assertEquals(res, res1);
-		}
-		catch(FileNotFoundException e)
-		{
-			fail(str + "Le code est incorrect : le nom du fichier ne semble pas être correct, vous essayez d'ouvrir un fichier non existant.");
-			e.printStackTrace();
 		}
 		catch(IOException e)
 		{
-			fail(str + "Le code est incorrect: il y a un problème à l'ouverture ou à la fermeture du fichier");
+			fail(str + "Le code est incorrect : le nom du fichier ne semble pas être correct, vous essayez d'ouvrir un fichier non existant. (FileNotFoundException)");
 			e.printStackTrace();
 		}
-	}
-	
+    }
 	public static void main(String[] args)
 	{
 		Result result = JUnitCore.runClasses(M09Q03.class);

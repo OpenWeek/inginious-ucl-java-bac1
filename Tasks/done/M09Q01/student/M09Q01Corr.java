@@ -1,5 +1,5 @@
 /**
- *  Copyright (c) 2016 Justine Doutreloux, Carolina Unriza Salamanca, Charline Outters
+ *  Copyright (c) 2017 Justine Doutreloux, Carolina Unriza Salamanca, Charline Outters, Mawait Maxime
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU Affero General Public License as published by
  *  the Free Software Foundation, either version 3 of the License, or
@@ -17,31 +17,28 @@ package student;
 import java.io.*;
 import java.io.BufferedReader;
 
-public class M09Q01Stu {
+public class M09Q01Corr {
 
-	// Code to check
+	// Correction
 	public static void premierFichier(String filename)
 	{ 
     		BufferedReader br;
 		try
-		{
-			br = new BufferedReader(new FileReader(filename));
-			String str = br.readLine();
-			while(str != null)
-			{
-				System.out.println(str);
-               			str = br.readLine();
-			}
-			br.close();
-		}catch(FileNotFoundException e){
-			fail(res + "Le code est incorrect : le nom du fichier ne semble pas être correct, vous essayez d'ouvrir un fichier non existant.");
-			e.printStackTrace();
-		}catch(IOException e){
-			fail(res + "Le code est incorrect: il y a un problème lors de l'utilisation de la méthode readLine() ou close()");
-			e.printStackTrace();
-		}catch(IOException e){
-			ex: System.exit(0);
-		}
+        {
+            br = new BufferedReader(new FileReader(filename));
+            String str = br.readLine();
+            while(str != null)
+            {
+                System.out.println(str);
+                str = br.readLine();
+            }
+            br.close();
+        }catch(FileNotFoundException e){
+            System.out.println("Le code est incorrect : le nom du fichier ne semble pas être correct, vous essayez d'ouvrir un fichier non existant.");
+            e.printStackTrace();
+        }catch(IOException e){
+            System.out.println("Le code est incorrect: il y a un problème lors de l'utilisation de la méthode readLine() ou close()");
+        }
 	}
 	
 }

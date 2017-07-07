@@ -76,6 +76,8 @@ problems:
                         this.couleur = couleur;
                         this.nom = "pion";
                     }
+
+                    //Complétez le code
         language: Java
         name: Classe PionStu
         type: code

@@ -1,5 +1,5 @@
 /**
- *  Copyright (c) 2016 Justine Doutreloux, Carolina Unriza, Charline Outters
+ *  Copyright (c) 2016 Justine Doutreloux, Carolina Unriza, Charline Outters, Mawait Maxime
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU Affero General Public License as published by
  *  the Free Software Foundation, either version 3 of the License, or
@@ -24,14 +24,9 @@ import java.io.*;
 
 public class M09Q02Stu 
 {
-	public static void deuxiemeFichier(String filename) throws IOException
+	public static String deuxiemeFichier(String filename) 
 	{
-		MyBufferedReader br; // attention!, il faut leur dire d'utiliser MyBufferedReader dans l'énoncé
-		PrintStream out = System.out; //on redirige la sortie standard pour récupérer la réponse des étudiants
-		FileOutputStream f = new FileOutputStream("student/outStu.txt");
-		System.setOut(new PrintStream(f));
-		@@q1@@
-		System.setOut(out);
-        f.close();
+        MyBufferedReader br; 
+        @@q1@@
 	}
 }

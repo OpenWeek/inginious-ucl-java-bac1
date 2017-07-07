@@ -29,13 +29,13 @@ public class M05Q07 {
   @Test
   public void test(){
     try{
-      assertEquals("Question 1 :\nLe code ne fonctione quand le caractère est présent plus d'une fois",2,M05Q07Stu.count("LSINF1252",'2'));
+      assertEquals(str + "Question 1 :\nLe code ne fonctione quand le caractère est présent plus d'une fois",2,M05Q07Stu.count("LSINF1252",'2'));
         
-      assertEquals("Question 1 :\nLe code ne fonctione quand le caractère est présent une fois",1,M05Q07Stu.count("LSINF1252",'5'));
+      assertEquals(str + "Question 1 :\nLe code ne fonctione quand le caractère est présent une fois",1,M05Q07Stu.count("LSINF1252",'5'));
         
-      assertEquals("Question 1 :\nLe code ne fonctione quand le caractère n'est pas présent",0,M05Q07Stu.count("LSINF1252",'0'));
+      assertEquals(str + "Question 1 :\nLe code ne fonctione quand le caractère n'est pas présent",0,M05Q07Stu.count("LSINF1252",'0'));
         
-      assertEquals("Question 2 :\nLe code ne fonctione pas correctement","ba",M05Q07Stu.inverseArray("ab".toM05Q07()));
+      assertEquals(str + "Question 2 :\nLe code ne fonctione pas correctement","ba",M05Q07Stu.inverseArray("ab".toCharArray()));
 
       // verification de l'utilisation de la programation défensive (assert)
       boolean err1 = false;
@@ -50,11 +50,11 @@ public class M05Q07 {
         err1=true;
       }
       if(err1){
-        fail("Question 1 :\n Vous devez utiliser de la programmation défensive.");
+        fail(str + "Question 1 :\n Vous devez utiliser de la programmation défensive.");
       }
       
       try {
-        String lol =M05Q07Stu.inverseArray(null);
+        String lol = M05Q07Stu.inverseArray(null);
         err2 = true;
         
       } catch (AssertionError e) {
@@ -63,7 +63,7 @@ public class M05Q07 {
         err2 = true;
       }
       if(err2){
-        fail("Question 2 :\n Vous devez utiliser de la programmation défensive.");
+        fail(str + "Question 2 :\n Vous devez utiliser de la programmation défensive.");
       }
 
     } catch (ArithmeticException e)  {
