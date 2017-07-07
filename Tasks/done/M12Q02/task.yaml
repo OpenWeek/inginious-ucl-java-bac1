@@ -22,7 +22,7 @@ limits:
     memory: '100'
     time: '30'
     output: '2'
-name: 'Exercice avancé : Le réveil de la Force (2)'
+name: 'Exercice de révision 02 : Le réveil de la Force (2)'
 network_grading: false
 problems:
     q2:

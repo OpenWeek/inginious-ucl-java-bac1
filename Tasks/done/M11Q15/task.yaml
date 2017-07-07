@@ -83,7 +83,7 @@ limits:
     memory: '200'
     time: '30'
     output: '2'
-name: 'Mission 11 : Question intermédiaire 7 : Reverse de liste'
+name: 'Mission 11 : Question 15 : Reverse de liste'
 network_grading: false
 order: 22
 problems:

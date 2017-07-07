@@ -14,7 +14,7 @@ limits:
     memory: '200'
     output: '2'
     time: '30'
-name: 'Mission 11 : Question de démarrage 2 : Ajouts dans une liste'
+name: 'Mission 11 : Question 02 : Question de démarrage 2 - Ajouts dans une liste'
 network_grading: false
 order: 2
 problems:

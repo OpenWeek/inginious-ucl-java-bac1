@@ -90,7 +90,7 @@ limits:
     memory: '200'
     time: '30'
     output: '2'
-name: 'Mission 11 : Question intermédiaire 6 : SortedMerge de listes'
+name: 'Mission 11 : Question 14 : SortedMerge de listes'
 network_grading: false
 order: 21
 problems:

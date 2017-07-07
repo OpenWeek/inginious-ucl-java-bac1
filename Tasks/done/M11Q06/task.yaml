@@ -29,7 +29,7 @@ limits:
     memory: '32'
     output: '1024'
     time: '60'
-name: 'Mission 11 : Question de démarrage 6 : Insertion d''un élément au milieu d''une
+name: 'Mission 11 : Question 06 : Question de démarrage 6 - Insertion d''un élément au milieu d''une
     liste doublement chainée'
 network_grading: false
 order: 7

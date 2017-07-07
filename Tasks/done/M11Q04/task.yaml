@@ -18,7 +18,7 @@ limits:
     memory: '32'
     output: '1024'
     time: '60'
-name: 'Mission 11 : Question de démarrage 4 : Parcours d''une liste simplement chainée'
+name: 'Mission 11 : Question 04 : Question de démarrage 4 - Parcours d''une liste simplement chainée'
 network_grading: false
 order: 4
 problems:

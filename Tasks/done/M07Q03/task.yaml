@@ -52,7 +52,7 @@ limits:
     memory: '200'
     output: '2'
     time: '30'
-name: 'Mission 7 : Exercice Intermédiaire : Polymorphisme et méthode abstraite'
+name: 'Mission 07 : Question 03 : Exercice Intermédiaire - Polymorphisme et méthode abstraite'
 network_grading: false
 order: 5
 problems:

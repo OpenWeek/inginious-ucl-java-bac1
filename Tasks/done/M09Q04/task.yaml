@@ -32,13 +32,13 @@ context: |+
 
         }
 
-environment: java7
+environment: mcq
 groups: false
 limits:
     memory: '100'
     output: '2'
     time: '30'
-name: 'Mission 9 : Exercice facile - Complétez le code'
+name: 'Mission 09 : Question 04 : Exercice facile - Complétez le code'
 network_grading: false
 problems:
     q1:

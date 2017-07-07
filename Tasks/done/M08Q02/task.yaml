@@ -58,7 +58,7 @@ limits:
     memory: '100'
     output: '2'
     time: '30'
-name: 'Mission 8 : Exercice intermédiaire - Implémenter une interface'
+name: 'Mission 08 : Question 02 : Exercice intermédiaire - Implémenter une interface'
 network_grading: false
 problems:
     q1:

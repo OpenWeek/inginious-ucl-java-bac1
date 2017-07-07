@@ -14,7 +14,7 @@ limits:
     memory: '100'
     output: '2'
     time: '30'
-name: 'Mission 5(a) : Question de Bilan Final '
+name: 'Mission 05 : Question 05 : Question de Bilan Final '
 network_grading: false
 problems:
     q1:

@@ -37,7 +37,7 @@ limits:
     memory: '100'
     output: '2'
     time: '30'
-name: 'Mission 6 : Question de démarrage - classe Cours 2.1 (les constructeurs)'
+name: 'Mission 06 : Question 02 : Question de démarrage - classe Cours 2.1 (les constructeurs)'
 network_grading: false
 problems:
     q1:

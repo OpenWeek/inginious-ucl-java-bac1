@@ -8,7 +8,7 @@ limits:
     memory: '100'
     time: '30'
     output: '2'
-name: 'Mission 5: Multiplication de matrices'
+name: 'Mission 05 : Question 03 : Multiplication de matrices'
 network_grading: false
 problems:
     q1:

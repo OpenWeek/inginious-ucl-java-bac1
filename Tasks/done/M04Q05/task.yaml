@@ -9,7 +9,7 @@ limits:
     memory: '100'
     time: '30'
     output: '2'
-name: Palyndrome
+name: Mission 04 : Question 05 : Palyndrome
 network_grading: false
 problems:
     q1:

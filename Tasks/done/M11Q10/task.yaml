@@ -20,7 +20,7 @@ limits:
     memory: '200'
     time: '30'
     output: '2'
-name: 'Mission 11 : Question intermédiaire 3 : Minimum d''une liste'
+name: 'Mission 11 : Question 10 : Question intermédiaire 3 - Minimum d''une liste'
 network_grading: false
 order: 12
 problems:

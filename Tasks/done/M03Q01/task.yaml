@@ -9,7 +9,7 @@ limits:
     output: '2'
     time: '30'
     memory: '100'
-name: Factorielle et Exponentielle
+name: Mission 03 : Question 01 : Factorielle et Exponentielle
 network_grading: false
 problems:
     q1:

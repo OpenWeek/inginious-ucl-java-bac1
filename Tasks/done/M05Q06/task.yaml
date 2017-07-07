@@ -15,7 +15,7 @@ limits:
     output: '5'
     time: '30'
     memory: '100'
-name: 'Mission 5 : somme des éléments d''un tableau'
+name: 'Mission 05 : Question 06 : somme des éléments d''un tableau'
 network_grading: false
 problems:
     q1:

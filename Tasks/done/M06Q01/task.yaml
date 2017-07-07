@@ -36,7 +36,7 @@ limits:
     memory: '100'
     output: '2'
     time: '30'
-name: 'Mission 6: Questionnaire de démarrage 1: set et get'
+name: 'Mission 06 : Question 01 : Questionnaire de démarrage 1: set et get'
 network_grading: false
 problems:
     q1:
