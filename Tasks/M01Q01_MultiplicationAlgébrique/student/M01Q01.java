@@ -21,7 +21,7 @@ import org.junit.Test;
 import java.util.Random;
 import org.junit.runner.notification.Failure;
 
-public class M01Q08 {
+public class M01Q01 {
 	
 	private static String str = "Le code semble comporter des erreurs : ";
 	
@@ -29,7 +29,7 @@ public class M01Q08 {
 	public void testPos(){
 		try{
         	int a = 0, b = 0, c = 0;
-       		int[] i = M01Q08Stu.prodAlgeb(a,b,c);
+       		int[] i = M01Q01Stu.prodAlgeb(a,b,c);
             int[] sol = {1, -(a+b+c), (a*b+a*c+b*c),-a*b*c};
             assertEquals("Avez-vous pensé au cas nul ? Votre coefficient xCube est erroné ",sol[0],i[0]);
             assertEquals("Avez-vous pensé au cas nul ? Votre coefficient xCarré est erroné",sol[1],i[1]);
@@ -41,7 +41,7 @@ public class M01Q08 {
             	a = (int)(Math.random()*10+2);
                 b = (int)(Math.random()*10+2);
                 c = (int)(Math.random()*10+2);
-			    i = M01Q08Stu.prodAlgeb(a,b,c);
+			    i = M01Q01Stu.prodAlgeb(a,b,c);
                 sol[1] = -(a+b+c);
                 sol[2] = (a*b+a*c+b*c);
                 sol[3] = -a*b*c;
@@ -78,7 +78,7 @@ public class M01Q08 {
 	
 	// Code verificateur
 	public static void main(String[] args) {
-		Result result = JUnitCore.runClasses(M01Q08.class);
+		Result result = JUnitCore.runClasses(M01Q01.class);
 		for (Failure failure: result.getFailures()) {
 			System.err.println(failure.toString());
 		}

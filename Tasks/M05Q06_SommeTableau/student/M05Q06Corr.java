@@ -15,7 +15,7 @@
 
 package student;
 
-public class M05Q06 
+public class M05Q06Corr
 {
     public static int[] sum (int[] tab)
     {

@@ -12,21 +12,19 @@
  *  You should have received a copy of the GNU Affero General Public License
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-
 package student;
 
-public class M01Q08Corr {
+public class M01Q01Stu {
 
-    /**
-     * @pre : -
-     * @post : calcule les coefficients d'un polynome de 3ème degré, en fonction des 3 racines
-     */
+    // Soluce
     public static int[] prodAlgeb(int a, int b, int c){
 
-        int xCube = 1;
-        int xCarre = -(a+b+c);
-        int x = (a*b+a*c+b*c);
-        int tI = -a*b*c;
+        int xCube = 0;
+        int xCarre = 0;
+        int x = 0;
+        int tI = 0;
+        
+        @    @q1@@
         
         int i[] = {xCube, xCarre, x, tI};
         return i;

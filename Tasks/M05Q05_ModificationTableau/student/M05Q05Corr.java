@@ -15,7 +15,7 @@
 
 package student;
 
-public class M05Q05() {
+public class M05Q05Corr {
 	// Q1
 	public static void shiftRightOne(int[] tab){
 		assert tab != null : "le tableau tab ne peut pas etre vide";
