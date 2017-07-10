@@ -15,7 +15,7 @@ package student;
 *   along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-public class M06Q06Stu {
+public class M06Q06Corr{
 	
     public static class Cours {
         private String prof;

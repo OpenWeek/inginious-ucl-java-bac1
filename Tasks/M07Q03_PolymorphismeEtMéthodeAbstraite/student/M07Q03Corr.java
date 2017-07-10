@@ -15,7 +15,7 @@
 
 package student;
 
-public class M07Q03Stu {
+public class M07Q03Corr{
 
 	//Classe Chevre
 	public class Chevre extends Animal{

@@ -15,7 +15,7 @@
 
 package student;
 
-public class M01Q07Stu {
+public class M01Q07Corr{
 
 	// Code a verifier
 	public static int sumFirstEvenIntegers(int n){

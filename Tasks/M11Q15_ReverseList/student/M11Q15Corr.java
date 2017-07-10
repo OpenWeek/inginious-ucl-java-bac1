@@ -20,7 +20,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.io.FileNotFoundException;
 
-public class M11Q15Stu {
+public class M11Q15Corr{
 
     public static class List {
         public Node first;

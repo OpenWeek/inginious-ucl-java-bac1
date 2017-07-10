@@ -15,7 +15,7 @@
 
 package student;
 
-public class PalyndromeStu {
+public class PalyndromeCorr{
 
 	/*
 	 *@pré: str != null

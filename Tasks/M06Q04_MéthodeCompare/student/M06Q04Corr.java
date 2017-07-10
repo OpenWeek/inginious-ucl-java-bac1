@@ -14,19 +14,19 @@
 
 package student;
 
-public class M06Q04Stu { // représente la classe Chanson
+public class M06Q04Corr{ // représente la classe Chanson
     private String prof;
     private String code;
     private int credit;
     
-    public M06Q04Stu (String pr, String co, int cr)
+    public M06Q04Corr(String pr, String co, int cr)
     {
 		prof = pr;
         code = co;
         credit = cr;
     }
    
-    public M06Q04Stu (String texte)
+    public M06Q04Corr(String texte)
     {
 		String[] part = texte.split("-");
 		prof = part[0];
@@ -44,7 +44,7 @@ public class M06Q04Stu { // représente la classe Chanson
     	return credit;
     }
 	
-    public boolean equals (M06Q04Stu cours) {
+    public boolean equals (M06Q04Corrcours) {
 		if (cours == null) {
     		return false;
 		}

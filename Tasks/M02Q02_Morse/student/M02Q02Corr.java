@@ -14,7 +14,7 @@
  */
 package student;
 
-public class M02Q02Stu {
+public class M02Q02Corr {
 
 
 	public static String drawLine(int nMorceau, int nTiret, int nPoint){

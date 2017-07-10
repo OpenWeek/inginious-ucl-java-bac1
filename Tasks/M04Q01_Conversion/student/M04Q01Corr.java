@@ -16,7 +16,7 @@
 package student;
 import java.lang.Integer;
 
-public class M04Q01Stu {
+public class M04Q01Corr{
 
 	public static int M04Q01(String str){
 		return Integer.parseInt(str);

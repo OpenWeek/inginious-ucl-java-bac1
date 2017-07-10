@@ -14,21 +14,12 @@
  */
 
 package student;
+import java.util.Arrays;
 
-public class M05Q03Corr{
+public class M05Q04Stu {
 
-	public static int[][] multiplication(int l[][], int m[][]){
-        assert(l!=null && m!=null);
-        assert(l[0].length==m.length);
-        int sol[][]=new int[l.length][m[0].length];
-        for(int i=0; i<sol.length; i++){
-            for(int j=0; j<sol[0].length; j++){
-                sol[i][j]=0; //initialisation du tableau
-                for(int k=0;k<l[0].length;k++){
-                    sol[i][j]+=l[i][k]*m[k][j];
-                }
-            }
-        }
-        return sol;
+	// Code a verifier
+	public static void shuffle(int tab[]){
+@		@q1@@
 	}
 }

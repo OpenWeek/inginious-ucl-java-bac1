@@ -15,7 +15,7 @@
 
 package student;
 
-public class M05Q01Stu {
+public class M05Q01Corr{
 	// q1
 	public static void question1(int n){
     	assert(n>=0);

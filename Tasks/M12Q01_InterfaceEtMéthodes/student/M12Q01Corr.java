@@ -18,7 +18,7 @@ package student;
 import java.util.*;
 import java.io.*;
 
-public class M12Q01Stu {
+public class M12Q01Corr{
 	/**
 	 * @pre l.isEmpty() == false
 	 * @post écrit dans le fichier de nom filename le nom et l'âge des personnes de la list l qui ont vu le film Star Wars et aiment raconter la fin des films, en séparant le nom et l'âge par un espace. Une seule personne est écrite par ligne.

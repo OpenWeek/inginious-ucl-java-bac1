@@ -14,19 +14,19 @@
 
 package student;
 
-public class M06Q02Stu { // représente la classe Chanson
+public class M06Q02Corr{ // représente la classe Chanson
     private String prof;
     private String code;
     private int credit;
     
-    public M06Q02Stu (String pr, String co, int cr)
+    public M06Q02Corr(String pr, String co, int cr)
     {
 		prof = pr;
 		code = co;
 		credit = cr;
     }
    
-    public M06Q02Stu (String texte)
+    public M06Q02Corr(String texte)
     {
 		String[] part = texte.split("-");
 		prof = part[0];

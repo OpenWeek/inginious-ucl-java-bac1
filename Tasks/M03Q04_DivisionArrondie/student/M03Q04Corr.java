@@ -15,7 +15,7 @@
 
 package student;
 
-public class M03Q04Stu {
+public class M03Q04Corr{
 	
 	/*
          *@pré: d2 != 0.0

@@ -15,7 +15,7 @@
  
 package student;
 
-public class M05Q02Stu {
+public class M05Q02Corr{
 
 	// Code a verifier
 	public static void inverse(int tab[]){

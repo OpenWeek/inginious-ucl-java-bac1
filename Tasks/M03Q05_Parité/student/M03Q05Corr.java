@@ -15,7 +15,7 @@
 
 package student;
 
-public class M03Q05Stu {
+public class M03Q05Corr{
 
 	/*
 	 *@pré: b est un entier

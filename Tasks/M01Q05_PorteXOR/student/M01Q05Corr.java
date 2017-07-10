@@ -14,7 +14,7 @@
  */
 package student;
 
-public class M01Q05Stu {
+public class M01Q05Corr{
 
     /**
      * @pre : - 

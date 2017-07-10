@@ -15,7 +15,7 @@
 
 package student;
 
-public class M03Q01Stu {
+public class M03Q01Corr{
 
     public static int fact (int a){
         if(a<0){return -1;}

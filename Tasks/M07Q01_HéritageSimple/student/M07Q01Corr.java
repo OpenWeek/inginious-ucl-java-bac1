@@ -15,7 +15,7 @@
 
 package student;
 
-public class M07Q01Stu {
+public class M07Q01Corr{
 
 	public class Animal {
     

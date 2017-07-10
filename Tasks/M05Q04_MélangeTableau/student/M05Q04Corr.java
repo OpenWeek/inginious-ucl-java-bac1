@@ -14,21 +14,21 @@
  */
 
 package student;
+import java.util.Arrays;
 
-public class M05Q03Corr{
+public class M05Q04Corr {
 
-	public static int[][] multiplication(int l[][], int m[][]){
-        assert(l!=null && m!=null);
-        assert(l[0].length==m.length);
-        int sol[][]=new int[l.length][m[0].length];
-        for(int i=0; i<sol.length; i++){
-            for(int j=0; j<sol[0].length; j++){
-                sol[i][j]=0; //initialisation du tableau
-                for(int k=0;k<l[0].length;k++){
-                    sol[i][j]+=l[i][k]*m[k][j];
-                }
-            }
+	public static void shuffle(int tab[]){
+    	assert(tab!=null);
+        for(int i=0;i<tab.length;i++){
+
+            // À chaque passage dans la boucle on regarde un élément à la fin en moins, et l'élément qui est choisit est mis à la fin
+            int randomPosition=(int)(Math.random()*(tab.length-i));
+
+            // switch de l'élément sélectionner à la dernière position
+            int tmp=tab[randomPosition];
+            tab[randomPosition]=tab[tab.length-i-1];
+            tab[tab.length-i-1]=tmp;
         }
-        return sol;
 	}
 }

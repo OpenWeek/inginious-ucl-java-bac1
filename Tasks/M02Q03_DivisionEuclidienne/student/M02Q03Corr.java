@@ -14,7 +14,7 @@
  */
 package student;
 
-public class M02Q03Stu {
+public class M02Q03Corr{
 
     /**
      * @pre : diviseur != 0

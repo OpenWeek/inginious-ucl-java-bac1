@@ -15,7 +15,7 @@
 
 package student;
 
-public class M07Q02Stu {
+public class M07Q02Corr{
 
 	public String toString(){
     	return "Salut, je suis un Kirby rose " + pv;

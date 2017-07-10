@@ -15,7 +15,7 @@
 
 package student;
 
-public class M04Q03Stu {
+public class M04Q03Corr{
 
 	/**
 	  * @param str: String représentant la chaine de caractère. Ne peut pas être null
