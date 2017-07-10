@@ -44,7 +44,7 @@ context: |+
 
     ``sl: snode(value: 10) -> snode(value: 20) -> snode(value: 30)``
 
-    .. image:: OWM11_23/RemoveDuplicates.png
+    .. image:: M11Q16_SuppressionDoublonListe/RemoveDuplicates.png
         :height: 587px
         :width: 1197px
         :scale: 60%

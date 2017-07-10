@@ -5,6 +5,7 @@ context: |-
 
 
     .. code-block:: java
+
         int xCube;//le coefficient du x³
 
         int xCarre;//le coefficient du x²

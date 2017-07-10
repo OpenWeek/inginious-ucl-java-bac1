@@ -47,7 +47,7 @@ context: |-
 
     ``sl: snode(value: 10) -> snode(value: 20) -> snode(value: 30) -> snode(value: 40) -> snode(value: 50)``
 
-    .. image:: OWM11_21/SortedMerge.png
+    .. image:: M11Q14_TriList/SortedMerge.png
         :height: 767px
         :width: 1163px
         :scale: 50%

@@ -3,7 +3,7 @@ author: Aurélie MASSART, Alexandre KÜHN & Hua Yang HU
 context: |-
     Le but de cet exercice est de supprimer un noeud au milieu et à la fin d'une liste doublement chainée.
 
-    .. image:: OWM11_8/Fin.png
+    .. image:: M11Q07_SuppressionDeNoeud/Fin.png
         :height: 367px
         :width: 1065px
         :scale: 60%

@@ -45,7 +45,7 @@ context: |+
 
     ``l: node(value: 30) -> node(value: 20) -> node(value: 10)``
 
-    .. image:: OWM11_22/Reverse.png
+  .. image:: M11Q15_ReverseList/Reverse.png
         :height: 481px
         :width: 951px
         :scale: 70%
