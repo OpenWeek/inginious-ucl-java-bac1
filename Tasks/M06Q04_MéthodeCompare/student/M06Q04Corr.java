@@ -14,7 +14,7 @@
 
 package student;
 
-public class M06Q04Corr{ // représente la classe Chanson
+public class M06Q04Corr { // représente la classe Chanson
     private String prof;
     private String code;
     private int credit;
@@ -44,7 +44,7 @@ public class M06Q04Corr{ // représente la classe Chanson
     	return credit;
     }
 	
-    public boolean equals (M06Q04Corrcours) {
+    public boolean equals (M06Q04Corr cours) {
 		if (cours == null) {
     		return false;
 		}

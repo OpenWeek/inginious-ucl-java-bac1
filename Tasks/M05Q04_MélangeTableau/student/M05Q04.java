@@ -43,8 +43,8 @@ public class M05Q04 {
             int tabShuf1[] = Arrays.copyOf(tab, tab.length);
             int tabShuf2[] = Arrays.copyOf(tab, tab.length);
             try{
-                M05Q04 Stu.shuffle(tabShuf1);
-                M05Q04 Stu.shuffle(tabShuf2);
+                M05Q04Stu.shuffle(tabShuf1);
+                M05Q04Stu.shuffle(tabShuf2);
         	}catch(AssertionError e) {
             	fail("Question 1 :\n Vous n'utilisez pas correctement assert.");
             }
@@ -56,7 +56,7 @@ public class M05Q04 {
             // verification de l'utilisation de la programation défensive
             boolean err = false;
             try {
-		M05Q04 Stu.shuffle(null);
+		M05Q04Stu.shuffle(null);
 		err=true;
             } catch (AssertionError e) {
             	// Pour vérifier qu'une Assertion a bien été lancé
@@ -102,7 +102,7 @@ public class M05Q04 {
             int tabShuf[] = Arrays.copyOf(tab, tab.length);
             int t[] = Arrays.copyOf(tab, tab.length);
             try{
-                M05Q04 Stu.shuffle(tabShuf);
+                M05Q04Stu.shuffle(tabShuf);
         	}catch(AssertionError e) {
             	//pas nécessaire puisque déjà tester dans la fonction de test juste avant
                 //fail("Question 1 :\n Vous n'utilisez pas correctement assert.");
