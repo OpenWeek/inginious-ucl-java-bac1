@@ -1,5 +1,5 @@
 accessible: true
-author: Lucas Ody & Tom Rousseaux 
+author: Lucas Ody & Tom Rousseaux
 context: |-
     Lisez le code suivant, et déterminez quel sera la sortie en console:
 
@@ -14,19 +14,24 @@ context: |-
              }
          }
          System.out.print(k);
-environment: java7
+environment: mcq
+evaluate: best
 groups: false
 limits:
-    memory: '100'
     time: '30'
     output: '2'
+    memory: '100'
 name: 'Mission 2 : IJK'
 network_grading: false
+order: 5
 problems:
     q1:
-        answer: '20'
         type: match
-        name: ''
+        answer: '20'
         header: ''
+        name: ''
+stored_submissions: 0
+submission_limit:
+    amount: -1
+    period: -1
 weight: 1.0
-order: 5

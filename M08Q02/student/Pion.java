@@ -1,5 +1,5 @@
 /**
- *  Copyright (c) 2015, 2016 Fitvoye Florian, Dubray Alexandre, Antoine Habran, Maxime Mawait
+ *  Copyright (c) 2017 Naitali Brandon, Mawait Maxime
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU Affero General Public License as published by
  *  the Free Software Foundation, either version 3 of the License, or
@@ -12,7 +12,8 @@
  *  You should have received a copy of the GNU Affero General Public License
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-
+ // @author: Naitali Brandon, Mawait Maxime
+ 
 
 package student;
 import static org.junit.Assert.*;
@@ -20,28 +21,43 @@ import org.junit.runner.JUnitCore;
 import org.junit.runner.Result;
 import org.junit.Test;
 import java.util.Random;
+import java.lang.reflect.Constructor;
 import org.junit.runner.notification.Failure;
 
-public class Fact {
+public class Pion {
 	
 	private static String str = "Le code semble comporter des erreurs : ";
 	
 	@Test
-	public void testFact(){
+	public void testPos(){
+    	PionStu p = new PionStu("blanc");
 		try{
-        	assertEquals("Question 1 :\nVerifiez les pre !",-1,FactStu.fact(-10));
-            assertEquals("Question 1 :\nFact(0) ne donne pas le resultat attendu :",1,FactStu.fact(0));
-            assertEquals("Question 1 :\nFact(1) ne donne pas le resultat attendu :",1,FactStu.fact(1));
-            assertEquals("Question 1 :\nFact(4) ne donne pas le resultat attendu :",24,FactStu.fact(4));
-            assertEquals("Question 2 :\nVerifiez les pre !",-1.0,FactStu.expon(-10),0.5);
-            assertEquals("Question 2 :\nExp(0) ne donne pas le résultat attendu:",1.0,FactStu.expon(0),0.01);
-            assertEquals("Question 2 :\nExp(1) ne donne pas le résultat attendu:",2.718281829585647,FactStu.expon(1),0.5);
-            assertEquals("Question 2 :\nExp(2) ne donne pas le résultat attendu:", 7.389071617436451,FactStu.expon(2),0.5);
+            if(!ChessPiece.class.isAssignableFrom(p.getClass())){
+            	fail(str + "Vous n'implémentez pas l'interface ChessPiece");
+            }
+            
+            
+            if( p.seDeplacer()!= (PionStu.temp)+1){
+            	fail(str + "Vous n'avez pas correctement implémenté seDeplacer()");
+            }
+            //assertEquals(PionStu.temp,0,0);
+            if( p.estMangee(null)!=(PionStu.temp)+2){
+            	fail(str + "Vous n'avez pas correctement implémenté estMangee()");
+            }
+            if( p.mangePiece(null)!=(PionStu.temp)+3){
+            	fail(str + "Vous n'avez pas correctement implémenté mangePiece()");
+            }
+            if(! (p.couleurPiece().equals("blanc"))){
+            	fail(str + "Vous n'avez pas correctement implémenté couleurPiece()");
+            }
+            if(! (p.nomPiece().equals("pion"))){
+            	fail(str + "Vous n'avez pas correctement implémenté nomPiece()");
+            }
+            
+            
+            
 		}catch (ArithmeticException e){
 			fail(str + "Le code est incorrect : il est interdit de diviser par zéro.");
-			e.printStackTrace();
-		}catch(ClassCastException e){
-			fail(str + "Attention, certaines variables ont été mal castées	!");
 			e.printStackTrace();
 		}catch(StringIndexOutOfBoundsException e){
 			e.printStackTrace();
@@ -60,10 +76,11 @@ public class Fact {
 		}
 	}
 	
-
+	
+	
 	// Code verificateur
 	public static void main(String[] args) {
-		Result result = JUnitCore.runClasses(Fact.class);
+		Result result = JUnitCore.runClasses(Pion.class);
 		for (Failure failure: result.getFailures()) {
 			System.err.println(failure.toString());
 		}

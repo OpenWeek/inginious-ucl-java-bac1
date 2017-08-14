@@ -15,27 +15,23 @@
 
 package student;
 
-public class FactStu {
+public class Sum 
+{
+    public static int[] sum (int[] tab)
+    {
+        if(tab==null)
+			return null;
 
-    public static int fact (int a){
-        if(a<0){return -1;}
-        if (a==0){return 1;}
-        int r=1;
-        for (int i=2;i<=a;i++){
-            r*=i;
-        }
-        return r;
-    }
-    
-    public static double expon(int a){
-        if (a >= 0) {
-            double res = 0.0;
-            for (int i = 0; i < 15; i++) {
-                res += (Math.pow((double) a, (double) i) / ((double) fact(i)));
-            }
-            return res;
-        }
-        else
-            return -1;
+		if(tab.length==0)
+			return new int[0];
+
+		int[] res = new int[tab.length];
+		res[0] = tab[0];
+
+		for(int i = 1;i<tab.length;i++)
+		{
+				res[i] = res[i-1]+tab[i];
+		}
+		return res;
     }
 }

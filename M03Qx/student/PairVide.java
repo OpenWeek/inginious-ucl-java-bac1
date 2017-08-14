@@ -1,5 +1,5 @@
 /**
- *  Copyright (c) 2015, 2016 Fitvoye Florian, Dubray Alexandre, Antoine Habran, Maxime Mawait, William Visée.
+ *  Copyright (c) 2015, 2016 Fitvoye Florian, Dubray Alexandre
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU Affero General Public License as published by
  *  the Free Software Foundation, either version 3 of the License, or
@@ -15,27 +15,14 @@
 
 package student;
 
-public class FactStu {
+public class PairStu {
 
-    public static int fact (int a){
-        if(a<0){return -1;}
-        if (a==0){return 1;}
-        int r=1;
-        for (int i=2;i<=a;i++){
-            r*=i;
-        }
-        return r;
-    }
+	/*
+	 *@pré: b est un entier
+	 *@post: Retourne true si b est pair et false sinon.
+         */
+	public static boolean isPair(int b){
     
-    public static double expon(int a){
-        if (a >= 0) {
-            double res = 0.0;
-            for (int i = 0; i < 15; i++) {
-                res += (Math.pow((double) a, (double) i) / ((double) fact(i)));
-            }
-            return res;
-        }
-        else
-            return -1;
-    }
+@		@q1@@
+	}
 }

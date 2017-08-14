@@ -1,0 +1,33 @@
+accessible: true
+author: Lucas Ody & Tom Rousseaux
+context: |-
+    Utilisez une boucle pour réaliser une division euclidienne! le diviseur et dividende vous sont donnés, vous devez trouver le quotient et le reste.
+
+     .. code-block:: java
+
+        int diviseur;
+        int dividende;
+
+        int reste = 0;
+        int quotient = 0;
+environment: java7
+evaluate: best
+groups: false
+limits:
+    time: '30'
+    output: '2'
+    memory: '100'
+name: 'Mission 2 : Division euclidienne'
+network_grading: false
+order: 7
+problems:
+    q1:
+        type: code
+        language: java
+        name: ''
+        header: ''
+stored_submissions: 0
+submission_limit:
+    amount: -1
+    period: -1
+weight: 1.0

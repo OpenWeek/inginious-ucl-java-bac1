@@ -174,7 +174,7 @@ def run(exercice, customscript, corr, execcustom, nexercices, javac_args, java_a
             sys.exit(0)
         elif resultat == 253:
             feedback.set_global_result('timeout')
-            feedback.set_global_feedback("La limite de temps d'exécution de votre programme est dépassée")
+            feedback.set_global_feedback("La limite de temps d'exécution de votre programme est dépassée, si votre code fonctionne en local, c'est surement parce que vous utilisez deux boucles itératives, par exemple deux for")
             exit()
         else:
             # Sinon c'est que les tests ont échoué, le programme possède des erreurs.

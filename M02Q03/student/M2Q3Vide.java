@@ -1,5 +1,5 @@
 /**
- *  Copyright (c) 2015, 2016 Fitvoye Florian, Dubray Alexandre, Antoine Habran, Maxime Mawait, William Visée.
+ *  Copyright (c)  2016 Ody Lucas, Rousseaux Tom
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU Affero General Public License as published by
  *  the Free Software Foundation, either version 3 of the License, or
@@ -12,30 +12,19 @@
  *  You should have received a copy of the GNU Affero General Public License
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-
 package student;
 
-public class FactStu {
+public class M2Q3Stu {
 
-    public static int fact (int a){
-        if(a<0){return -1;}
-        if (a==0){return 1;}
-        int r=1;
-        for (int i=2;i<=a;i++){
-            r*=i;
-        }
-        return r;
-    }
-    
-    public static double expon(int a){
-        if (a >= 0) {
-            double res = 0.0;
-            for (int i = 0; i < 15; i++) {
-                res += (Math.pow((double) a, (double) i) / ((double) fact(i)));
-            }
-            return res;
-        }
-        else
-            return -1;
+    public static int[] M2Q3(int diviseur, int dividende)
+    {
+        int reste = 0;
+        int quotient = 0;
+     
+        @    @q1@@
+       
+      
+        int[] res = {quotient, reste};
+        return res; 
     }
 }

@@ -1,5 +1,5 @@
 /**
- *  Copyright (c) 2015, 2016 Fitvoye Florian, Dubray Alexandre, Antoine Habran, Maxime Mawait, William Visée.
+ *  Copyright (c) 2017 Mawait Maxime, Habran Antoine, Visée William
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU Affero General Public License as published by
  *  the Free Software Foundation, either version 3 of the License, or
@@ -12,30 +12,34 @@
  *  You should have received a copy of the GNU Affero General Public License
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-
+ 
 package student;
 
-public class FactStu {
-
-    public static int fact (int a){
-        if(a<0){return -1;}
-        if (a==0){return 1;}
-        int r=1;
-        for (int i=2;i<=a;i++){
-            r*=i;
-        }
-        return r;
-    }
+public class CharArrayStu {
     
-    public static double expon(int a){
-        if (a >= 0) {
-            double res = 0.0;
-            for (int i = 0; i < 15; i++) {
-                res += (Math.pow((double) a, (double) i) / ((double) fact(i)));
-            }
-            return res;
+    public static void inverse(char tab[]){
+        char tmp;
+        for(int i=0; i<(int)(tab.length/2);i++){
+        	tmp = tab[i];
+            tab[i]=tab[tab.length-i-1];
+            tab[tab.length-i-1]=tmp;
         }
-        else
-            return -1;
+	}
+
+	// Code a verifier
+    /*
+    * @pre: str != NULL
+    * @post: retourne le nombre d'occurences de c dans str
+    **/
+    public static int count (String str, char c){
+        @@q1@@
+    }
+	
+    /*
+    * @pre: tab != NULL
+    * @post: retourne tab renversé et retransformé en String
+    */
+    public static String inverseArray (char[] tab){
+        @@q2@@
     }
 }

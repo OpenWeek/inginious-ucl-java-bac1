@@ -1,5 +1,5 @@
 /**
- *  Copyright (c) 2015, 2016 Fitvoye Florian, Dubray Alexandre, Antoine Habran, Maxime Mawait
+ *  Copyright (c)  2016 Ody Lucas, Rousseaux Tom, William Visée, Maxime Mawait, *Habran Antoine.
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU Affero General Public License as published by
  *  the Free Software Foundation, either version 3 of the License, or
@@ -12,8 +12,6 @@
  *  You should have received a copy of the GNU Affero General Public License
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-
-
 package student;
 import static org.junit.Assert.*;
 import org.junit.runner.JUnitCore;
@@ -21,22 +19,32 @@ import org.junit.runner.Result;
 import org.junit.Test;
 import java.util.Random;
 import org.junit.runner.notification.Failure;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
 
-public class Fact {
-	
+public class M2Q3 {
+
 	private static String str = "Le code semble comporter des erreurs : ";
-	
+
 	@Test
-	public void testFact(){
+	public void testP1(){
 		try{
-        	assertEquals("Question 1 :\nVerifiez les pre !",-1,FactStu.fact(-10));
-            assertEquals("Question 1 :\nFact(0) ne donne pas le resultat attendu :",1,FactStu.fact(0));
-            assertEquals("Question 1 :\nFact(1) ne donne pas le resultat attendu :",1,FactStu.fact(1));
-            assertEquals("Question 1 :\nFact(4) ne donne pas le resultat attendu :",24,FactStu.fact(4));
-            assertEquals("Question 2 :\nVerifiez les pre !",-1.0,FactStu.expon(-10),0.5);
-            assertEquals("Question 2 :\nExp(0) ne donne pas le résultat attendu:",1.0,FactStu.expon(0),0.01);
-            assertEquals("Question 2 :\nExp(1) ne donne pas le résultat attendu:",2.718281829585647,FactStu.expon(1),0.5);
-            assertEquals("Question 2 :\nExp(2) ne donne pas le résultat attendu:", 7.389071617436451,FactStu.expon(2),0.5);
+            int diviseur = 0;
+            int dividende = 0;
+            int[] sol = new int[2];
+            int[] stu = new int[2];
+            for(int i = 0; i < 8; i++)
+            {
+                dividende=(int)(Math.random()*40);
+                diviseur=(int)(Math.random()*10+1);
+                stu=M2Q3Stu.M2Q3(diviseur,dividende);
+                sol[0]=dividende/diviseur;
+                sol[1]=dividende%diviseur;
+                
+                assertTrue("La calcul est erroné : "+dividende+" divisé par "+diviseur+" doivent donner "+sol[0]+" comme quotient, et "+sol[1]+" comme reste. Or votre code donne respectivement les valeurs "+stu[0]+" et "+stu[1]+".",(sol[0]==stu[0])&&(sol[1]==stu[1]));
+                
+            }
 		}catch (ArithmeticException e){
 			fail(str + "Le code est incorrect : il est interdit de diviser par zéro.");
 			e.printStackTrace();
@@ -60,10 +68,39 @@ public class Fact {
 		}
 	}
 	
+    @Test
+	public void testP2(){
+        BufferedReader reader = null;
 
+		try {
+    		reader = new BufferedReader(new FileReader("student/M2Q3Stu.java"));
+
+    		String line;
+           for(int i=0; i<20;i++){
+               line=reader.readLine();
+           }
+    		while ((line=reader.readLine())!=null){
+				for(int i=0;i<line.length();i++){
+               	 assertNotEquals("Votre fonction contient un'/'",'/',line.charAt(i));
+                assertNotEquals("Votre fonction contient un'%'",'%',line.charAt(i));
+            }
+			}
+    
+
+		} catch (IOException e) {
+    		e.printStackTrace();
+		} finally {
+    		try {
+     		   reader.close();
+    		} catch (IOException e) {
+      		  e.printStackTrace();
+   			 }
+		}
+    }
+    
 	// Code verificateur
 	public static void main(String[] args) {
-		Result result = JUnitCore.runClasses(Fact.class);
+		Result result = JUnitCore.runClasses(M2Q3.class);
 		for (Failure failure: result.getFailures()) {
 			System.err.println(failure.toString());
 		}

@@ -22,21 +22,30 @@ import org.junit.Test;
 import java.util.Random;
 import org.junit.runner.notification.Failure;
 
-public class Fact {
+public class Sum {
 	
 	private static String str = "Le code semble comporter des erreurs : ";
 	
 	@Test
-	public void testFact(){
+	public void testSum(){
 		try{
-        	assertEquals("Question 1 :\nVerifiez les pre !",-1,FactStu.fact(-10));
-            assertEquals("Question 1 :\nFact(0) ne donne pas le resultat attendu :",1,FactStu.fact(0));
-            assertEquals("Question 1 :\nFact(1) ne donne pas le resultat attendu :",1,FactStu.fact(1));
-            assertEquals("Question 1 :\nFact(4) ne donne pas le resultat attendu :",24,FactStu.fact(4));
-            assertEquals("Question 2 :\nVerifiez les pre !",-1.0,FactStu.expon(-10),0.5);
-            assertEquals("Question 2 :\nExp(0) ne donne pas le résultat attendu:",1.0,FactStu.expon(0),0.01);
-            assertEquals("Question 2 :\nExp(1) ne donne pas le résultat attendu:",2.718281829585647,FactStu.expon(1),0.5);
-            assertEquals("Question 2 :\nExp(2) ne donne pas le résultat attendu:", 7.389071617436451,FactStu.expon(2),0.5);
+        	assertNull("n'oubliez pas ou le cas ou le parametre est null",SumStu.sum(null));
+            int[] a = {1,2,3,4,5};
+            int[] b = SumStu.sum(a);
+            int[] c = {1,3,6,10,15};
+            assertArrayEquals("le tableau retourne par sum([1,2,3,4,5]) est incorrect",b,c);
+            a = new int[0];
+            b = SumStu.sum(a);
+            c = new int[0];
+            assertArrayEquals("le tableau renvoyé par sum([]) (un tableau vide) est incorrect",b,c);
+            a = new int[1000000];
+            for(int i =0;i<a.length;i++)
+            {
+                a[i]=i;
+            }
+            b = SumStu.sum(a);
+            c = mySum(a);
+            assertArrayEquals("le tableau renvoyé par sum([a]) (ou a est un tableau de 5000 élément contentant les entiers de 0 a 4999) est incorrect",b,c);
 		}catch (ArithmeticException e){
 			fail(str + "Le code est incorrect : il est interdit de diviser par zéro.");
 			e.printStackTrace();
@@ -48,9 +57,9 @@ public class Fact {
 			fail(str + "Attention, vous tentez de lire en dehors des limites d'un String ! (StringIndexOutOfBoundsException)");
 			e.printStackTrace();
 		}catch(ArrayIndexOutOfBoundsException e){
-			e.printStackTrace();
+			//e.printStackTrace();
 			fail(str + "Attention, vous tentez de lire en dehors des limites d'un tableau ! (ArrayIndexOutOfBoundsException)");
-			e.printStackTrace();
+			//e.printStackTrace();
 		}catch(NullPointerException e){
 			fail(str + "Attention, vous faites une opération sur un objet qui vaut null ! Veillez à bien gérer ce cas.");
 			e.printStackTrace();
@@ -59,11 +68,32 @@ public class Fact {
 			e.printStackTrace();
 		}
 	}
+    
+    public int[] mySum(int[]tab)
+    {
+        if(tab==null)
+			return null;
+
+		if(tab.length==0)
+			return new int[0];
+
+		int[] res = new int[tab.length];
+		res[0] = tab[0];
+
+		for(int i = 0;i<tab.length;i++)
+		{
+			if(i != 0)
+			{
+				res[i] = res[i-1]+tab[i];
+			}
+		}
+		return res;
+    }
 	
 
 	// Code verificateur
 	public static void main(String[] args) {
-		Result result = JUnitCore.runClasses(Fact.class);
+		Result result = JUnitCore.runClasses(Sum.class);
 		for (Failure failure: result.getFailures()) {
 			System.err.println(failure.toString());
 		}

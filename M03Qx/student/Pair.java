@@ -1,5 +1,5 @@
 /**
- *  Copyright (c) 2015, 2016 Fitvoye Florian, Dubray Alexandre, Antoine Habran, Maxime Mawait
+ *  Copyright (c) 2015, 2016 Fitvoye Florian, Dubray Alexandre
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU Affero General Public License as published by
  *  the Free Software Foundation, either version 3 of the License, or
@@ -21,22 +21,23 @@ import org.junit.runner.Result;
 import org.junit.Test;
 import java.util.Random;
 import org.junit.runner.notification.Failure;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
 
-public class Fact {
+public class Pair {
 	
 	private static String str = "Le code semble comporter des erreurs : ";
 	
 	@Test
-	public void testFact(){
+	public void testPair(){
 		try{
-        	assertEquals("Question 1 :\nVerifiez les pre !",-1,FactStu.fact(-10));
-            assertEquals("Question 1 :\nFact(0) ne donne pas le resultat attendu :",1,FactStu.fact(0));
-            assertEquals("Question 1 :\nFact(1) ne donne pas le resultat attendu :",1,FactStu.fact(1));
-            assertEquals("Question 1 :\nFact(4) ne donne pas le resultat attendu :",24,FactStu.fact(4));
-            assertEquals("Question 2 :\nVerifiez les pre !",-1.0,FactStu.expon(-10),0.5);
-            assertEquals("Question 2 :\nExp(0) ne donne pas le résultat attendu:",1.0,FactStu.expon(0),0.01);
-            assertEquals("Question 2 :\nExp(1) ne donne pas le résultat attendu:",2.718281829585647,FactStu.expon(1),0.5);
-            assertEquals("Question 2 :\nExp(2) ne donne pas le résultat attendu:", 7.389071617436451,FactStu.expon(2),0.5);
+          
+           assertEquals("Votre fonction ne renvoie pas la bonne réponse pour le int : 1",false,PairStu.isPair(1));
+            assertEquals("Votre fonction ne renvoie pas la bonne réponse pour le int : 2",true,PairStu.isPair(2));
+            assertEquals("Votre fonction ne renvoie pas la bonne réponse pour le int : 3",false,PairStu.isPair(3));
+            assertEquals("Votre fonction ne renvoie pas la bonne réponse pour le int : 0",true,PairStu.isPair(0));
+            
 		}catch (ArithmeticException e){
 			fail(str + "Le code est incorrect : il est interdit de diviser par zéro.");
 			e.printStackTrace();
@@ -59,11 +60,39 @@ public class Fact {
 			e.printStackTrace();
 		}
 	}
-	
+    
+    @Test
+	public void testPair2(){
+        BufferedReader reader = null;
 
+		try {
+    		reader = new BufferedReader(new FileReader("student/PairStu.java"));
+
+    		String line;
+           for(int i=0; i<24;i++){
+               line=reader.readLine();
+           }
+    		while ((line=reader.readLine())!=null){
+				for(int i=0;i<line.length();i++){
+               	 assertNotEquals("Votre fonction contient un'%'",'%',line.charAt(i));
+            }
+			}
+    
+
+		} catch (IOException e) {
+    		e.printStackTrace();
+		} finally {
+    		try {
+     		   reader.close();
+    		} catch (IOException e) {
+      		  e.printStackTrace();
+   			 }
+		}
+    }
+	
 	// Code verificateur
 	public static void main(String[] args) {
-		Result result = JUnitCore.runClasses(Fact.class);
+		Result result = JUnitCore.runClasses(Pair.class);
 		for (Failure failure: result.getFailures()) {
 			System.err.println(failure.toString());
 		}
