@@ -1,0 +1,68 @@
+accessible: true
+author: Aurélie MASSART, Alexandre KÜHN & Hua Yang HU, Mawait Maxime
+context: |
+    Soit un stack défini par la classe suivante :
+
+    .. code-block:: java
+
+        public class Node{
+            int value;
+            Node next;
+
+            ...
+        }
+
+    .. code-block:: java
+
+        public class Stack{
+            Node first;
+
+            ...
+        }
+
+    La classe Stack est incomplète : il manque les opérations push et pop ajoutant un élément et retirant un élément du stack. Complétez la classe Stack.
+environment: java7
+evaluate: best
+groups: false
+limits:
+    memory: '200'
+    output: '2'
+name: 'Mission 11 : Question 13 : Opérations sur un stack - implémentations'
+network_grading: false
+order: 14
+problems:
+    q1:
+        header: |
+            Implémentez la fonctions pop d'une stack. La signatures de la fonction est fournie ci-dessous. Utilisez la programmation défensive pour garantir les pré-conditions.
+
+            .. code-block:: java
+
+                /*
+                 * @pre le stack est non vide
+                 * @post retire et retourne un element du stack
+                 */
+                public int pop(){
+                    //Complétez le code
+        language: java
+        name: Fonction pop
+        type: code
+    q2:
+        type: code
+        header: |-
+            Implémentez la fonctions push d'une stack. La signatures de la fonction est fournie ci-dessous. Utilisez la programmation défensive pour garantir les pré-conditions.
+
+            .. code-block:: java
+
+                /*
+                 * @pre -
+                 * @post ajoute l'élément val dans le stack
+                 */
+                public void push(int val){
+                    //Complétez le code
+        language: Java
+        name: Fonction push
+stored_submissions: 0
+submission_limit:
+    amount: -1
+    period: -1
+weight: 1.0

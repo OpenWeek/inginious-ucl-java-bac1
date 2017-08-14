@@ -1,0 +1,39 @@
+accessible: true
+author: Justine Doutreloux, Carolina Unriza Salamanca, Charline Outters, Mawait Maxime
+context: |-
+    Dans cet exercice, on vous demande de compléter le code que vous avez fourni pour l'exercice précédent. Vous devrez donc ouvrir un fichier qui ne contient qu'une seule ligne, afficher cette ligne sur la sortie standard et fermer le fichier.
+    En plus de tout cela, vous devez gérer les problèmes éventuels qui pourraient apparaître.
+environment: java7
+evaluate: best
+groups: false
+limits:
+    memory: '200'
+    output: '2'
+name: 'Mission 09 : Question 02 : Exercice facile - Premiers fichiers II'
+network_grading: false
+problems:
+    q1:
+        header: |
+            Pour cet exercice, on vous demande d'utiliser MyBufferedReader à la place de BufferedReader. (MyBufferedReader a les mêmes fonctions que BufferedReader)
+            Complétez le code suivant:
+
+            .. code-block:: java
+
+                /* @pre : /
+                 * @post : une fois le fichier ouvert, retourner la première ligne
+                 *        et refermer le fichier. Le cas échéant, gérer les
+                 *        problèmes et retourner null;
+                 */
+                public static String deuxiemeFichier(String filename)
+                {
+                    MyBufferedReader br;
+                    //Insérez votre code ici
+                }
+        language: Java
+        name: try/catch
+        type: code
+stored_submissions: 0
+submission_limit:
+    amount: -1
+    period: -1
+weight: 1.0

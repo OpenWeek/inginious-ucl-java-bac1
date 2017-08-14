@@ -1,0 +1,32 @@
+accessible: true
+author: Lucas Ody & Tom Rousseaux 
+context: |-
+    Tracez sur une seule ligne une séquence de tirets (-) et de points (.). Cette ligne contiendra la séquence composée de ``nTiret`` tirets puis ``nPoint`` point, le tout, ``nMorceau`` fois. Par exemple les valeurs
+
+    .. code-block:: java
+
+        int nTiret = 2;
+        int nPoint = 3; //Ces trois variables sont fournies
+        int nMorceau = 4;
+
+    affichera dans la console
+
+    .. code-block:: java
+
+        --...--...--...--...
+environment: java7
+groups: false
+limits:
+    memory: '200'
+    time: '30'
+    output: '2'
+name: 'Mission 02 : Question 02 : Morse'
+network_grading: false
+order: 8
+problems:
+    q1:
+        language: Java
+        type: code
+        name: Morse
+        header: ''
+weight: 1.0

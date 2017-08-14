@@ -1,0 +1,28 @@
+accessible: true
+author: Fitvoye Florian, Dubray Alexandre
+context: Écrivez une méthode permettant de convertir un String en son nombre correspondant
+environment: java7
+groups: false
+limits:
+    memory: '100'
+    time: '30'
+    output: '2'
+name: 'Mission 04 : Question 01 : Conversion de Nombre'
+network_grading: false
+problems:
+    q1:
+        language: java
+        type: code
+        name: Conversion
+        header: |-
+            Écrivez le corps de la méthode convert que voici :
+
+            .. code-block:: java
+
+                /* pre : la fonction possède un argument String s
+                 * post: renvoie l'entier correspondant au String passé en argument.
+                 */
+                public static int convert(String s){
+                    /* code a completer */
+                }
+weight: 1.0
