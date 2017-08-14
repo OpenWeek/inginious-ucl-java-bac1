@@ -1,0 +1,112 @@
+accessible: true
+author: Aurélie MASSART, Alexandre KÜHN & Hua Yang HU, Mawait Maxime
+context: |-
+    Soit une implémentation d'une liste **simplement chaînée** et **triée en ordre croissant** utilisant les classes ``SNode`` et ``SList`` suivantes :
+
+    .. code-block:: java
+
+        public class SList {
+            public SNode first;
+
+            public SList() {
+                this.first = null; // empty list
+            }
+        }
+
+        public class SNode {
+            public int value;
+            public SNode next;
+
+            public SNode(int v) {
+                this.value = v;
+                this.next = null;
+            }
+        }
+
+    Nous vous demandons d'ajouter une méthode ``sortedMerge`` dans ``SList`` avec les spécifications suivantes :
+
+    .. code-block:: java
+
+        /*
+         * @pre:  'sl1' et 'sl2' sont des instances de SList triées.
+         * @post: - 'sl1' et 'sl2' sont inchangées;
+         *        - La méthode renvoie une nouvelle liste SList;
+         *        - Cette nouvelle liste est triée en ordre croissant;
+         *        - Cette nouvelle liste contient tous les noeuds de 'sl1' et 'sl2'
+         *        (longueur de la nouvelle liste = somme des longueurs de 'sl1' et 'sl2').
+         */
+        public SList sortedMerge(SList sl1, SList sl2)
+
+    Par exemple, supposons que vous avons les deux listes ``SList`` **sla** et **slb** suivantes :
+
+    ``sla: snode(value: 10) -> snode(value: 30) -> snode(value: 40)``
+
+    ``slb: snode(value: 20) -> snode(value: 50)``
+
+    Le résultat de ``sortedMerge(sla, slb)`` est la nouvelle liste ``sl`` suivante :
+
+    ``sl: snode(value: 10) -> snode(value: 20) -> snode(value: 30) -> snode(value: 40) -> snode(value: 50)``
+
+    .. image:: M11Q14_TriList/SortedMerge.png
+        :height: 767px
+        :width: 1163px
+        :scale: 50%
+
+    **Hint:** nous vous suggérons d'implémenter une méthode ``insert(SNode sn)`` à ``SList`` qui insère ``sn`` dans l'instance de ``SList`` courante, tout en préservant celle-ci triée.
+
+    .. code-block:: java
+
+        /*
+         * @pre:  'sn' est une instance de SNode.
+         * @post: - La liste courante est modifiée;
+         *        - 'sn' est ajouté à la liste courante de telle manière
+         *           à ce qu'elle reste triée.
+         */
+        public void insert(SNode sn)
+environment: java7
+evaluate: best
+groups: false
+limits:
+    memory: '200'
+    output: '2'
+name: 'Mission 11 : Question 14 : SortedMerge de listes'
+network_grading: false
+order: 21
+problems:
+    q1:
+        header: |-
+            Insérez la méthode sortedMerge dans la classe ``SList`` en utilisant autant de méthodes auxiliaires que vous voulez. **Vous n'avez pas le droit de créer d'autres objects SList que ceux déjà créés**, que ce soit dans la fonction ``sortedMerge`` ou dans les fonctions auxiliaires. **Vous devez utiliser la programmation défensive**.
+
+            .. code-block:: java
+
+                public class SList {
+                    public SNode first;
+
+                    public SList() {
+                        this.first = null;
+                    }
+
+                    /*
+                    * @pre : sl1, sl2 != null
+                    * @post : retourne la liste mergée de sl1 et sl2.
+                    */
+                    public SList sortedMerge(SList sl1, SList sl2){
+                        SList sl = new SList() //Liste à retourner
+                        //Code à compléter
+                    }
+                }
+        language: Java
+        name: SortedMerge de listes simplement chaînées et triées
+        type: code
+    q2:
+        type: code
+        header: Complétez ici le code des fonctions auxiliaires que vous utilisez
+            dans votre fonction ``sortedMerge`` .
+        language: java
+        name: Fonctions auxiliaires
+        optional: true
+stored_submissions: 0
+submission_limit:
+    amount: -1
+    period: -1
+weight: 1.0

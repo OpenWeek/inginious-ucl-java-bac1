@@ -1,0 +1,58 @@
+accessible: true
+author: Aurélie MASSART, Alexandre KÜHN & Hua Yang HU
+context: |-
+    Pour toutes les questions ci-dessous, nous vous demandons d'écrire la ligne de code pour effectuer l'opération demandée.
+
+    Vous devez respecter ceci pour le format des instructions:
+
+    - Pas d'espace avant et après l'instruction;
+    - Insérer qu'un seul espace avant et après une assignation;
+    - L'instruction doit se terminer par un point-virgule;
+    - Ne mettez aucun espace entre le dernier caractère de la ligne de code et le point-virgule final;
+    - Ne mettez aucun espace entre un objet et une de ses méthodes lorsqu'on en invoque une (p.ex.: ``obj.m`` est valide, ``obj .m`` est invalide).
+    - Vous ne pouvez n'utiliser que la référence à la liste ``p`` et la méthode ``next`` d'un noeud de la liste.
+
+    Pour toutes les questions ci-dessous, nous considérons la représentation d'une liste simplement chaînée suivante ``p`` :
+
+    ``p: a(value: 10) -> b(value: 20) -> c(value: 30)``
+environment: java7
+groups: false
+limits:
+    memory: '200'
+    output: '2'
+    time: '30'
+name: 'Mission 11 : Question 03 : Question de démarrage 3 - Retraits dans une liste'
+network_grading: false
+order: 3
+problems:
+    '1':
+        header: |-
+            Depuis la représentation originale de ``p``, nous souhaitons y retirer le noeud ``b`` entre les noeuds ``a`` et ``c``, afin d'obtenir la liste chaînée suivante :
+
+            ``p: a(value: 10) -> c(value: 30)``
+
+            Indiquer l'instruction à effectuer, en respectant les consignes de la tâche.
+        answer: p.next = p.next.next
+        name: Simple retrait au milieu d'une liste simplement chaînée
+        type: match
+    '2':
+        header: |-
+            Depuis la représentation originale de ``p``, nous souhaitons y retirer le noeud ``a``, afin d'obtenir la liste chaînée suivante :
+
+            ``p: b(value: 20) -> c(value: 30)``
+
+            Indiquer l'instruction à effectuer, en respectant les consignes de la tâche.
+        type: match
+        name: Simple retrait au début d'une liste simplement chaînée
+        answer: p = p.next
+    '3':
+        header: |-
+            Depuis la représentation originale de ``p``, nous souhaitons y retirer le noeud ``c``, afin d'obtenir la liste chaînée suivante :
+
+            ``p: a(value:10) -> b(value: 20)``
+
+            Indiquer l'instruction à effectuer, en respectant les consignes de la tâche.
+        type: match
+        name: Simple retrait à la fin d'une liste simplement chaînée
+        answer: p.next.next = null
+weight: 1.0

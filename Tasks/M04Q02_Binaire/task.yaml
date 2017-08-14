@@ -1,0 +1,36 @@
+accessible: false
+author: Fitvoye Florian, Dubray Alexandre
+context: |
+    Créer une méthode qui affiche l'entier correspondant à un ``String`` représentant un entier sous sa forme binaire. Nous utiliserons la représentation dites "complément à deux". Cette méthode permet de représenter les nombre négatif en appliquant un signe négatif sur le bit le plus à gauche est de signe négatif.
+    Donc, pour le ``String`` "1001", votre méthode doit afficher -7 tandis que pour le ``String`` "0110" elle doit afficher 6.
+environment: java7
+evaluate: best
+groups: false
+limits:
+    output: '2'
+    time: '30'
+    memory: '100'
+name: 'Mission 04 : Question 02 : Binaire'
+network_grading: false
+problems:
+    q1:
+        language: java
+        type: code
+        header: |-
+            Voici la signature de la fonction :
+
+            .. code-block:: java
+
+                /**
+                 * @pre str est non vide
+                 * @post affiche la représentation décimale du nombre binaire contenu dans str
+                 */
+                public static void decimale (String str){
+                    /* Code à completer */
+                }
+        name: Convertion décimale
+stored_submissions: 0
+submission_limit:
+    amount: -1
+    period: -1
+weight: 1.0

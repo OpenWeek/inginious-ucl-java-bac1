@@ -1,0 +1,115 @@
+accessible: true
+author: Aurélie MASSART, Alexandre KÜHN & Hua Yang HU
+context: |
+    Les fragments de code ci-dessous représentent différentes implémentations retournant le plus petit élément d'une liste simplement chainée. Parmi les propositions ci-dessous, une seule est correcte. Pouvez-vous deviner laquelle?
+    La liste chainée est implémentée par la classe Node dont le code est fourni ci-dessous:
+
+    .. code-block:: java
+
+        public class Node{
+            int value;
+            Node next;
+
+            ...
+        }
+environment: default
+groups: false
+limits:
+    memory: '32'
+    output: '1024'
+    time: '60'
+name: 'Mission 11 : Question 05 : Question de démarrage 5 - Plus petit élément d''une liste'
+network_grading: false
+order: 5
+problems:
+    idFirstExercice:
+        choices:
+        -   text: |+
+                .. code-block:: java
+
+                    public int plusPetit(Node n)
+                        Node current = n;
+                        int min = current.value;
+                        while(current != null){
+                            if(current.value < min){
+                                min = current.value;
+                            }
+                        }
+                        return min;
+                    }
+
+
+
+            feedback: 'Ce fragment de code est erronné car on ne parcourt pas la liste:
+                le pointeur current n''est pas mis à jour'
+        -   text: |+
+                .. code-block:: java
+
+                    public int plusPetit(Node n)
+                        Node current = n;
+                        int min = current.value;
+                        while(current != null){
+                            min = current.value;
+                            current = current.next;
+                        }
+                        return min;
+                    }
+
+
+            feedback: 'Ce fragment de code est erronné : la valeur de la variable
+                min ne représente pas le minimum de la liste'
+        -   text: |
+                .. code-block:: java
+
+                    public int plusPetit(Node n)
+                        Node current = n;
+                        int min = 1000;
+                        while(current.next != null){
+                            current = current.next;
+                            if(current.value < min){
+                                min = current.value;
+                            }
+                        }
+                        return min;
+                    }
+            feedback: 'Ce fragment de code est erronné : l''élément minimum peut être
+                supérieur à 1000. '
+        -   feedback: 'Ce fragment de code est erronné : il ne retourne pas le plus
+                petit nombre de la liste chainée, mais retourne le premier nombre
+                inférieur au nombre qui le précède.'
+            text: |-
+                .. code-block:: java
+
+                    public int plusPetit(Node n)
+                        Node current = n;
+                        Node prev = n;
+                        while(current != null){
+                            if(current.value < prev.value){
+                                return current.value;
+                            }
+                            current = current.next;
+                            prev = prev.next;
+                        }
+                        return min;
+                    }
+        -   valid: true
+            text: |-
+                .. code-block:: java
+
+                    public int plusPetit(Node n)
+                        Node current = n;
+                        int min = current.value;
+                        while(current.next != null){
+                            current = current.next;
+                            if(current.value < min){
+                                min = current.value;
+                            }
+                        }
+                        return min;
+                    }
+        header: ''
+        error_message: '``You failed!!!``...'
+        type: multiple-choice
+        limit: 3
+        name: The first exercice
+weight: 1.0

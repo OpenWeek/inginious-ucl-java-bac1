@@ -1,0 +1,40 @@
+accessible: true
+author: Olivier MARTIN
+context: |-
+    La méthode toString() est définie dans la classe Object. Grâce à l'héritage, toutes les objets/classes java la possèdent aussi. Par défaut, toString renvoie le nom de la classe de l'objet suivi de l'adresse. Cependant, on souhaite que toString renvoie une jolie description de notre objet plutôt que l'adresse de l'objet.
+
+    Nous avons une classe Kirby. La classe Kirby contient donc la méthode toString qui vient de la classe mère (la classe Object). Redéfinis la méthode toString afin qu'elle fournisse une description de Kirby.
+
+    Ainsi, la méthode toString devrait retourner quelque chose comme "Bonjour, je suis Kirby, je suis rose et j'ai 89 pv."
+
+    .. code-block:: java
+
+        public class Kirby {
+            public final String nom = "Kirby";
+            public final String couleur = "rose";
+            private int pv;
+
+            public int get_pv(){
+                return this.pv;
+            }
+
+            // Redéfinir la méthode toString()
+        }
+environment: java7
+groups: false
+limits:
+    memory: '200'
+    time: '30'
+    output: '2'
+name: 'Mission 07 : Question 02 : Exercice Facile - Redéfinir une méthode existante de la superclasse'
+network_grading: false
+order: 5
+problems:
+    q1:
+        language: Java
+        type: code
+        name: Méthode toString() de la classe Kirby
+        header: Écrivez ici la signature et le corps de la méthode toString. La description
+            doit contenir au moins les 3 attributs de la classe Kirby (nom, couleur,
+            pv).
+weight: 1.0
