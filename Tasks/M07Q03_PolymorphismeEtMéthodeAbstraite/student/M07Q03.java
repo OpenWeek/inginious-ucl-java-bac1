@@ -72,8 +72,8 @@ public class M07Q03 {
         		try{
         			Object ret = method.invoke(o, p);
         			return (boolean) ret;
-        		}catch(Exception e){
-        			return false;
+        		}catch(Exception e){ // TODO: [Bad handle of exception]: this will catch all exceptions that appear during execution of method.invoke().
+        			return false; //If student make divion by 0, this will return false and feedback will be not appropriate.
         		}
         	}
 		}
